@@ -1,4 +1,4 @@
-aven_build:
+maven_build:
   image: maven:3.6.3-jdk-11
   variables:
     MAVEN_OPTS: "-Dmaven.compiler.source=11 -Dmaven.compiler.target=11"
