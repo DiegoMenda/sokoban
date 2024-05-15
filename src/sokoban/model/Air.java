@@ -8,7 +8,7 @@ public class Air extends ImmovableEntity{
 	
 	@Override
 	public String toString() {
-		return " ";
+		return ".";
 	}
 
 }
