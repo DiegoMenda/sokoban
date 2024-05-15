@@ -4,11 +4,13 @@ public class Level {
 
 	int col, row;
 	Entity[][] pos;
-
-	public Level(int col, int row, Entity[][] pos) {
+	String levelName;
+	
+	public Level(int col, int row, String levelName, Entity[][] pos) {
 		this.col = col;
 		this.row = row;
 		this.pos = pos;
+		this.levelName = levelName;
 	}
 
 	
