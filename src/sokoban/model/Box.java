@@ -1,9 +1,11 @@
 package model;
 
+import java.awt.Image;
+
 public class Box extends MobileEntity {
 
-	public Box(int x, int y) {
-		super(x, y);
+	public Box(int x, int y, Image textureImage) {
+		super(x, y, textureImage);
 	}
 	
 	@Override

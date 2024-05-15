@@ -1,9 +1,11 @@
 package model;
 
+import java.awt.Image;
+
 public class Air extends ImmovableEntity{
 
-	public Air(int x, int y) {
-		super(x, y, true);
+	public Air(int x, int y, Image textureImage) {
+		super(x, y, textureImage, true);
 	}
 	
 	@Override

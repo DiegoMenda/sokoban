@@ -3,7 +3,7 @@ package model;
 public class Level {
 
 	int col, row;
-	Entity[][] pos;
+	public Entity[][] pos;
 	String levelName;
 	
 	public Level(int col, int row, String levelName, Entity[][] pos) {

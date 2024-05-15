@@ -44,19 +44,19 @@ public class LevelLoader {
                     char c = line.charAt(j);
                     switch (c) {
                         case '+':
-                            pos[i][j] = new Wall(i,j);
+                            pos[i][j] = new Wall(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_WALL));
                             break;
                         case '.':
-                            pos[i][j] = new Air(i,j);
+                            pos[i][j] = new Air(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
                             break;
                         case '*':
-                            pos[i][j] = new Goal(i,j);
+                            pos[i][j] = new Goal(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_GOAL));
                             break;
                         case '#':
-                            pos[i][j] = new Box(i,j);
+                            pos[i][j] = new Box(i,j,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
                             break;
                         case 'W':
-                            pos[i][j] = new Worker(i,j);
+                            pos[i][j] = new Worker(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_WORKER));
                             break;
                     }
                 }

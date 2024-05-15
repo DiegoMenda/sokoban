@@ -1,11 +1,13 @@
 package model;
 
+import java.awt.Image;
+
 public class Goal extends ImmovableEntity{
 
 	private boolean archieved;
 	
-	public Goal(int x, int y) {
-		super(x, y, false);
+	public Goal(int x, int y, Image textureImage) {
+		super(x, y, textureImage, false);
 		this.archieved = false;
 		
 	}
