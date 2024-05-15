@@ -3,7 +3,6 @@ maven_build:
   variables:
     MAVEN_OPTS: "-Dmaven.compiler.source=11 -Dmaven.compiler.target=11"
   script:   
-    - cd sokoban
     - mvn test
 
 sonarqube-check:
@@ -17,7 +16,6 @@ sonarqube-check:
     paths:
       - .sonar/cache
   script: 
-    - cd sokoban
     - mvn verify sonar:sonar -Dsonar.login=${SONAR_LOGIN} -Dsonar.id=${SONAR_ID}
   allow_failure: true
   only:
