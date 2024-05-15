@@ -62,7 +62,7 @@ public class LevelLoader {
                 }
             }
 
-            level = new Level(rows, cols, pos);
+            level = new Level(rows, cols,levelName, pos);
         } catch (IOException e) {
             e.printStackTrace();
         }
