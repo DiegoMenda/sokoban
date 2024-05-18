@@ -7,11 +7,11 @@ import java.util.List;
 import java.util.ArrayList;
 import model.*;
 
-public class Renderer extends JPanel {
+public class EntitiesRenderer extends JPanel {
 
 
     private Entity[][] entities;
-    public Renderer(Entity[][] entities) {
+    public EntitiesRenderer(Entity[][] entities) {
         this.entities = entities;
     }
 

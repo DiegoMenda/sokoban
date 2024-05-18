@@ -30,13 +30,15 @@ public class LevelLoader {
 	
     public static Level loadLevel(File file) {
         Level level = null;
+        Worker warehouseMan = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String levelName = reader.readLine();
             String[] dimensions = reader.readLine().split(" ");
             int rows = Integer.parseInt(dimensions[0]);
             int cols = Integer.parseInt(dimensions[1]);
 
-            Entity[][] pos = new Entity[rows][cols];
+            ImmovableEntity[][] inamovible = new ImmovableEntity[rows][cols];
+            MobileEntity[][] movible = new MobileEntity[rows][cols];
 
             for (int i = 0; i < rows; i++) {
                 String line = reader.readLine();
@@ -44,25 +46,34 @@ public class LevelLoader {
                     char c = line.charAt(j);
                     switch (c) {
                         case '+':
-                            pos[i][j] = new Wall(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_WALL));
+                            inamovible[i][j] = new Wall(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_WALL));
+                            movible[i][j] = null;
                             break;
                         case '.':
-                            pos[i][j] = new Air(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                            inamovible[i][j] = new Air(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                            movible[i][j] = null;
                             break;
                         case '*':
-                            pos[i][j] = new Goal(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_GOAL));
+                            inamovible[i][j] = new Goal(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_GOAL));
+                            movible[i][j] = null;
                             break;
                         case '#':
-                            pos[i][j] = new Box(i,j,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
+                            //inamovible[i][j] = new Box(i,j,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
+                        	inamovible[i][j] = new Air(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                        	movible[i][j] = new Box(i,j,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
+                        	
                             break;
                         case 'W':
-                            pos[i][j] = new Worker(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_WORKER));
+                        	inamovible[i][j] = new Air(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                        	warehouseMan = new Worker(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_WORKER));
+                        	movible[i][j] = warehouseMan;
                             break;
                     }
                 }
             }
 
-            level = new Level(rows, cols,levelName, pos);
+            level = new Level(rows, cols,levelName, inamovible, movible);
+            level.setWarehouseMan(warehouseMan);
         } catch (IOException e) {
             e.printStackTrace();
         }

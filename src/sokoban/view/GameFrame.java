@@ -4,10 +4,10 @@ import javax.swing.JFrame;
 import model.Entity;
 
 public class GameFrame extends JFrame {
-    private Renderer renderer;
+    private EntitiesRenderer renderer;
 
-    public GameFrame(Renderer renderer) {
-        setTitle("Entity Test");
+    public GameFrame(EntitiesRenderer renderer) {
+        setTitle("Sokoban Game");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);

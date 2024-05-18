@@ -12,5 +12,10 @@ public class ImmovableEntity extends Entity{
 	}
 	
 	
+	public boolean getPenetrable() {
+		return this.penetrable;
+	}
+	
+	
 
 }

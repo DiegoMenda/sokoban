@@ -7,22 +7,30 @@ public class GameWorld {
 	
 	File levelFile;
 	private int puntuation;
-	private ArrayList local_puntuation;
-	private Level lvl;
+	private ArrayList localPuntuation;
+	private Level level;
 	
 	
 	public GameWorld(String levelRoute) {
-		levelFile = new File(levelRoute+1); 
+		levelFile = new File(levelRoute); 
+		loadLevel(levelFile);
 	}
 
-	private Level loadLevel(File file) {
-		return LevelLoader.loadLevel(file);
+	private void loadLevel(File file) {
+		this.level = LevelLoader.loadLevel(file);
 	}
 		
 	
 	public boolean eventMoveEntity() {
 		return false;
 	}
+	
+	public Level getLevel() {
+		
+		return this.level;
+	}
+	
+
 	
 	
 

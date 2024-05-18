@@ -34,17 +34,17 @@ public class LevelSaver {
 	public static boolean saveLevel(Level level, String dir) {
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(dir)))) {
 			// Write the level name
-			writer.write(level.levelName);
+			writer.write(level.getLevelName());
 			writer.newLine();
 
 			// Write the dimensions
-			writer.write(level.row + " " + level.col);
+			writer.write(level.getRow() + " " + level.getRow());
 			writer.newLine();
 
 			// Write the grid of entities
-			for (int i = 0; i < level.row; i++) {
-				for (int j = 0; j < level.col; j++) {
-					writer.write(level.pos[i][j].toString());
+			for (int i = 0; i < level.getRow(); i++) {
+				for (int j = 0; j < level.getRow(); j++) {
+					writer.write(level.getImmovableEntities()[i][j].toString());
 				}
 				writer.newLine();
 			}

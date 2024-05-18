@@ -9,11 +9,11 @@ public class Entity {
 	
 	private int exp = 36;
 	
-	public static void main(String[] args) {
-		
-		Entity wall = new Wall(0,0, TexturePaths.generateImage(TexturePaths.TEXTURE_WALL));
-
-	}
+//	public static void main(String[] args) {
+//		
+//		Entity wall = new Wall(0,0, TexturePaths.generateImage(TexturePaths.TEXTURE_WALL));
+//
+//	}
 	
 	int x,y;
 	Image textureImage;
@@ -38,6 +38,19 @@ public class Entity {
 	public String toString(){
 			return "Entity";
 	}
+	
+	public int getX() {
+		return this.x;
+	}
+	
+	
+	public int getY() {
+		return this.y;
+	}
+	
+	
+	
+
 		
 	
 

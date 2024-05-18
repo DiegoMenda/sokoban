@@ -14,6 +14,15 @@ public class Worker extends MobileEntity{
 		
 		return "W";
 	}
+
+	public void setX(int x) {
+		// TODO Auto-generated method stub
+		this.x = x;
+	}
+
+	public void setY(int y) {
+		this.y = y;		
+	}
 	
 	
 
