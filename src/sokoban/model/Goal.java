@@ -7,7 +7,7 @@ public class Goal extends ImmovableEntity{
 	private boolean archieved;
 	
 	public Goal(int x, int y, Image textureImage) {
-		super(x, y, textureImage, false);
+		super(x, y, textureImage, true);
 		this.archieved = false;
 		
 	}
