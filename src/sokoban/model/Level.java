@@ -65,21 +65,28 @@ public class Level {
 		return levelName;
 	}
 	
-	public Entity[][] getImmovableEntities() {
+	public ImmovableEntity[][] getImmovableEntities() {
 		return immovableEntities;
 	}
 	
-	public Entity getImmovableEntities(int x, int y) {
+	public ImmovableEntity getImmovableEntities(int x, int y) {
 		return immovableEntities[x][y];
+	}
+	public void setImmovableEntities(int x, int y, ImmovableEntity immovableEntity) {
+		immovableEntities[x][y] = immovableEntity;
 	}
 
 	
-	public Entity[][] getMobileEntities() {
+	public MobileEntity[][] getMobileEntities() {
 		return mobileEntities;
 	}
 	
-	public Entity getMobileEntities(int x, int y) {
+	public MobileEntity getMobileEntities(int x, int y) {
 		return mobileEntities[x][y];
+	}
+	
+	public void setMobileEntities(int x, int y, MobileEntity mobileEntity) {
+		 mobileEntities[x][y] = mobileEntity;
 	}
 
 
