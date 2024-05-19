@@ -10,18 +10,28 @@ import model.*;
 public class EntitiesRenderer extends JPanel {
 
 
-    private Entity[][] entities;
-    public EntitiesRenderer(Entity[][] entities) {
-        this.entities = entities;
+    private MobileEntity[][] mobileEntity;
+    private ImmovableEntity[][] immovableEntity;
+    public EntitiesRenderer(MobileEntity[][] mobileEntity, ImmovableEntity[][] immovableEntity) {
+        this.mobileEntity = mobileEntity;
+        this.immovableEntity = immovableEntity;
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        for (Entity[] entity1 : entities) {
-        	for(Entity entity2 : entity1) {
-            if (entity2 != null) {
-                entity2.draw(g);
+        for (Entity[] entityX : immovableEntity) {
+        	for(Entity entityY : entityX) {
+            if (entityY != null) {
+                entityY.draw(g);
+            }
+        	}
+        }
+        
+        for (Entity[] entityX : mobileEntity) {
+        	for(Entity entityY : entityX) {
+            if (entityY != null) {
+                entityY.draw(g);
             }
         	}
         }
