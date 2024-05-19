@@ -1,45 +1,85 @@
 package view;
 
 import javax.swing.SwingUtilities;
-import java.io.File;
+import javax.swing.JFrame;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import model.*;
 
 public class RendererTest {
+    private static int xDirection = 0;
+    private static int yDirection = 0;
+
     public static void main(String[] args) {
-        
-    	GameWorld mundo = new GameWorld("./src/sokoban/model/maps/test_level.txt");
-    	LevelLoader levelLoader = new LevelLoader();
-        //File levelFile = new File("./src/sokoban/model/maps/test_level.txt");
-        
-    	SokobanLogic logica = new SokobanLogic(mundo);
+        GameWorld mundo = new GameWorld("./src/sokoban/model/maps/test_level.txt");
+        LevelLoader levelLoader = new LevelLoader();
+        SokobanLogic logica = new SokobanLogic(mundo);
         String xd = mundo.getLevel().toString();
 
         System.out.println(xd);
-        
-        
-        EntitiesRenderer rend = new EntitiesRenderer(mundo.getLevel().getImmovableEntities());
+
+        EntitiesRenderer rend = new EntitiesRenderer(mundo.getLevel().getMobileEntities(), mundo.getLevel().getImmovableEntities());
         GameFrame gameFrame = new GameFrame(rend);
-        SwingUtilities.invokeLater(() -> {
-            
-            gameFrame.setVisible(true);
-          
-            
+
+        gameFrame.addKeyListener(new KeyListener() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                switch (e.getKeyCode()) {
+                    case KeyEvent.VK_UP:
+                        xDirection = 0;
+                        yDirection = -1;
+                        break;
+                    case KeyEvent.VK_DOWN:
+                        xDirection = 0;
+                        yDirection = 1;
+                        break;
+                    case KeyEvent.VK_LEFT:
+                        xDirection = -1;
+                        yDirection = 0;
+                        break;
+                    case KeyEvent.VK_RIGHT:
+                        xDirection = 1;
+                        yDirection = 0;
+                        break;
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                // Stop movement when key is released
+                switch (e.getKeyCode()) {
+                    case KeyEvent.VK_UP:
+                    case KeyEvent.VK_DOWN:
+                    case KeyEvent.VK_LEFT:
+                    case KeyEvent.VK_RIGHT:
+                        xDirection = 0;
+                        yDirection = 0;
+                        break;
+                }
+            }
+
+            @Override
+            public void keyTyped(KeyEvent e) {
+                // Not used
+            }
         });
-        
-        int cont = 0;
-        while(cont <= 1) {
-        	try {
-				Thread.sleep(1500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-        	gameFrame.renderFrame();
-        	logica.moveCharacter(0, -1);
+
+        SwingUtilities.invokeLater(() -> {
+            gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            gameFrame.setVisible(true);
+            gameFrame.requestFocusInWindow(); // Ensure the frame is focused to capture key events
+        });
+
+        while (true) {
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            gameFrame.renderFrame();
+            logica.moveCharacter(xDirection, yDirection);
         }
         
-        
-   
         
     }
 }
