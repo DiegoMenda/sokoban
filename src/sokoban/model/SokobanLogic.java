@@ -1,11 +1,14 @@
 package model;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class SokobanLogic {
 
 	private GameWorld world;
 	private Worker warehouseMan;
 	private Level level;
-	
+	private static final Logger logger = LoggerFactory.getLogger(SokobanLogic.class);
 	public SokobanLogic(GameWorld world) {
 		this.world=world;
 		this.level = world.getLevel();		
@@ -48,14 +51,25 @@ public class SokobanLogic {
 		 //canMoveTo(x_to + (x_to-x_from), y_to + (y_to-y_from)) 
 	   
 		 if ( isValidPosition(x_to, y_to) ) {
-			 
+			 logger.info("canMoveCharacterTo: the character is able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
 			 return true;
 		 }
 		 else if( level.getMobileEntities(x_to, y_to) instanceof Box ) {
 			 
-			 return isValidPosition(  x_to + (x_to-x_from), y_to + (y_to-y_from)  );
+			
+					 if(isValidPosition(  x_to + (x_to-x_from), y_to + (y_to-y_from)  )) {
+						 logger.info("canMoveCharacterTo: the character is able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
+						 return true;
+					 }
+					 else {
+						 logger.info("canMoveCharacterTo: the character is NOT able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
+						 return false;
+					 }
 		 }
-		 else return false;
+		 else {
+			 logger.info("canMoveCharacterTo: the character is NOT able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
+			 return false;
+		 }
 	   }
 	 
 	
@@ -95,11 +109,12 @@ public class SokobanLogic {
         		
         		if(isValidPosition( newX+dx, newY+dy)  && level.getMobileEntities(newX+dx, newY+dy) == null   ) { //en la posicion hay una caja que empujar
         			// mover la caja
+        			logger.info("the warehouse man moves the box from ({}, {}) to ({}, {})", newX, newY, newX+dx, newY+dy);
         			MobileEntity box = level.getMobileEntities(newX, newY);
         			box.move(newX+dx, newY+dy);
         			level.setMobileEntities(newX+dx, newY+dy, box);
         			
- 
+        			logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
         			// mover el personaje
         			warehouseMan.move(newX, newY);
         			level.setMobileEntities(newX, newY, warehouseMan);
@@ -109,6 +124,7 @@ public class SokobanLogic {
         	}
         	else { // nueva posicion libre de cajas
         		// mover el personaje
+        		logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
     			warehouseMan.move(newX, newY);
     			level.setMobileEntities(newX, newY, warehouseMan);
     			level.setMobileEntities(charX, charY, null);

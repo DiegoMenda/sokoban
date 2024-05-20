@@ -1,5 +1,8 @@
 package model;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Level {
 
 	private int col, row;
@@ -8,7 +11,7 @@ public class Level {
 
 	private String levelName;
 	private Worker warehouseMan;
-
+	private static final Logger logger = LoggerFactory.getLogger(Level.class);
 
 	public Level(int col, int row, String levelName, ImmovableEntity[][] immovableEntity, MobileEntity[][] mobileEntities) {
 		this.col = col;
@@ -22,7 +25,7 @@ public class Level {
 
 
 	public void undoMove(){
-
+		logger.info("Undoing last movement");
 	}
 
 	public String toString(){
@@ -40,7 +43,8 @@ public class Level {
 
 	public void setWarehouseMan(Worker warehouseMan) {
 		if (warehouseMan == null) {
-			throw new IllegalArgumentException("El parámetro warehouseMan no puede ser nulo");
+			logger.error("setWarehouseMan error: The warehouseMan parameter is null");
+			throw new IllegalArgumentException("The warehouseMan parameter cannot be null");
 		}
 		this.warehouseMan = warehouseMan;
 

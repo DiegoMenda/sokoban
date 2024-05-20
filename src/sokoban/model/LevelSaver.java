@@ -7,9 +7,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class LevelSaver {
 
-
+	private static final Logger logger = LoggerFactory.getLogger(LevelSaver.class);
 	public static void main(String[] args) {
 		//System.out.println(System.getProperty("user.dir"));
 
@@ -32,6 +35,7 @@ public class LevelSaver {
 
 
 	public static boolean saveLevel(Level level, String dir) {
+		logger.info("saving level {} in {}", level.getLevelName(), dir);
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(dir)))) {
 			// Write the level name
 			writer.write(level.getLevelName());
@@ -50,6 +54,7 @@ public class LevelSaver {
 			}
 			return true;
 		} catch (IOException e) {
+			logger.error("error writing while saving the level {} in {}", level.getLevelName(), dir);
 			e.printStackTrace();
 			return false;
 		}
