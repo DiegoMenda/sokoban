@@ -30,9 +30,9 @@ public class Level {
 
 	public String toString(){
 		String print = "";
-		for(int i = 0; i < col; i++) {
+		for(int i = 0; i < row; i++) {
 
-			for(int j = 0; j < row; j++) {
+			for(int j = 0; j < col; j++) {
 				print = print + immovableEntities[i][j].toString();
 			}
 			if(i!=col-1) {print = print + "\n";}

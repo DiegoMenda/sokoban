@@ -75,6 +75,7 @@ public class RendererTest {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                
             }
             gameFrame.renderFrame();
             logica.moveCharacter(xDirection, yDirection);

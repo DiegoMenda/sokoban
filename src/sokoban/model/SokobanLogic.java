@@ -111,6 +111,18 @@ public class SokobanLogic {
         			// mover la caja
         			logger.info("the warehouse man moves the box from ({}, {}) to ({}, {})", newX, newY, newX+dx, newY+dy);
         			MobileEntity box = level.getMobileEntities(newX, newY);
+        			if(level.getImmovableEntities(newX+dx, newY+dy) instanceof Goal) {
+        				Goal gol = (Goal) level.getImmovableEntities(newX+dx, newY+dy);
+        				gol.setGoalArchieved(true);
+                		logger.info("GOOOOOL");
+                		box.setImage(TexturePaths.generateImage(TexturePaths.TEXTURE_BOX2));
+                		
+                	}
+        			if(level.getImmovableEntities(newX, newY) instanceof Goal)  {
+        				box.setImage(TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
+        				Goal gol = (Goal) level.getImmovableEntities(newX, newY);
+        				gol.setGoalArchieved(false);
+        			}
         			box.move(newX+dx, newY+dy);
         			level.setMobileEntities(newX+dx, newY+dy, box);
         			
@@ -136,17 +148,22 @@ public class SokobanLogic {
         
     }
 	
-	private void moveBox(int x, int y, int dx, int dy) {
-        int newBoxX = x + dx;
-        int newBoxY = y + dy;
-
-        if (isValidPosition(newBoxX, newBoxY)) {
-        	MobileEntity origin = level.getMobileEntities(x, y);
-        	MobileEntity destiny = level.getMobileEntities(newBoxX, newBoxY);
-            level.setMobileEntities(newBoxX, newBoxY, destiny);
-            level.setMobileEntities(x, y, destiny);
-        }
-    }
+//	private void moveBox(int x, int y, int dx, int dy) {
+//        int newBoxX = x + dx;
+//        int newBoxY = y + dy;
+//
+//        if (isValidPosition(newBoxX, newBoxY)) {
+//        	if(level.getImmovableEntities(newBoxX, newBoxY) instanceof Goal) {
+//        		logger.info("GOOOOOL");
+//        		level.getImmovableEntities(newBoxX, newBoxY).setImage(TexturePaths.generateImage(TexturePaths.TEXTURE_BOX2));
+//        	}
+//        	logger.info("GOOOOOL");
+//        	MobileEntity origin = level.getMobileEntities(x, y);
+//        	MobileEntity destiny = level.getMobileEntities(newBoxX, newBoxY);
+//            level.setMobileEntities(newBoxX, newBoxY, destiny);
+//            level.setMobileEntities(x, y, destiny);
+//        }
+//    }
 	
 	private void nextLevel() {
 		

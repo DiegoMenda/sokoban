@@ -13,6 +13,7 @@ public class TexturePaths {
     public static final String TEXTURE_WORKER = "./src/sokoban/model/textures/worker.png";
     public static final String TEXTURE_GOAL = "./src/sokoban/model/textures/goal.png";
     public static final String TEXTURE_BOX = "./src/sokoban/model/textures/box.png";
+    public static final String TEXTURE_BOX2 = "./src/sokoban/model/textures/box-modified.png";
 
     
     

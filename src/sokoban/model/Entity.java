@@ -55,7 +55,9 @@ public class Entity {
 		return this.y;
 	}
 	
-	
+	public void setImage(Image textura) {
+		textureImage = textura;
+	}
 	
 
 		

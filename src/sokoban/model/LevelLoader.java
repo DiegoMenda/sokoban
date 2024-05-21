@@ -35,6 +35,9 @@ public class LevelLoader {
     	logger.info("reading file {} to generate level", file.getName());
         Level level = null;
         Worker warehouseMan = null;
+        int nWareHouseMan=0;
+        int nboxes = 0;
+        int ngoals = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String levelName = reader.readLine();
             String[] dimensions = reader.readLine().split(" ");
@@ -51,37 +54,57 @@ public class LevelLoader {
                     char c = line.charAt(j);
                     switch (c) {
                         case '+':
-                            inamovible[i][j] = new Wall(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_WALL));
-                            movible[i][j] = null;
-                            logger.info("a wall has been loaded");
+                            inamovible[j][i] = new Wall(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_WALL));
+                            movible[j][i]  = null;
+                            logger.info("a wall has been loaded ({}, {})", i, j);
                             break;
                         case '.':
-                            inamovible[i][j] = new Air(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
-                            movible[i][j] = null;
+                            inamovible[j][i]  = new Air(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                            movible[j][i]  = null;
                             logger.info("an air");
                             break;
                         case '*':
-                            inamovible[i][j] = new Goal(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_GOAL));
-                            movible[i][j] = null;
-                            logger.info("a goal has been loaded");
+                            inamovible[j][i]  = new Goal(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_GOAL));
+                            movible[j][i] = null;
+                            logger.info("a goal has been loaded({}, {})", i, j);
+                            ngoals++;
                             break;
                         case '#':
                             //inamovible[i][j] = new Box(i,j,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
-                        	inamovible[i][j] = new Air(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
-                        	movible[i][j] = new Box(i,j,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
-                        	logger.info("a box has been loaded");
+                        	inamovible[j][i]  = new Air(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                        	movible[j][i]  = new Box(j,i,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
+                        	nboxes++;
+                        	logger.info("a box has been loaded({}, {})", i, j);
                             break;
                         case 'W':
-                        	inamovible[i][j] = new Air(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
-                        	warehouseMan = new Worker(i,j, TexturePaths.generateImage(TexturePaths.TEXTURE_WORKER));
-                        	movible[i][j] = warehouseMan;
-                        	logger.info("the warehouse man has been loaded");
+                        	inamovible[j][i]  = new Air(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                        	warehouseMan = new Worker(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_WORKER));
+                        	movible[j][i]  = warehouseMan;
+                        	if(nWareHouseMan==0)
+                        		nWareHouseMan++;
+                        	else {
+                        		logger.error("The level {} is wrong, there is more than one warehouse man", levelName );
+                        		return null;
+                        	}
+                        	logger.info("the warehouse man has been loaded({}, {})", i, j);
                             break;
                     }
                 }
             }
-
-            level = new Level(rows, cols,levelName, inamovible, movible);
+            if(nboxes== 0 ) {
+            	logger.error("The level {} is wrong, there should be at least one box", levelName);
+            	return null;
+            }
+            if(ngoals == 0 ) {
+            	logger.error("The level {} is wrong, there should be at least one goal", levelName);
+            	return null;
+            }
+            if(nboxes!=ngoals) {
+            	logger.error("The level {} is wrong, the number of boxes does not match the number of goals", levelName);
+            	return null;
+            	
+            }
+            level = new Level(cols,rows, levelName, inamovible, movible);
             level.setWarehouseMan(warehouseMan);
         } catch (IOException e) {
         	logger.error("error reading from file {}", file.getName());
