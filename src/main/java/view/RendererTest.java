@@ -11,7 +11,7 @@ public class RendererTest {
     private static int yDirection = 0;
 
     public static void main(String[] args) {
-        GameWorld mundo = new GameWorld("./src/sokoban/model/maps/test_level.txt");
+        GameWorld mundo = new GameWorld("./src/main/java/model/maps/test_level.txt");
         LevelLoader levelLoader = new LevelLoader();
         SokobanLogic logica = new SokobanLogic(mundo);
         String xd = mundo.getLevel().toString();

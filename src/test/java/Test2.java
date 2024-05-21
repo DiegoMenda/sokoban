@@ -21,9 +21,9 @@ public class Test2 {
     @BeforeEach
     void setUp() {
         cargador = new LevelLoader();
-        levelFile = new File("./src/sokoban/model/maps/test_level.txt");
+        levelFile = new File("./src/main/java/model/maps/test_level.txt");
         nivel = cargador.loadLevel(levelFile);
-        mundo = new GameWorld("./src/sokoban/model/maps/test_level.txt");
+        mundo = new GameWorld("./src/main/java/model/maps/test_level.txt");
         logica =new SokobanLogic(mundo);
     }
 
