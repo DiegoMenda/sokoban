@@ -35,9 +35,9 @@ public class Entity {
         }
     }
 	
-	public String toString(){
-			return "Entity";
-	}
+//	public String toString(){
+//			return "Entity";
+//	}
 	
 	public int getX() {
 		return this.x;

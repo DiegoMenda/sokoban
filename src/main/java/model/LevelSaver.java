@@ -53,7 +53,7 @@ public class LevelSaver {
 			return true;
 		} catch (IOException e) {
 			logger.error("error writing while saving the level {} in {}", level.getLevelName(), dir);
-			e.printStackTrace();
+			
 			return false;
 		}
 

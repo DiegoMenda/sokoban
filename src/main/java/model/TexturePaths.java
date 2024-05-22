@@ -21,7 +21,6 @@ public class TexturePaths {
     
     
     private TexturePaths() {
-    	logger.error("TexturePaths is a utility class and cannot be instantiated");
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
     

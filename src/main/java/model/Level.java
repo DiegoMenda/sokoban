@@ -31,14 +31,15 @@ public class Level {
 
 
 	
+
 	@Override
 	public String toString() {
 	    StringBuilder print = new StringBuilder();
 	    for (int i = 0; i < row; i++) {
 	        for (int j = 0; j < col; j++) {
-	            print.append(immovableEntities[i][j].toString());
+	            print.append(immovableEntities[i][j]);
 	        }
-	        print.append("\n");
+	        print.append('\n');
 	    }
 	    return print.toString();
 	}

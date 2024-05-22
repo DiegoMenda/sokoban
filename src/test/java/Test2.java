@@ -124,6 +124,13 @@ public class Test2 {
         assertEquals(1, nivel.getWarehouseMan().getX());
     }
     @Test
+    void canMoveFromTO4() {
+        logica.moveCharacter(0, 0);
+        nivel =mundo.getLevel();
+        assertEquals(1, nivel.getWarehouseMan().getY());
+        assertEquals(1, nivel.getWarehouseMan().getX());
+    }
+    @Test
     void cantMoveFromTO() {
         logica.moveCharacter(-1, 0);
         nivel =mundo.getLevel();
@@ -133,6 +140,13 @@ public class Test2 {
     @Test
     void cantMoveFromTO2() {
         logica.moveCharacter(0, -1);
+        nivel =mundo.getLevel();
+        assertEquals(1, nivel.getWarehouseMan().getY());
+        assertEquals(1, nivel.getWarehouseMan().getX());
+    }
+    @Test
+    void cantMoveFromTO3() {
+        logica.moveCharacter(-5,0);
         nivel =mundo.getLevel();
         assertEquals(1, nivel.getWarehouseMan().getY());
         assertEquals(1, nivel.getWarehouseMan().getX());
@@ -198,4 +212,12 @@ public class Test2 {
       Image im=TexturePaths.generateImage("hello");
         assertEquals(null, im);
     }
+    
+    @Test
+    //TODO INCOMPLETO POR FALTA DE METODO
+    void undo() {
+      nivel.undoMove();
+        assertTrue(true);
+    }
+
 }

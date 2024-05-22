@@ -100,7 +100,7 @@ public class LevelLoader {
             level.setWarehouseMan(warehouseMan);
         } catch (IOException | NullPointerException e) {
         	logger.error("error reading from file {}", file.getName());
-        	 e.printStackTrace();
+        	
         	return null;
            
         }
