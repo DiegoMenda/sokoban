@@ -29,6 +29,17 @@ public class GameWorld {
 		return this.level;
 	}
 	
+	public void addPuntuation() {
+		puntuation++;
+	}
+	public void subPuntuation() {
+		puntuation--;
+	}
+	
+	public int getPuntuation() {
+		return puntuation;
+	}
+	
 
 	
 	
