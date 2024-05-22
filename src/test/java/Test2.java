@@ -34,12 +34,12 @@ public class Test2 {
 
     @Test
     void readLevelRows() {
-        assertEquals(5, nivel.getRow());
+        assertEquals(3, nivel.getRow());
     }
 
     @Test
     void readLevelCols() {
-        assertEquals(5, nivel.getRow());
+        assertEquals(5, nivel.getCol());
     }
 
     @Test
@@ -49,17 +49,17 @@ public class Test2 {
 
     @Test
     void readWareHouseManPositionY() {
-    	System.out.println(nivel.getWarehouseMan().getY());
-        assertEquals(3, nivel.getWarehouseMan().getY());
+        System.out.println(nivel.getWarehouseMan().getY());
+        assertEquals(1, nivel.getWarehouseMan().getY());
     }
     @Test
     void canMoveFromTO() {
-    	logica.moveCharacter(1, 0);
-    	System.out.println(nivel.getWarehouseMan().getX());
-    	System.out.println(nivel.getWarehouseMan().getY());
-    	nivel =mundo.getLevel();
-        assertEquals(3, nivel.getWarehouseMan().getY());
+        logica.moveCharacter(1, 0);
+        System.out.println(nivel.getWarehouseMan().getX());
+        System.out.println(nivel.getWarehouseMan().getY());
+        nivel =mundo.getLevel();
+        assertEquals(1, nivel.getWarehouseMan().getY());
         assertEquals(2, nivel.getWarehouseMan().getX());
     }
-    
+
 }
