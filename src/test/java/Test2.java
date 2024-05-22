@@ -34,17 +34,21 @@ public class Test2 {
 
     @Test
     void readLevelRows() {
-        assertEquals(3, nivel.getRow());
+        assertEquals(5, nivel.getRow());
     }
 
     @Test
     void readLevelCols() {
-        assertEquals(5, nivel.getCol());
+        assertEquals(7, nivel.getCol());
     }
 
     @Test
     void readWareHouseManPositionX() {
         assertEquals(1, nivel.getWarehouseMan().getX());
+    }
+    @Test
+    void readBox() {
+        assertEquals("#", nivel.getMobileEntities(2, 1).toString());
     }
 
     @Test
@@ -61,5 +65,13 @@ public class Test2 {
         assertEquals(1, nivel.getWarehouseMan().getY());
         assertEquals(2, nivel.getWarehouseMan().getX());
     }
-
+    @Test
+    void cantMoveFromTO() {
+        logica.moveCharacter(-1, 0);
+        System.out.println(nivel.getWarehouseMan().getX());
+        System.out.println(nivel.getWarehouseMan().getY());
+        nivel =mundo.getLevel();
+        assertEquals(1, nivel.getWarehouseMan().getY());
+        assertEquals(1, nivel.getWarehouseMan().getX());
+    }
 }

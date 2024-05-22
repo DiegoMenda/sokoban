@@ -47,35 +47,35 @@ public class SokobanLogic {
 
 
 
-	private boolean canMoveCharacterTo(int x_to, int y_to, int x_from, int y_from) {
-		//canMoveTo(x_to + (x_to-x_from), y_to + (y_to-y_from)) 
+//	private boolean canMoveCharacterTo(int x_to, int y_to, int x_from, int y_from) {
+//		//canMoveTo(x_to + (x_to-x_from), y_to + (y_to-y_from)) 
+//
+//		if ( isValidPosition(x_to, y_to) ) {
+//			logger.info("canMoveCharacterTo: the character is able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
+//			return true;
+//		}
+//		else if( level.getMobileEntities(x_to, y_to) instanceof Box ) {
+//
+//
+//			if(isValidPosition(  x_to + (x_to-x_from), y_to + (y_to-y_from)  )) {
+//				logger.info("canMoveCharacterTo: the character is able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
+//				return true;
+//			}
+//			else {
+//				logger.info("canMoveCharacterTo: the character is NOT able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
+//				return false;
+//			}
+//		}
+//		else {
+//			logger.info("canMoveCharacterTo: the character is NOT able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
+//			return false;
+//		}
+//	}
 
-		if ( isValidPosition(x_to, y_to) ) {
-			logger.info("canMoveCharacterTo: the character is able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
-			return true;
-		}
-		else if( level.getMobileEntities(x_to, y_to) instanceof Box ) {
 
-
-			if(isValidPosition(  x_to + (x_to-x_from), y_to + (y_to-y_from)  )) {
-				logger.info("canMoveCharacterTo: the character is able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
-				return true;
-			}
-			else {
-				logger.info("canMoveCharacterTo: the character is NOT able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
-				return false;
-			}
-		}
-		else {
-			logger.info("canMoveCharacterTo: the character is NOT able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
-			return false;
-		}
-	}
-
-
-	private boolean checkGoal() {
-		return false;
-	}
+//	private boolean checkGoal() {
+//		return false;
+//	}
 
 
 
@@ -88,13 +88,13 @@ public class SokobanLogic {
 		int newX = warehouseMan.getX() + dx;
 		int newY = warehouseMan.getY() + dy;
 
-		if(dx == 0 && dy == 0) {
+	
 
 
-		}
-		else if (isValidPosition(newX, newY)) {
+		
+		if (isValidPosition(newX, newY) && (dx != 0 || dy != 0)) {
 
-			if(level.getMobileEntities(newX,newY) != null && level.getMobileEntities(newX,newY) instanceof Box) { // hay una caja en medio
+			if(level.getMobileEntities(newX,newY) instanceof Box) { // hay una caja en medio
 
 				if(isValidPosition( newX+dx, newY+dy)  && level.getMobileEntities(newX+dx, newY+dy) == null   ) { //en la posicion hay una caja que empujar
 					// mover la caja
@@ -131,7 +131,7 @@ public class SokobanLogic {
 				level.setMobileEntities(charX, charY, null);
 			}
 
-
+		
 		}
 
 
@@ -154,10 +154,10 @@ public class SokobanLogic {
 	//        }
 	//    }
 
-	private void nextLevel() {
-
-
-	}
+//	private void nextLevel() {
+//
+//
+//	}
 
 
 
