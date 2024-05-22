@@ -19,23 +19,19 @@ public class EntitiesRenderer extends JPanel {
         this.immovableEntity = immovableEntity;
     }
 
-    @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        for (Entity[] entityY : immovableEntity) {
-        	for(Entity entityX : entityY) {
-            if (entityX != null) {
-                entityX.draw(g);
+        drawEntities(g, immovableEntity);
+        drawEntities(g, mobileEntity);
+    }
+
+    private void drawEntities(Graphics g, Entity[][] entities) {
+        for (Entity[] entityRow : entities) {
+            for (Entity entity : entityRow) {
+                if (entity != null) {
+                    entity.draw(g);
+                }
             }
-        	}
-        }
-        
-        for (Entity[] entityY : mobileEntity) {
-        	for(Entity entityX : entityY) {
-            if (entityX != null) {
-                entityX.draw(g);
-            }
-        	}
         }
     }
     
