@@ -11,23 +11,7 @@ import org.slf4j.LoggerFactory;
 public class LevelLoader {
 	
 	private static final Logger logger = LoggerFactory.getLogger(LevelLoader.class);
-	public static void main(String[] args) {
-		//System.out.println(System.getProperty("user.dir"));
-		
-		
-		
-	        LevelLoader levelLoader = new LevelLoader();
-	        //File levelFile = new File(System.getProperty("user.dir")+"/src/sokoban/model/maps/test_level.txt"); 
-	        File levelFile = new File("./src/main/java/model/maps/test_level.txt"); 
-		       
-	        Level level = levelLoader.loadLevel(levelFile);
-	        String xd = level.toString();
-	        
-	        System.out.println(xd);
-	        
-	        
-	        
-	    }
+
 	
 	
 	
@@ -70,7 +54,7 @@ public class LevelLoader {
                             ngoals++;
                             break;
                         case '#':
-                            //inamovible[i][j] = new Box(i,j,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
+                            
                         	inamovible[y][x]  = new Air(x,y, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
                         	movible[y][x]  = new Box(x,y,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
                         	nboxes++;
@@ -88,8 +72,15 @@ public class LevelLoader {
                         	}
                         	logger.info("the warehouse man has been loaded({}, {})", x, y);
                             break;
+                         default:
+                        	 logger.error("the character {} readed is not valid", c);
+                        	 return null;
                     }
                 }
+            }
+            if(nWareHouseMan != 1) {
+            	logger.error("The level {} is wrong, there should be at least one warehouse man", levelName);
+            	return null;
             }
             if(nboxes== 0 ) {
             	logger.error("The level {} is wrong, there should be at least one box", levelName);
@@ -105,10 +96,13 @@ public class LevelLoader {
             	
             }
             level = new Level(cols,rows, levelName, inamovible, movible);
+           
             level.setWarehouseMan(warehouseMan);
-        } catch (IOException e) {
+        } catch (IOException | NullPointerException e) {
         	logger.error("error reading from file {}", file.getName());
-            e.printStackTrace();
+        	
+        	return null;
+           
         }
 
         return level;

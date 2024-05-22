@@ -6,8 +6,11 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class TexturePaths {
-	public static String def = "./src/main/java/model/textures/box.png";
+	private static final Logger logger = LoggerFactory.getLogger(TexturePaths.class);
     public static final String TEXTURE_WALL = "./src/main/java/model/textures/wall.png";
     public static final String TEXTURE_AIR = "./src/main/java/model/textures/air.png";
     public static final String TEXTURE_WORKER = "./src/main/java/model/textures/worker.png";
@@ -17,16 +20,19 @@ public class TexturePaths {
 
     
     
-    
+    private TexturePaths() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+    }
     
     public static Image generateImage(String path) {
     	
     	try {
+    		logger.info("image generated correctly from this path {}", path);
 			return ImageIO.read(new File(path));
 			
 		} catch (IOException e) {
-			//e.printStackTrace();
-			System.err.println("Not loaderd --> " + path  + " Sys dir actually is --> " + System.getProperty("user.dir"));
+			
+			logger.error("can not generate image correctly from this path {}", path);
 			return null;
 		}
     	
