@@ -4,7 +4,9 @@
   <artifactId>sokoban</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Sokoban</name>
-
+<properties>
+    <jacoco.version>0.8.6</jacoco.version>
+  </properties>
   <dependencies>
     <dependency>
         <groupId>org.junit.jupiter</groupId>
