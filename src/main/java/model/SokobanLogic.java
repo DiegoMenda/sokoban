@@ -88,17 +88,6 @@ public class SokobanLogic {
 		int newX = warehouseMan.getX() + dx;
 		int newY = warehouseMan.getY() + dy;
 
-		//        if (canMoveCharacterTo(newX, newY, warehouseMan.getX(), warehouseMan.getY())) {
-		//            if (level.getMobileEntities(newX, newY) instanceof Box) {
-		//                moveBox(newX, newY, dx, dy);
-		//            }
-		//            
-		//            (warehouseMan.getX(), warehouseMan.getY(), world.getEntity(newX, newY) );
-		//            
-		//            warehouseMan.setX(newX);
-		//            warehouseMan.setY(newY);
-		//            level.setMobileEntities(newX, newY, warehouseMan);
-		//        }
 		if(dx == 0 && dy == 0) {
 
 

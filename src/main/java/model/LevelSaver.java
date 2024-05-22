@@ -18,7 +18,7 @@ public class LevelSaver {
 
 
 		//		
-		//	        //File levelFile = new File(System.getProperty("user.dir")+"/src/sokoban/model/maps/test_level.txt"); 
+		//File levelFile = new File(System.getProperty("user.dir")+"/src/sokoban/model/maps/test_level.txt"); 
 		File levelFile = new File("./src/main/java/model/maps/test_level.txt"); 
 		//		       
 		Level level = LevelLoader.loadLevel(levelFile);

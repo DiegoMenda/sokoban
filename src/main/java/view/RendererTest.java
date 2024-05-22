@@ -46,7 +46,7 @@ public class RendererTest {
 
             @Override
             public void keyReleased(KeyEvent e) {
-                // Stop movement when key is released
+                //Stop
                 switch (e.getKeyCode()) {
                     case KeyEvent.VK_UP:
                     case KeyEvent.VK_DOWN:
@@ -60,14 +60,14 @@ public class RendererTest {
 
             @Override
             public void keyTyped(KeyEvent e) {
-                // Not used
+                // ¿Que es esto?
             }
         });
 
         SwingUtilities.invokeLater(() -> {
             gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             gameFrame.setVisible(true);
-            gameFrame.requestFocusInWindow(); // Ensure the frame is focused to capture key events
+            gameFrame.requestFocusInWindow();
         });
 
         while (true) {
@@ -75,7 +75,6 @@ public class RendererTest {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-                
             }
             gameFrame.renderFrame();
             logica.moveCharacter(xDirection, yDirection);

@@ -20,7 +20,6 @@ public class GameWorld {
 		this.level = LevelLoader.loadLevel(file);
 	}
 		
-	
 	public boolean eventMoveEntity() {
 		return false;
 	}
