@@ -14,7 +14,7 @@ import model.SokobanLogic;
 public class Test2 {
 
     private Level nivel;
-    private LevelLoader cargador;
+    private static LevelLoader cargador;
     private File levelFile;
     private GameWorld mundo;
     private SokobanLogic logica;
@@ -59,6 +59,28 @@ public class Test2 {
         assertEquals("+", nivel.getImmovableEntities(0, 0).toString());
     }
     @Test
+    void readGoal() {
+        assertEquals("*", nivel.getImmovableEntities(4, 1).toString());
+    }
+    @Test
+    void getImmovableEntities() {
+    
+        assertEquals("+", nivel.getImmovableEntities()[0][0].toString());
+    }
+    @Test
+    void getMovableEntities() {
+    
+        assertEquals("#", nivel.getMobileEntities()[1][2].toString());
+    }
+    @Test
+    void levelToString() {
+        assertEquals("+++++++\n"
+        		+ "+...*.+\n"
+        		+ "+.....+\n"
+        		+ "+.....+\n"
+        		+ "+++++++\n", nivel.toString());
+    }
+    @Test
     void readWareHouseMan() {
         assertEquals("W", nivel.getMobileEntities(1, 1).toString());
     }
@@ -70,44 +92,73 @@ public class Test2 {
     @Test
     void canMoveFromTO() {
         logica.moveCharacter(1, 0);
-        System.out.println(nivel.getWarehouseMan().getX());
-        System.out.println(nivel.getWarehouseMan().getY());
         nivel =mundo.getLevel();
         assertEquals(1, nivel.getWarehouseMan().getY());
         assertEquals(2, nivel.getWarehouseMan().getX());
     }
     @Test
+    void canMoveFromTO2() {
+        logica.moveCharacter(1, 0);
+        logica.moveCharacter(1, 0);
+        logica.moveCharacter(1, 0);
+        nivel =mundo.getLevel();
+        assertEquals(1, nivel.getWarehouseMan().getY());
+        assertEquals(4, nivel.getWarehouseMan().getX());
+    }
+    @Test
     void cantMoveFromTO() {
         logica.moveCharacter(-1, 0);
-        System.out.println(nivel.getWarehouseMan().getX());
-        System.out.println(nivel.getWarehouseMan().getY());
         nivel =mundo.getLevel();
         assertEquals(1, nivel.getWarehouseMan().getY());
         assertEquals(1, nivel.getWarehouseMan().getX());
     }
     @Test
+    void cantMoveFromTO2() {
+        logica.moveCharacter(0, -1);
+        nivel =mundo.getLevel();
+        assertEquals(1, nivel.getWarehouseMan().getY());
+        assertEquals(1, nivel.getWarehouseMan().getX());
+    }
+//    @Test
+//    void cantMoveFromTO3() {
+//        logica.moveCharacter(1, 1);
+//        nivel =mundo.getLevel();
+//        assertEquals(1, nivel.getWarehouseMan().getY());
+//        assertEquals(1, nivel.getWarehouseMan().getX());
+//    }
+    @Test
     void invalidCharLevel() {
-        mundo = new GameWorld("./src/main/java/model/maps/test_level_wrong_char.txt");
-        assertEquals(null, mundo.getLevel());
+        levelFile = new File("./src/main/java/model/maps/test_level_wrong_char.txt");
+        nivel = LevelLoader.loadLevel(levelFile);
+        assertEquals(null, nivel);
     }
     @Test
     void moreThanOneWhareHouseManInALevel() {
-        mundo = new GameWorld("./src/main/java/model/maps/test_level_2_warehouseMan.txt");
-        assertEquals(null, mundo.getLevel());
+        
+        levelFile = new File("./src/main/java/model/maps/test_level_2_warehouseMan.txt");
+        nivel = LevelLoader.loadLevel(levelFile);
+        assertEquals(null, nivel);
+     
     }
     @Test
     void noBoxesInALevel() {
-        mundo = new GameWorld("./src/main/java/model/maps/test_level_no_boxes.txt");
-        assertEquals(null, mundo.getLevel());
+        
+        levelFile = new File("./src/main/java/model/maps/test_level_no_boxes.txt");
+        nivel = LevelLoader.loadLevel(levelFile);
+        assertEquals(null, nivel);
     }
     @Test
     void noGoalsInALevel() {
-        mundo = new GameWorld("./src/main/java/model/maps/test_level_no_goals.txt");
-        assertEquals(null, mundo.getLevel());
+        
+        levelFile = new File("./src/main/java/model/maps/test_level_no_goals.txt");
+        nivel = LevelLoader.loadLevel(levelFile);
+        assertEquals(null, nivel);
     }
     @Test
     void differentNUmberOfGoalsAndBoxes() {
-        mundo = new GameWorld("./src/main/java/model/maps/test_level_nboxes_!=_ngoals.txt");
-        assertEquals(null, mundo.getLevel());
+        
+        levelFile = new File("./src/main/java/model/maps/test_level_nboxes_!=_ngoals.txt");
+        nivel = LevelLoader.loadLevel(levelFile);
+        assertEquals(null, nivel);
     }
 }
