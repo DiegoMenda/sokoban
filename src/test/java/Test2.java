@@ -2,6 +2,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.awt.Image;
 import java.io.File;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +14,8 @@ import model.ImmovableEntity;
 import model.Level;
 import model.LevelLoader;
 import model.SokobanLogic;
+import model.TexturePaths;
+import model.Wall;
 
 public class Test2 {
 
@@ -189,5 +192,10 @@ public class Test2 {
         levelFile = new File("./src/main/java/model/maps/test_level_no_whman.txt");
         nivel = LevelLoader.loadLevel(levelFile);
         assertEquals(null, nivel);
+    }
+    @Test
+    void createWithInvalidTexture() {
+      Image im=TexturePaths.generateImage("hello");
+        assertEquals(null, im);
     }
 }

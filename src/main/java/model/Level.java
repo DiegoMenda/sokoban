@@ -79,9 +79,9 @@ public class Level {
 	public ImmovableEntity getImmovableEntities(int x, int y) {
 		return immovableEntities[y][x];
 	}
-	public void setImmovableEntities(int x, int y, ImmovableEntity immovableEntity) {
-		immovableEntities[y][x] = immovableEntity;
-	}
+//	public void setImmovableEntities(int x, int y, ImmovableEntity immovableEntity) {
+//		immovableEntities[y][x] = immovableEntity;
+//	}
 
 	
 	public MobileEntity[][] getMobileEntities() {

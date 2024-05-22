@@ -78,7 +78,7 @@ public class LevelLoader {
                     }
                 }
             }
-            if(warehouseMan == null) {
+            if(nWareHouseMan != 1) {
             	logger.error("The level {} is wrong, there should be at least one warehouse man", levelName);
             	return null;
             }
