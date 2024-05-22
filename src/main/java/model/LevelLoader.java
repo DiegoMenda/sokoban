@@ -94,6 +94,10 @@ public class LevelLoader {
                     }
                 }
             }
+            if(warehouseMan == null) {
+            	logger.error("The level {} is wrong, there should be at least one warehouse man", levelName);
+            	return null;
+            }
             if(nboxes== 0 ) {
             	logger.error("The level {} is wrong, there should be at least one box", levelName);
             	return null;
@@ -108,10 +112,13 @@ public class LevelLoader {
             	
             }
             level = new Level(cols,rows, levelName, inamovible, movible);
+           
             level.setWarehouseMan(warehouseMan);
-        } catch (IOException e) {
+        } catch (IOException | NullPointerException e) {
         	logger.error("error reading from file {}", file.getName());
-            e.printStackTrace();
+        	 e.printStackTrace();
+        	return null;
+           
         }
 
         return level;

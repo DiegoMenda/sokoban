@@ -42,10 +42,10 @@ public class Level {
 
 
 	public void setWarehouseMan(Worker warehouseMan) {
-		if (warehouseMan == null) {
-			logger.error("setWarehouseMan error: The warehouseMan parameter is null");
-			throw new IllegalArgumentException("The warehouseMan parameter cannot be null");
-		}
+//		if (warehouseMan == null) {
+//			logger.error("setWarehouseMan error: The warehouseMan parameter is null");
+//			throw new IllegalArgumentException("The warehouseMan parameter cannot be null");
+//		}
 		this.warehouseMan = warehouseMan;
 
 	}

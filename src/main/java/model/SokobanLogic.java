@@ -101,10 +101,9 @@ public class SokobanLogic {
 					logger.info("the warehouse man moves the box from ({}, {}) to ({}, {})", newX, newY, newX+dx, newY+dy);
 					MobileEntity box = level.getMobileEntities(newX, newY);
 					if(level.getImmovableEntities(newX+dx, newY+dy) instanceof Goal) {
-						Goal gol = (Goal) level.getImmovableEntities(newX+dx, newY+dy);
-						gol.setGoalArchieved(true);
-						logger.info("GOOOOOL");
-						box.setImage(TexturePaths.generateImage(TexturePaths.TEXTURE_BOX2));
+						  ((Goal) level.getImmovableEntities(newX + dx, newY + dy)).setGoalArchieved(true);
+						    logger.info("GOOOOOL");
+						    box.setImage(TexturePaths.generateImage(TexturePaths.TEXTURE_BOX2));
 
 					}
 					if(level.getImmovableEntities(newX, newY) instanceof Goal)  {

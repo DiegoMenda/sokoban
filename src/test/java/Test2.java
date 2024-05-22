@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
@@ -7,6 +8,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import model.GameWorld;
+import model.Goal;
+import model.ImmovableEntity;
 import model.Level;
 import model.LevelLoader;
 import model.SokobanLogic;
@@ -99,11 +102,23 @@ public class Test2 {
     @Test
     void canMoveFromTO2() {
         logica.moveCharacter(1, 0);
+        
         logica.moveCharacter(1, 0);
+        //ImmovableEntity[][] ent = nivel.getImmovableEntities();
+        Goal gol = (Goal) mundo.getLevel().getImmovableEntities(4, 1);
+        assertTrue(gol.isGoalArchieved());
         logica.moveCharacter(1, 0);
+        assertFalse(gol.isGoalArchieved());
         nivel =mundo.getLevel();
         assertEquals(1, nivel.getWarehouseMan().getY());
         assertEquals(4, nivel.getWarehouseMan().getX());
+    }
+    @Test
+    void canMoveFromTO3() {
+        logica.moveCharacter(0, 1);
+        nivel =mundo.getLevel();
+        assertEquals(2, nivel.getWarehouseMan().getY());
+        assertEquals(1, nivel.getWarehouseMan().getX());
     }
     @Test
     void cantMoveFromTO() {
@@ -158,6 +173,13 @@ public class Test2 {
     void differentNUmberOfGoalsAndBoxes() {
         
         levelFile = new File("./src/main/java/model/maps/test_level_nboxes_!=_ngoals.txt");
+        nivel = LevelLoader.loadLevel(levelFile);
+        assertEquals(null, nivel);
+    }
+    @Test
+    void noLevel() {
+        
+        levelFile = new File("./src/main/java/model/maps/test_level_no_level.txt");
         nivel = LevelLoader.loadLevel(levelFile);
         assertEquals(null, nivel);
     }
