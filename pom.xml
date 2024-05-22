@@ -6,6 +6,14 @@
   <name>Sokoban</name>
 <properties>
     <jacoco.version>0.8.6</jacoco.version>
+
+		<!-- Files to be excluded from coverage. Define for the view+controller 
+			in your final projects -->
+		<sonar.coverage.exclusions>**/src/main/java/view</sonar.coverage.exclusions>
+		<jacoco.version>0.8.6</jacoco.version>
+		<sonar.scm.provider>git</sonar.scm.provider>
+		<sonar.language>java</sonar.language>
+
   </properties>
   <dependencies>
     <dependency>
@@ -71,7 +79,7 @@
 						</goals>
 						<phase>test</phase>
 					</execution>
-
+		
 				</executions>
 			</plugin>
 
