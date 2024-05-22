@@ -1,29 +1,56 @@
 package model;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 public class SokobanLogic {
 
 	private GameWorld world;
 	private Worker warehouseMan;
 	private Level level;
+	private Stack<Move> history;
 	private static final Logger logger = LoggerFactory.getLogger(SokobanLogic.class);
 	public SokobanLogic(GameWorld world) {
 		this.world=world;
 		this.level = world.getLevel();		
 		this.warehouseMan = level.getWarehouseMan();
+		history = new Stack<>();
 
 	}
-
+	
 
 	public void generalLogic(){
-
-
+		
 	}
 	/*
 	 * Si la posicion dentro del mapa es valida.
 	 */
+	public void undoMove() {
+		if(history.isEmpty()) {
+			logger.info("No move to undo");
+			return;
+		}
+		
+		Move lastMove = history.pop();
+		logger.info("Undoing move: {}", lastMove);
+		
+		if (lastMove.isBoxMove()) {
+            MobileEntity box = level.getMobileEntities(lastMove.getNewBoxX(), lastMove.getNewBoxY());
+            box.move(lastMove.getOldBoxX(), lastMove.getOldBoxY());
+            level.setMobileEntities(lastMove.getOldBoxX(), lastMove.getOldBoxY(), box);
+            level.setMobileEntities(lastMove.getOldBoxX(), lastMove.getOldBoxY(), null);
+
+        }
+		warehouseMan.move(lastMove.getOldX(),lastMove.getOldY());
+		level.setMobileEntities(lastMove.getOldX(), lastMove.getOldY(), warehouseMan);
+		level.setMobileEntities(lastMove.getNewX(), lastMove.getNewY(), null);
+	}
+	
 	private boolean isValidPosition(int x, int y) {
 
 		return (x >= 0 && y >= 0 && 
@@ -100,6 +127,7 @@ public class SokobanLogic {
 					// mover la caja
 					logger.info("the warehouse man moves the box from ({}, {}) to ({}, {})", newX, newY, newX+dx, newY+dy);
 					MobileEntity box = level.getMobileEntities(newX, newY);
+					history.push(new Move(charX,charY,newX,newY,box.getX(),box.getY(),newX+dx,newY+dy));
 					if(level.getImmovableEntities(newX+dx, newY+dy) instanceof Goal) {
 						Goal gol = (Goal) level.getImmovableEntities(newX+dx, newY+dy);
 						gol.setGoalArchieved(true);
@@ -120,11 +148,11 @@ public class SokobanLogic {
 					warehouseMan.move(newX, newY);
 					level.setMobileEntities(newX, newY, warehouseMan);
 					level.setMobileEntities(charX, charY, null);
-
 				}
 			}
 			else { // nueva posicion libre de cajas
 				// mover el personaje
+				history.push(new Move(charX,charY,newX,newY));
 				logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
 				warehouseMan.move(newX, newY);
 				level.setMobileEntities(newX, newY, warehouseMan);
@@ -158,8 +186,72 @@ public class SokobanLogic {
 
 
 	}
+	
+	private static class Move{
+		private final int oldX, oldY;
+		private final int newX, newY;
+		private final boolean boxMove;
+		private final int oldBoxX, oldBoxY, newBoxX, newBoxY;
+		
+		public Move(int oldX, int oldY, int newX, int newY) {
+			this.oldX = oldX;
+			this.oldY = oldY;
+			this.newX = newX;
+			this.newY = newY;
+			this.boxMove = false;
+			this.oldBoxX = this.oldBoxY = this.newBoxX = this.newBoxY = -1;
+		}
+		
+		
+		public Move(int oldX, int oldY, int newX, int newY, int oldBoxX, int oldBoxY, int newBoxX, int newBoxY) {
+			this.oldX = oldX;
+			this.oldY = oldY;
+			this.newX = newX;
+			this.newY = newY;
+			this.boxMove = true;
+			this.oldBoxX = oldBoxX;
+			this.oldBoxY = oldBoxY;
+			this.newBoxX = newBoxX;
+			this.newBoxY = newBoxY;
+		}
 
 
+		public int getOldX() {
+			return oldX;
+		}
+		public int getOldY() {
+			return oldY;
+		}
+		public int getNewX() {
+			return newX;
+		}
+		public int getNewY() {
+			return newY;
+		}
+		public boolean isBoxMove() {
+			return boxMove;
+		}
+		public int getOldBoxX() {
+			return oldBoxX;
+		}
+		public int getOldBoxY() {
+			return oldBoxY;
+		}
+		public int getNewBoxX() {
+			return newBoxX;
+		}
+		public int getNewBoxY() {
+			return newBoxY;
+		}
+
+
+		@Override
+		public String toString() {
+			return "Move [oldX=" + oldX + ", oldY=" + oldY + ", newX=" + newX + ", newY=" + newY + "]";
+		}
+		
+		
+	}
 
 
 }
