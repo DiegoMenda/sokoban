@@ -9,12 +9,13 @@ import model.*;
 public class RendererTest {
     private static int xDirection = 0;
     private static int yDirection = 0;
-
+    private static boolean unDo = false;
     public static void main(String[] args) {
         GameWorld mundo = new GameWorld("./src/main/java/model/maps/test_level.txt");
         LevelLoader levelLoader = new LevelLoader();
         SokobanLogic logica = new SokobanLogic(mundo);
         String xd = mundo.getLevel().toString();
+        boolean UnDo = false;
 
         System.out.println(xd);
 
@@ -41,6 +42,9 @@ public class RendererTest {
                         xDirection = 1;
                         yDirection = 0;
                         break;
+                    case KeyEvent.VK_Z:
+                    	unDo = true;
+                    	break;
                 }
             }
 
@@ -52,8 +56,9 @@ public class RendererTest {
                     case KeyEvent.VK_DOWN:
                     case KeyEvent.VK_LEFT:
                     case KeyEvent.VK_RIGHT:
-                        xDirection = 0;
-                        yDirection = 0;
+                    case KeyEvent.VK_Z:
+                    	xDirection = 0;
+                    	yDirection = 0;
                         break;
                 }
             }
@@ -72,12 +77,17 @@ public class RendererTest {
 
         while (true) {
             try {
-                Thread.sleep(120);
+                Thread.sleep(200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             gameFrame.renderFrame();
-            logica.moveCharacter(xDirection, yDirection);
+            if(!unDo) {
+                logica.moveCharacter(xDirection, yDirection);
+            }else {
+            	logica.undoMove();
+            	unDo = false;
+            }
         }
         
         
