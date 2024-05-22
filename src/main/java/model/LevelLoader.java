@@ -11,23 +11,23 @@ import org.slf4j.LoggerFactory;
 public class LevelLoader {
 	
 	private static final Logger logger = LoggerFactory.getLogger(LevelLoader.class);
-	public static void main(String[] args) {
-		//System.out.println(System.getProperty("user.dir"));
-		
-		
-		
-	        LevelLoader levelLoader = new LevelLoader();
-	        //File levelFile = new File(System.getProperty("user.dir")+"/src/sokoban/model/maps/test_level.txt"); 
-	        File levelFile = new File("./src/main/java/model/maps/test_level.txt"); 
-		       
-	        Level level = levelLoader.loadLevel(levelFile);
-	        String xd = level.toString();
-	        
-	        System.out.println(xd);
-	        
-	        
-	        
-	    }
+//	public static void main(String[] args) {
+//		//System.out.println(System.getProperty("user.dir"));
+//		
+//		
+//		
+//	        LevelLoader levelLoader = new LevelLoader();
+//	        //File levelFile = new File(System.getProperty("user.dir")+"/src/sokoban/model/maps/test_level.txt"); 
+//	        File levelFile = new File("./src/main/java/model/maps/test_level.txt"); 
+//		       
+//	        Level level = levelLoader.loadLevel(levelFile);
+//	        String xd = level.toString();
+//	        
+//	        System.out.println(xd);
+//	        
+//	        
+//	        
+//	    }
 	
 	
 	
@@ -88,6 +88,9 @@ public class LevelLoader {
                         	}
                         	logger.info("the warehouse man has been loaded({}, {})", x, y);
                             break;
+                         default:
+                        	 logger.error("the character {} readed is not valid", c);
+                        	 return null;
                     }
                 }
             }

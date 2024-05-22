@@ -17,10 +17,10 @@ public class SokobanLogic {
 	}
 
 
-	public void generalLogic(){
-
-
-	}
+//	public void generalLogic(){
+//
+//
+//	}
 	/*
 	 * Si la posicion dentro del mapa es valida.
 	 */
