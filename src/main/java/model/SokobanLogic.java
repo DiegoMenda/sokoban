@@ -17,10 +17,6 @@ public class SokobanLogic {
 	}
 
 
-//	public void generalLogic(){
-//
-//
-//	}
 	/*
 	 * Si la posicion dentro del mapa es valida.
 	 */
@@ -30,52 +26,6 @@ public class SokobanLogic {
 				x < world.getLevel().getCol()-1 && y < world.getLevel().getRow()-1 && 
 				level.getImmovableEntities(x, y).getPenetrable() );
 	}
-	/*
-	 * 
-	 * Comprueba si la posicion esta ocupada. De estarlo, devuelve quien la ocupa, de lo contrario, devuelve null.
-	 * 
-	 */
-	//	 private MobileEntity isPositionOccupied(int x, int y) {
-	//		 
-	//		 if(!isValidPosition(x,y)) {
-	//             System.err.println("La posicion suministrada ("+x+", " + y +") se encuentra fuera de la zona de desplazamiento valida");
-	//             return null;
-	//		 }
-	//		 
-	//		 return level.getMobileEntities(x, y);
-	//	 }
-
-
-
-//	private boolean canMoveCharacterTo(int x_to, int y_to, int x_from, int y_from) {
-//		//canMoveTo(x_to + (x_to-x_from), y_to + (y_to-y_from)) 
-//
-//		if ( isValidPosition(x_to, y_to) ) {
-//			logger.info("canMoveCharacterTo: the character is able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
-//			return true;
-//		}
-//		else if( level.getMobileEntities(x_to, y_to) instanceof Box ) {
-//
-//
-//			if(isValidPosition(  x_to + (x_to-x_from), y_to + (y_to-y_from)  )) {
-//				logger.info("canMoveCharacterTo: the character is able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
-//				return true;
-//			}
-//			else {
-//				logger.info("canMoveCharacterTo: the character is NOT able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
-//				return false;
-//			}
-//		}
-//		else {
-//			logger.info("canMoveCharacterTo: the character is NOT able to move from ({}, {}) to ({}, {}) ", x_from, y_from, x_to, y_to);
-//			return false;
-//		}
-//	}
-
-
-//	private boolean checkGoal() {
-//		return false;
-//	}
 
 
 
@@ -136,27 +86,7 @@ public class SokobanLogic {
 
 	}
 
-	//	private void moveBox(int x, int y, int dx, int dy) {
-	//        int newBoxX = x + dx;
-	//        int newBoxY = y + dy;
-	//
-	//        if (isValidPosition(newBoxX, newBoxY)) {
-	//        	if(level.getImmovableEntities(newBoxX, newBoxY) instanceof Goal) {
-	//        		logger.info("GOOOOOL");
-	//        		level.getImmovableEntities(newBoxX, newBoxY).setImage(TexturePaths.generateImage(TexturePaths.TEXTURE_BOX2));
-	//        	}
-	//        	logger.info("GOOOOOL");
-	//        	MobileEntity origin = level.getMobileEntities(x, y);
-	//        	MobileEntity destiny = level.getMobileEntities(newBoxX, newBoxY);
-	//            level.setMobileEntities(newBoxX, newBoxY, destiny);
-	//            level.setMobileEntities(x, y, destiny);
-	//        }
-	//    }
-
-//	private void nextLevel() {
-//
-//
-//	}
+	
 
 
 

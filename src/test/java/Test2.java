@@ -183,4 +183,11 @@ public class Test2 {
         nivel = LevelLoader.loadLevel(levelFile);
         assertEquals(null, nivel);
     }
+    @Test
+    void noWareHouseMan() {
+        
+        levelFile = new File("./src/main/java/model/maps/test_level_no_whman.txt");
+        nivel = LevelLoader.loadLevel(levelFile);
+        assertEquals(null, nivel);
+    }
 }

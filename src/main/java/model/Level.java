@@ -5,7 +5,8 @@ import org.slf4j.LoggerFactory;
 
 public class Level {
 
-	private int col, row;
+	private int col;
+	private int row;
 	private ImmovableEntity[][] immovableEntities;
 	private MobileEntity[][] mobileEntities;
 
@@ -28,24 +29,26 @@ public class Level {
 		logger.info("Undoing last movement");
 	}
 
-	public String toString(){
-		String print = "";
-		for(int i = 0; i < row; i++) {
 
-			for(int j = 0; j < col; j++) {
-				print = print + immovableEntities[i][j].toString();
-			}
-			if(i!=col-1) {print = print + "\n";}
-		}
-		return print;
+	
+	@Override
+	public String toString() {
+	    StringBuilder print = new StringBuilder();
+	    for (int i = 0; i < row; i++) {
+	        for (int j = 0; j < col; j++) {
+	            print.append(immovableEntities[i][j].toString());
+	        }
+	        print.append("\n");
+	    }
+	    return print.toString();
 	}
 
 
+
+
+
 	public void setWarehouseMan(Worker warehouseMan) {
-//		if (warehouseMan == null) {
-//			logger.error("setWarehouseMan error: The warehouseMan parameter is null");
-//			throw new IllegalArgumentException("The warehouseMan parameter cannot be null");
-//		}
+
 		this.warehouseMan = warehouseMan;
 
 	}
