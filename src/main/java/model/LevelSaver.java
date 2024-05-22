@@ -19,16 +19,14 @@ public class LevelSaver {
 
 		//		
 		//	        //File levelFile = new File(System.getProperty("user.dir")+"/src/sokoban/model/maps/test_level.txt"); 
-			        File levelFile = new File("./src/main/java/model/maps/test_level.txt"); 
+		File levelFile = new File("./src/main/java/model/maps/test_level.txt"); 
 		//		       
-			        Level level = LevelLoader.loadLevel(levelFile);
-			        String xd = level.toString();
+		Level level = LevelLoader.loadLevel(levelFile);
+		String xd = level.toString();
 		//	        
-			        System.out.println(xd);
-  
-			        LevelSaver.saveLevel(level, "./src/main/java/model/maps/test_level_save.txt");
-			        
- 
+		System.out.println(xd);
+
+		LevelSaver.saveLevel(level, "./src/main/java/model/maps/test_level_save.txt");
 
 	}
 
@@ -42,13 +40,17 @@ public class LevelSaver {
 			writer.newLine();
 
 			// Write the dimensions
-			writer.write(level.getRow() + " " + level.getRow());
+			writer.write(level.getRow() + " " + level.getCol());
 			writer.newLine();
 
 			// Write the grid of entities
-			for (int i = 0; i < level.getRow(); i++) {
-				for (int j = 0; j < level.getRow(); j++) {
-					writer.write(level.getImmovableEntities()[i][j].toString());
+			for (int y = 0; y < level.getRow(); y++) {
+				for (int x = 0; x < level.getCol(); x++) {
+					if(level.getMobileEntities(x,y) != null) {
+						writer.write(level.getMobileEntities(x,y).toString());
+					}else {
+						writer.write(level.getImmovableEntities(x,y).toString());
+					}
 				}
 				writer.newLine();
 			}

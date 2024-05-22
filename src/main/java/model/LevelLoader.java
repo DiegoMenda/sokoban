@@ -15,17 +15,17 @@ public class LevelLoader {
 		//System.out.println(System.getProperty("user.dir"));
 		
 		
-//		
-//	        LevelLoader levelLoader = new LevelLoader();
-//	        //File levelFile = new File(System.getProperty("user.dir")+"/src/sokoban/model/maps/test_level.txt"); 
-//	        File levelFile = new File("./src/sokoban/model/maps/test_level.txt"); 
-//		       
-//	        Level level = levelLoader.loadLevel(levelFile);
-//	        String xd = level.toString();
-//	        
-//	        System.out.println(xd);
-//	        
-//	        
+		
+	        LevelLoader levelLoader = new LevelLoader();
+	        //File levelFile = new File(System.getProperty("user.dir")+"/src/sokoban/model/maps/test_level.txt"); 
+	        File levelFile = new File("./src/main/java/model/maps/test_level.txt"); 
+		       
+	        Level level = levelLoader.loadLevel(levelFile);
+	        String xd = level.toString();
+	        
+	        System.out.println(xd);
+	        
+	        
 	        
 	    }
 	
@@ -48,45 +48,45 @@ public class LevelLoader {
             ImmovableEntity[][] inamovible = new ImmovableEntity[rows][cols];
             MobileEntity[][] movible = new MobileEntity[rows][cols];
 
-            for (int i = 0; i < rows; i++) {
+            for (int y = 0; y < rows; y++) {
                 String line = reader.readLine();
-                for (int j = 0; j < cols; j++) {
-                    char c = line.charAt(j);
+                for (int x = 0; x < cols; x++) {
+                    char c = line.charAt(x);
                     switch (c) {
                         case '+':
-                            inamovible[j][i] = new Wall(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_WALL));
-                            movible[j][i]  = null;
-                            logger.info("a wall has been loaded ({}, {})", i, j);
+                            inamovible[y][x] = new Wall(x,y, TexturePaths.generateImage(TexturePaths.TEXTURE_WALL));
+                            movible[y][x]  = null;
+                            logger.info("a wall has been loaded ({}, {})", x, y);
                             break;
                         case '.':
-                            inamovible[j][i]  = new Air(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
-                            movible[j][i]  = null;
+                            inamovible[y][x]  = new Air(x,y, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                            movible[y][x]  = null;
                             logger.info("an air");
                             break;
                         case '*':
-                            inamovible[j][i]  = new Goal(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_GOAL));
-                            movible[j][i] = null;
-                            logger.info("a goal has been loaded({}, {})", i, j);
+                            inamovible[y][x]  = new Goal(x,y, TexturePaths.generateImage(TexturePaths.TEXTURE_GOAL));
+                            movible[y][x] = null;
+                            logger.info("a goal has been loaded({}, {})", x, y);
                             ngoals++;
                             break;
                         case '#':
                             //inamovible[i][j] = new Box(i,j,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
-                        	inamovible[j][i]  = new Air(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
-                        	movible[j][i]  = new Box(j,i,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
+                        	inamovible[y][x]  = new Air(x,y, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                        	movible[y][x]  = new Box(x,y,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
                         	nboxes++;
-                        	logger.info("a box has been loaded({}, {})", i, j);
+                        	logger.info("a box has been loaded({}, {})", x, y);
                             break;
                         case 'W':
-                        	inamovible[j][i]  = new Air(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
-                        	warehouseMan = new Worker(j,i, TexturePaths.generateImage(TexturePaths.TEXTURE_WORKER));
-                        	movible[j][i]  = warehouseMan;
+                        	inamovible[y][x]  = new Air(x,y, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
+                        	warehouseMan = new Worker(x,y, TexturePaths.generateImage(TexturePaths.TEXTURE_WORKER));
+                        	movible[y][x]  = warehouseMan;
                         	if(nWareHouseMan==0)
                         		nWareHouseMan++;
                         	else {
                         		logger.error("The level {} is wrong, there is more than one warehouse man", levelName );
                         		return null;
                         	}
-                        	logger.info("the warehouse man has been loaded({}, {})", i, j);
+                        	logger.info("the warehouse man has been loaded({}, {})", x, y);
                             break;
                     }
                 }
