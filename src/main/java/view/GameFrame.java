@@ -12,7 +12,8 @@ import java.awt.event.ComponentEvent;
 public class GameFrame extends JFrame {
     private EntitiesRenderer renderer;
     private int puntuation = 0;
-
+    private String levelName = "";
+    
     public GameFrame(EntitiesRenderer renderer) {
         setTitle("Sokoban Game");
         setSize(800, 600);
@@ -57,6 +58,11 @@ public class GameFrame extends JFrame {
         this.puntuation = puntuation;
         repaint(); 
     }
+    
+    public void setLevelName(String levelName) {
+        this.levelName = levelName;
+        repaint(); 
+    }
 
     public void renderFrame() {
         renderer.repaint();
@@ -70,6 +76,7 @@ public class GameFrame extends JFrame {
             g.setFont(new Font("Arial", Font.PLAIN, 20));
             g.setColor(Color.BLACK); 
             g.drawString("Puntuacion: " + puntuation, 5, 30);
+            g.drawString("Nombre de nivel: " + levelName , 5, 55);
         }
     }
 }

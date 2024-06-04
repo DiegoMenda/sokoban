@@ -56,7 +56,7 @@ public class LevelLoader {
                         case '#':
                             
                         	inamovible[y][x]  = new Air(x,y, TexturePaths.generateImage(TexturePaths.TEXTURE_AIR));
-                        	movible[y][x]  = new Box(x,y,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX));
+                        	movible[y][x]  = new Box(x,y,  TexturePaths.generateImage(TexturePaths.TEXTURE_BOX), TexturePaths.generateImage(TexturePaths.TEXTURE_BOX2));
                         	nboxes++;
                         	logger.info("a box has been loaded({}, {})", x, y);
                             break;
