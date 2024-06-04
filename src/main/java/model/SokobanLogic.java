@@ -111,6 +111,7 @@ public class SokobanLogic {
 					warehouseMan.move(newX, newY);
 					level.setMobileEntities(newX, newY, warehouseMan);
 					level.setMobileEntities(charX, charY, null);
+					world.addPuntuation();
 				}
 			}
 			else { // nueva posicion libre de cajas
@@ -120,9 +121,10 @@ public class SokobanLogic {
 				warehouseMan.move(newX, newY);
 				level.setMobileEntities(newX, newY, warehouseMan);
 				level.setMobileEntities(charX, charY, null);
+				world.addPuntuation();
 			}
 
-			world.addPuntuation();
+			
 		}
 		else {
 			logger.info("the warehouse man can not move from ({}, {}) to ({}, {})", charX, charY, newX, newY);
