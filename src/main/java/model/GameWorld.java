@@ -1,47 +1,70 @@
 package model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
 import java.util.ArrayList;
 
+@XmlRootElement
 public class GameWorld {
 	
-	File levelFile;
+	private File levelFile;
 	private int puntuation;
-	private ArrayList localPuntuation;
+	private ArrayList<Integer> localPuntuation;
 	private Level level;
-	
 	
 	public GameWorld(String levelRoute) {
 		levelFile = new File(levelRoute); 
 		loadLevel(levelFile);
+		puntuation=0;
+	}
+	
+	public GameWorld() {
 	}
 
 	private void loadLevel(File file) {
 		this.level = LevelLoader.loadLevel(file);
 	}
-		
-//	public boolean eventMoveEntity() {
-//		return false;
-//	}
-	
+	@XmlElement
 	public Level getLevel() {
-		
 		return this.level;
 	}
-	
-	public void addPuntuation() {
-		puntuation++;
+	public void setLevel(Level level) {
+		this.level=level;
 	}
-	public void subPuntuation() {
-		puntuation--;
+	@XmlElement
+	public File getLevelFile() {
+		return levelFile;
 	}
-	
+
+
+	public void setLevelFile(File levelFile) {
+		this.levelFile = levelFile;
+	}
+
+	@XmlElement
 	public int getPuntuation() {
 		return puntuation;
 	}
-	
 
-	
-	
+	public void setPuntuation(int puntuation) {
+		this.puntuation = puntuation;
+	}
 
+	@XmlElement
+	public ArrayList<Integer> getLocalPuntuation() {
+		return localPuntuation;
+	}
+
+	public void setLocalPuntuation(ArrayList<Integer> localPuntuation) {
+		this.localPuntuation = localPuntuation;
+	}
+
+	public void addPuntuation() {
+		puntuation++;
+	}
+	
+	public void subPuntuation() {
+		puntuation--;
+	}
 }

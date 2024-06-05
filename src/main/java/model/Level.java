@@ -1,101 +1,95 @@
 package model;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.xml.bind.annotation.*;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Level {
 
-	private int col;
-	private int row;
-	private ImmovableEntity[][] immovableEntities;
-	private MobileEntity[][] mobileEntities;
+    @XmlElement
+    private int col;
 
-	private String levelName;
-	private Worker warehouseMan;
-	private static final Logger logger = LoggerFactory.getLogger(Level.class);
+    @XmlElement
+    private int row;
 
-	public Level(int col, int row, String levelName, ImmovableEntity[][] immovableEntity, MobileEntity[][] mobileEntities) {
-		this.col = col;
-		this.row = row;
-		this.immovableEntities = immovableEntity;
-		this.mobileEntities = mobileEntities;
-		this.levelName = levelName;
-	}
+    @XmlElementWrapper(name="immovableEntities")
+    @XmlElement(name="row")
+    private ImmovableEntity[][] immovableEntities;
 
+    @XmlElementWrapper(name="mobileEntities")
+    @XmlElement(name="row")
+    private MobileEntity[][] mobileEntities;
 
+    @XmlElement
+    private String levelName;
 
+    @XmlElement
+    private Worker warehouseMan;
 
-	public void undoMove(){
-		logger.info("Undoing last movement");
-	}
+    public Level() {
+        // Este constructor vacío es necesario para JAXB
+    }
 
+    public Level(int col, int row, String levelName, ImmovableEntity[][] immovableEntities, MobileEntity[][] mobileEntities) {
+        this.col = col;
+        this.row = row;
+        this.immovableEntities = immovableEntities;
+        this.mobileEntities = mobileEntities;
+        this.levelName = levelName;
+    }
 
-	
+    public void undoMove(){
+        // Lógica para deshacer un movimiento
+    }
 
-	@Override
-	public String toString() {
-	    StringBuilder print = new StringBuilder();
-	    for (int i = 0; i < row; i++) {
-	        for (int j = 0; j < col; j++) {
-	            print.append(immovableEntities[i][j]);
-	        }
-	        print.append('\n');
-	    }
-	    return print.toString();
-	}
+    public String toString() {
+        StringBuilder print = new StringBuilder();
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                print.append(immovableEntities[i][j]);
+            }
+            print.append('\n');
+        }
+        return print.toString();
+    }
 
+    public void setWarehouseMan(Worker warehouseMan) {
+        this.warehouseMan = warehouseMan;
+    }
 
+    public Worker getWarehouseMan() {
+        return this.warehouseMan;
+    }
 
+    public int getRow() {
+        return this.row;
+    }
 
+    public int getCol() {
+        return this.col;
+    }
 
-	public void setWarehouseMan(Worker warehouseMan) {
+    public String getLevelName() {
+        return levelName;
+    }
 
-		this.warehouseMan = warehouseMan;
+    public ImmovableEntity[][] getImmovableEntities() {
+        return immovableEntities;
+    }
 
-	}
-	
-	public Worker getWarehouseMan() {
-		return this.warehouseMan;
-	}
+    public ImmovableEntity getImmovableEntities(int x, int y) {
+        return immovableEntities[y][x];
+    }
 
+    public MobileEntity[][] getMobileEntities() {
+        return mobileEntities;
+    }
 
-	public int getRow() {
+    public MobileEntity getMobileEntities(int x, int y) {
+        return mobileEntities[y][x];
+    }
 
-		return this.row;
-	}
-
-	public int getCol() {
-		return this.col;
-	}
-	
-
-	public String getLevelName() {
-		return levelName;
-	}
-	
-	public ImmovableEntity[][] getImmovableEntities() {
-		return immovableEntities;
-	}
-	
-	public ImmovableEntity getImmovableEntities(int x, int y) {
-		return immovableEntities[y][x];
-	}
-//	public void setImmovableEntities(int x, int y, ImmovableEntity immovableEntity) {
-//		immovableEntities[y][x] = immovableEntity;
-//	}
-
-	
-	public MobileEntity[][] getMobileEntities() {
-		return mobileEntities;
-	}
-	
-	public MobileEntity getMobileEntities(int x, int y) {
-		return mobileEntities[y][x];
-	}
-	
-	public void setMobileEntities(int x, int y, MobileEntity mobileEntity) {
-		 mobileEntities[y][x] = mobileEntity;
-	}
-
-
+    public void setMobileEntities(int x, int y, MobileEntity mobileEntity) {
+        mobileEntities[y][x] = mobileEntity;
+    }
 }

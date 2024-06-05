@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -112,6 +114,7 @@ public class SokobanLogic {
 					level.setMobileEntities(newX, newY, warehouseMan);
 					level.setMobileEntities(charX, charY, null);
 					world.addPuntuation();
+					logger.info("la puntuacion nueva es {}", world.getPuntuation());
 				}
 			}
 			else { // nueva posicion libre de cajas
@@ -122,6 +125,7 @@ public class SokobanLogic {
 				level.setMobileEntities(newX, newY, warehouseMan);
 				level.setMobileEntities(charX, charY, null);
 				world.addPuntuation();
+				logger.info("la puntuacion nueva es {}", world.getPuntuation());
 			}
 
 			
@@ -154,72 +158,19 @@ public class SokobanLogic {
 
 
 	}
-	
-	private static class Move{
-		private final int oldX, oldY;
-		private final int newX, newY;
-		private final boolean boxMove;
-		private final int oldBoxX, oldBoxY, newBoxX, newBoxY;
-		
-		public Move(int oldX, int oldY, int newX, int newY) {
-			this.oldX = oldX;
-			this.oldY = oldY;
-			this.newX = newX;
-			this.newY = newY;
-			this.boxMove = false;
-			this.oldBoxX = this.oldBoxY = this.newBoxX = this.newBoxY = -1;
-		}
-		
-		
-		public Move(int oldX, int oldY, int newX, int newY, int oldBoxX, int oldBoxY, int newBoxX, int newBoxY) {
-			this.oldX = oldX;
-			this.oldY = oldY;
-			this.newX = newX;
-			this.newY = newY;
-			this.boxMove = true;
-			this.oldBoxX = oldBoxX;
-			this.oldBoxY = oldBoxY;
-			this.newBoxX = newBoxX;
-			this.newBoxY = newBoxY;
-		}
-
-
-		public int getOldX() {
-			return oldX;
-		}
-		public int getOldY() {
-			return oldY;
-		}
-		public int getNewX() {
-			return newX;
-		}
-		public int getNewY() {
-			return newY;
-		}
-		public boolean isBoxMove() {
-			return boxMove;
-		}
-		public int getOldBoxX() {
-			return oldBoxX;
-		}
-		public int getOldBoxY() {
-			return oldBoxY;
-		}
-		public int getNewBoxX() {
-			return newBoxX;
-		}
-		public int getNewBoxY() {
-			return newBoxY;
-		}
-
-
-		@Override
-		public String toString() {
-			return "Move [oldX=" + oldX + ", oldY=" + oldY + ", newX=" + newX + ", newY=" + newY + "]";
-		}
-		
-		
+	//GETTER DE LA PILA (BORRAR SI A ISAM NO LE PARECE BIEN
+	public Stack<Move> getHistory() {
+	    return history;
 	}
+	
+		
+//	public GameWorld getWorld() {
+//		return world;
+//	}
+	
+public int getPuntuation() {
+	return world.getPuntuation();
+}
 
 
 }
