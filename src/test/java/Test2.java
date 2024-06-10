@@ -1,9 +1,14 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.awt.Image;
 import java.io.File;
+import java.lang.reflect.Constructor;
+import java.util.ArrayList;
 import java.util.stream.Stream;
 
 import javax.xml.bind.JAXBException;
@@ -20,11 +25,14 @@ import model.ImmovableEntity;
 import model.Level;
 import model.LevelLoader;
 import model.LevelSaver;
+import model.Move;
+import model.Position;
 import model.SokobanLogic;
 import model.TexturePaths;
 import model.Wall;
+import model.Box;
 
-public class Test2 {
+class Test2 {
 
     private Level nivel;
     private static LevelLoader cargador;
@@ -190,12 +198,31 @@ public class Test2 {
     }
 
     @Test
-   
     void undo() {
-        logica.moveCharacter(0, -1);
+        logica.moveCharacter(0, 1);
+        assertFalse(logica.getHistory().isEmpty());
         nivel =mundo.getLevel();
-      nivel.undoMove();
-        assertTrue(true);
+        logica.undoMove();
+        assertEquals(1, nivel.getWarehouseMan().getY());
+        assertEquals(1, nivel.getWarehouseMan().getX());
+    }
+    @Test
+    void undoNoHistory() {
+        
+        assertTrue(logica.getHistory().isEmpty());
+        nivel =mundo.getLevel();
+        logica.undoMove();
+        assertEquals(1, nivel.getWarehouseMan().getY());
+        assertEquals(1, nivel.getWarehouseMan().getX());
+    }
+    @Test
+    void undoBoxMovement() {
+   
+        logica.moveCharacter(1, 0);
+        
+        nivel =mundo.getLevel();
+        logica.undoMove();
+       
         assertEquals(1, nivel.getWarehouseMan().getY());
         assertEquals(1, nivel.getWarehouseMan().getX());
     }
@@ -207,11 +234,69 @@ public class Test2 {
     	GameWorldWithHistory mundohistoria = new GameWorldWithHistory(mundo, logica.getHistory());
     	
     	LevelSaver.saveToXML(mundohistoria,"./src/main/java/model/maps/test_level_save");
+    	LevelSaver.saveToXML(mundohistoria,"./src/main/java/model/maps/test_level_save");
     	GameWorldWithHistory  leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
     	assertEquals("Nivel 1",leido.getGameWorld().getLevel().getLevelName());
     	
     }
-    	
+    @Test void onlyreadLevel() throws JAXBException{
+    	GameWorldWithHistory  leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
+    	assertEquals("Nivel 1",leido.getGameWorld().getLevel().getLevelName());
+    	 leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
+    	assertEquals("Nivel 1",leido.getGameWorld().getLevel().getLevelName());
+    }
+
     
+    @Test 
+    void changeLocalPuntuation() {
+    	ArrayList<Integer> lista = new ArrayList<Integer>();
+    	lista.add(77);
+    	mundo.setLocalPuntuation(lista);
+    	assertEquals(77, mundo.getLocalPuntuation().get(0));
+    }
+   
+    @Test void moveEmptyCOnstructor() {
+    	Move movimiento= new Move();
+    	assertEquals(-1, movimiento.getNewX());
+    	assertEquals(-1, movimiento.getNewY());
+    	assertEquals(-1, movimiento.getOldX());
+    	assertEquals(-1, movimiento.getOldY());
+    	assertEquals(-1, movimiento.getOldBoxX());
+    	assertEquals(-1, movimiento.getOldBoxY());
+    	assertEquals(-1, movimiento.getNewBoxX());
+    	assertEquals(-1, movimiento.getNewBoxY());
+
+    }
+    @Test
+    void testMoveGetters() {
+        
+        Position oldPosition = new Position(1, 2);
+        Position newPosition = new Position(3, 4);
+        Position oldBoxPosition = new Position(5, 6);
+        Position newBoxPosition = new Position(7, 8);
+
+        
+        Move move = new Move(oldPosition, newPosition, oldBoxPosition, newBoxPosition);
+
+       
+        assertEquals(1, move.getOldX());
+        assertEquals(2, move.getOldY());
+        assertEquals(3, move.getNewX());
+        assertEquals(4, move.getNewY());
+        assertEquals(5, move.getOldBoxX());
+        assertEquals(6, move.getOldBoxY());
+        assertEquals(7, move.getNewBoxX());
+        assertEquals(8, move.getNewBoxY());
+        assertEquals(true, move.isBoxMove());
+    }
+
+
+
+
+
+
+
+
+
     
 }

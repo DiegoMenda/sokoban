@@ -95,7 +95,12 @@ public class SokobanLogic {
 					// mover la caja
 					logger.info("the warehouse man moves the box from ({}, {}) to ({}, {})", newX, newY, newX+dx, newY+dy);
 					MobileEntity box = level.getMobileEntities(newX, newY);
-					history.push(new Move(charX,charY,newX,newY,box.getX(),box.getY(),newX+dx,newY+dy));
+					Position oldPosition = new Position(charX, charY);
+					Position newPosition = new Position(newX, newY);
+					Position oldBoxPosition = new Position(box.getX(), box.getY());
+					Position newBoxPosition = new Position(newX + dx, newY + dy);
+
+					history.push(new Move(oldPosition, newPosition, oldBoxPosition, newBoxPosition));
 					if(level.getImmovableEntities(newX+dx, newY+dy) instanceof Goal) {
 						  ((Goal) level.getImmovableEntities(newX + dx, newY + dy)).setGoalArchieved(true);
 						    logger.info("We reached the goal.");
@@ -120,7 +125,11 @@ public class SokobanLogic {
 			}
 			else { // nueva posicion libre de cajas
 				// mover el personaje
-				history.push(new Move(charX,charY,newX,newY));
+				Position oldPosition = new Position(charX, charY);
+				Position newPosition = new Position(newX, newY);
+
+				history.push(new Move(oldPosition, newPosition));
+
 				logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
 				warehouseMan.move(newX, newY);
 				level.setMobileEntities(newX, newY, warehouseMan);
