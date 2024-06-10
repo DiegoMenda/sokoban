@@ -1,6 +1,8 @@
 package model;
 
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 
@@ -14,13 +16,13 @@ public class SokobanLogic {
 	private GameWorld world;
 	private Worker warehouseMan;
 	private Level level;
-	private Stack<Move> history;
+	private Deque<Move> history;
 	private static final Logger logger = LoggerFactory.getLogger(SokobanLogic.class);
 	public SokobanLogic(GameWorld world) {
 		this.world=world;
 		this.level = world.getLevel();		
 		this.warehouseMan = level.getWarehouseMan();
-		history = new Stack<>();
+		history = new LinkedList<>();
 
 	}
 	
@@ -158,7 +160,7 @@ public class SokobanLogic {
 
 	}
 	//GETTER DE LA PILA (BORRAR SI A ISAM NO LE PARECE BIEN
-	public Stack<Move> getHistory() {
+	public Deque<Move>  getHistory() {
 	    return history;
 	}
 	

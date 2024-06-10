@@ -2,20 +2,22 @@ package model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Stack;
+
+import java.util.Deque;
+
 
 @XmlRootElement
 public class GameWorldWithHistory {
 
     private GameWorld gameWorld;
-    private Stack<Move> history;
+    private Deque<Move> history;
 
     // Constructor vacío
     public GameWorldWithHistory() {
         
     }
 
-    public GameWorldWithHistory(GameWorld gameWorld, Stack<Move> history) {
+    public GameWorldWithHistory(GameWorld gameWorld, Deque<Move> history) {
         this.history=history;
         this.gameWorld = gameWorld;
     }
@@ -30,11 +32,11 @@ public class GameWorldWithHistory {
     }
 
     @XmlElement
-    public Stack<Move> getHistory() {
+    public Deque<Move>getHistory() {
         return history;
     }
 
-    public void setHistory(Stack<Move> history) {
+    public void setHistory(Deque<Move> history) {
         this.history = history;
     }
 }
