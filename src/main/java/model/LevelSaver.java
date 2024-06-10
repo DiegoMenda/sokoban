@@ -21,37 +21,32 @@ import org.slf4j.LoggerFactory;
 public class LevelSaver {
 
 	private static final Logger logger = LoggerFactory.getLogger(LevelSaver.class);
-	public static void main(String[] args) {
-		 try {
-	            GameWorld gameWorld = new GameWorld("./src/main/java/model/maps/test_level.txt");
-	            GameWorldWithHistory gameWorldWithHistory = new GameWorldWithHistory(gameWorld, null);
-	            //gameWorldWithHistory.getHistory().push(new Move(1, 2, 3, 4));
+	private static JAXBContext context;
+	
 
-	            // Guardar en XML
-	            saveToXML(gameWorldWithHistory, "./src/main/java/model/maps/test_level_save");
-
-	            // Leer desde XML
-	            GameWorldWithHistory loadedGameWorldWithHistory = readFromXML("./src/main/java/model/maps/test_level_save");
-	            System.out.println("Loaded GameWorldWithHistory: " + loadedGameWorldWithHistory.getHistory());
-
-	        } catch (JAXBException e) {
-	            e.printStackTrace();
-	        }
-
-	}
 
 
 	 public static void saveToXML(GameWorldWithHistory gameWorldWithHistory, String filePath) throws JAXBException {
-	        JAXBContext context = JAXBContext.newInstance(GameWorldWithHistory.class);
+	        if (context == null) {
+	            context = JAXBContext.newInstance(GameWorldWithHistory.class);
+	        }
+
 	        Marshaller marshaller = context.createMarshaller();
 	        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 	        marshaller.marshal(gameWorldWithHistory, new File(filePath));
 	    }
 
 	    // Método para leer desde XML
-	    public static GameWorldWithHistory readFromXML(String filePath) throws JAXBException {
-	        JAXBContext context = JAXBContext.newInstance(GameWorldWithHistory.class);
-	        Unmarshaller unmarshaller = context.createUnmarshaller();
-	        return (GameWorldWithHistory) unmarshaller.unmarshal(new File(filePath));
-	    }
+	 public static GameWorldWithHistory readFromXML(String filePath) throws JAXBException {
+		    JAXBContext context = getJAXBContext();
+		    Unmarshaller unmarshaller = context.createUnmarshaller();
+		    return (GameWorldWithHistory) unmarshaller.unmarshal(new File(filePath));
+		}
+
+		private static JAXBContext getJAXBContext() throws JAXBException {
+		    if (context == null) {
+		        context = JAXBContext.newInstance(GameWorldWithHistory.class);
+		    }
+		    return context;
+		}
 }
