@@ -4,64 +4,54 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Move {
-    private final int oldX;
-    private final int oldY;
-    private final int newX;
-    private final int newY;
+    private final Position oldPosition;
+    private final Position newPosition;
     private final boolean boxMove;
-    private final int oldBoxX;
-    private final int oldBoxY;
-    private final int newBoxX;
-    private final int newBoxY;
+    private final Position oldBoxPosition;
+    private final Position newBoxPosition;
 
-    public Move(int oldX, int oldY, int newX, int newY) {
-        this.oldX = oldX;
-        this.oldY = oldY;
-        this.newX = newX;
-        this.newY = newY;
+    public Move(Position oldPosition, Position newPosition) {
+        this.oldPosition = oldPosition;
+        this.newPosition = newPosition;
         this.boxMove = false;
-        this.oldBoxX = this.oldBoxY = this.newBoxX = this.newBoxY = -1;
+        this.oldBoxPosition = this.newBoxPosition = null;
     }
 
     public Move() {
         // Constructor por defecto
-        this.oldX = this.oldY = this.newX = this.newY = -1;
+        this.oldPosition = this.newPosition = null;
         this.boxMove = false;
-        this.oldBoxX = this.oldBoxY = this.newBoxX = this.newBoxY = -1;
+        this.oldBoxPosition = this.newBoxPosition = null;
     }
 
-    public Move(int oldX, int oldY, int newX, int newY, int oldBoxX, int oldBoxY, int newBoxX, int newBoxY) {
-        this.oldX = oldX;
-        this.oldY = oldY;
-        this.newX = newX;
-        this.newY = newY;
+    public Move(Position oldPosition, Position newPosition, Position oldBoxPosition, Position newBoxPosition) {
+        this.oldPosition = oldPosition;
+        this.newPosition = newPosition;
         this.boxMove = true;
-        this.oldBoxX = oldBoxX;
-        this.oldBoxY = oldBoxY;
-        this.newBoxX = newBoxX;
-        this.newBoxY = newBoxY;
+        this.oldBoxPosition = oldBoxPosition;
+        this.newBoxPosition = newBoxPosition;
     }
 
     // Getters
 
     @XmlElement
     public int getOldX() {
-        return oldX;
+        return oldPosition != null ? oldPosition.getX() : -1;
     }
 
     @XmlElement
     public int getOldY() {
-        return oldY;
+        return oldPosition != null ? oldPosition.getY() : -1;
     }
 
     @XmlElement
     public int getNewX() {
-        return newX;
+        return newPosition != null ? newPosition.getX() : -1;
     }
 
     @XmlElement
     public int getNewY() {
-        return newY;
+        return newPosition != null ? newPosition.getY() : -1;
     }
 
     @XmlElement
@@ -71,26 +61,26 @@ public class Move {
 
     @XmlElement
     public int getOldBoxX() {
-        return oldBoxX;
+        return oldBoxPosition != null ? oldBoxPosition.getX() : -1;
     }
 
     @XmlElement
     public int getOldBoxY() {
-        return oldBoxY;
+        return oldBoxPosition != null ? oldBoxPosition.getY() : -1;
     }
 
     @XmlElement
     public int getNewBoxX() {
-        return newBoxX;
+        return newBoxPosition != null ? newBoxPosition.getX() : -1;
     }
 
     @XmlElement
     public int getNewBoxY() {
-        return newBoxY;
+        return newBoxPosition != null ? newBoxPosition.getY() : -1;
     }
 
     @Override
     public String toString() {
-        return "Move [oldX=" + oldX + ", oldY=" + oldY + ", newX=" + newX + ", newY=" + newY + "]";
+        return "Move [oldPosition=" + oldPosition + ", newPosition=" + newPosition + "]";
     }
 }
