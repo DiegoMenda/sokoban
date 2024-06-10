@@ -3,10 +3,15 @@ package model;
 import java.awt.Graphics;
 import java.awt.Image;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
 
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 
 public class Entity {
 	
@@ -17,7 +22,9 @@ public class Entity {
 	int x;
 	int y;
 	Image textureImage;
-	
+	public Entity() {
+		
+	}
 	public Entity(int x, int y, Image textureImage) {
 		
 		this.x = x;

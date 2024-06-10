@@ -1,62 +1,53 @@
 package model;
 
 
-import java.io.BufferedWriter;
+
+
 import java.io.File;
 
-import java.io.FileWriter;
-import java.io.IOException;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+
 public class LevelSaver {
 
 	private static final Logger logger = LoggerFactory.getLogger(LevelSaver.class);
-//	public static void main(String[] args) {
-//		
-//		File levelFile = new File("./src/main/java/model/maps/test_level.txt"); 
-//		//		       
-//		Level level = LevelLoader.loadLevel(levelFile);
-//		String xd = level.toString();
-//		//	        
-//		System.out.println(xd);
-//
-//		LevelSaver.saveLevel(level, "./src/main/java/model/maps/test_level_save.txt");
-//
-//	}
+	private static JAXBContext context;
+	
+	 private LevelSaver() {
+	        // Este constructor está vacío, ya que no necesitamos inicializar nada en esta clase
+	    }
 
 
+	 public static void saveToXML(GameWorldWithHistory gameWorldWithHistory, String filePath) throws JAXBException {
+	        if (context == null) {
+	            context = JAXBContext.newInstance(GameWorldWithHistory.class);
+	        }
+	        logger.info("saving game in xml format on the following route {} ", filePath);
+	        Marshaller marshaller = context.createMarshaller();
+	        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+	        marshaller.marshal(gameWorldWithHistory, new File(filePath));
+	    }
 
-	public static boolean saveLevel(Level level, String dir) {
-		logger.info("saving level {} in {}", level.getLevelName(), dir);
-		try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(dir)))) {
-			// Write the level name
-			writer.write(level.getLevelName());
-			writer.newLine();
-
-			// Write the dimensions
-			writer.write(level.getRow() + " " + level.getCol());
-			writer.newLine();
-
-			// Write the grid of entities
-			for (int y = 0; y < level.getRow(); y++) {
-				for (int x = 0; x < level.getCol(); x++) {
-					if(level.getMobileEntities(x,y) != null) {
-						writer.write(level.getMobileEntities(x,y).toString());
-					}else {
-						writer.write(level.getImmovableEntities(x,y).toString());
-					}
-				}
-				writer.newLine();
-			}
-			return true;
-		} catch (IOException e) {
-			logger.error("error writing while saving the level {} in {}", level.getLevelName(), dir);
-			
-			return false;
+	    // Método para leer desde XML
+	 public static GameWorldWithHistory readFromXML(String filePath) throws JAXBException {
+		 logger.info("reading game in xml format from the following route {} ", filePath);
+		    JAXBContext context = getJAXBContext();
+		    Unmarshaller unmarshaller = context.createUnmarshaller();
+		    return (GameWorldWithHistory) unmarshaller.unmarshal(new File(filePath));
 		}
 
-	}
-
+		private static JAXBContext getJAXBContext() throws JAXBException {
+		    if (context == null) {
+		        context = JAXBContext.newInstance(GameWorldWithHistory.class);
+		    }
+		    return context;
+		}
 }

@@ -5,14 +5,18 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.awt.Image;
 import java.io.File;
 
+import javax.xml.bind.JAXBException;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import model.GameWorld;
+import model.GameWorldWithHistory;
 import model.Goal;
 import model.ImmovableEntity;
 import model.Level;
 import model.LevelLoader;
+import model.LevelSaver;
 import model.SokobanLogic;
 import model.TexturePaths;
 import model.Wall;
@@ -212,12 +216,30 @@ public class Test2 {
       Image im=TexturePaths.generateImage("hello");
         assertEquals(null, im);
     }
-    
+
     @Test
-    //TODO INCOMPLETO POR FALTA DE METODO
+   
     void undo() {
+        logica.moveCharacter(0, -1);
+        nivel =mundo.getLevel();
       nivel.undoMove();
         assertTrue(true);
+        assertEquals(1, nivel.getWarehouseMan().getY());
+        assertEquals(1, nivel.getWarehouseMan().getX());
     }
-
+    
+    @Test
+    void saveLevel() throws JAXBException {
+    	logica.moveCharacter(0, 1);
+    	assertEquals(1, logica.getPuntuation());
+    	GameWorldWithHistory mundohistoria = new GameWorldWithHistory(mundo, logica.getHistory());
+    	
+    	LevelSaver.saveToXML(mundohistoria,"./src/main/java/model/maps/test_level_save");
+    	GameWorldWithHistory  leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
+    	assertEquals("Nivel 1",leido.getGameWorld().getLevel().getLevelName());
+    	
+    }
+    	
+    
+    
 }

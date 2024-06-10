@@ -8,7 +8,9 @@ public class Worker extends MobileEntity{
 		super(x, y, textureImage);
 
 	}
-	
+	public Worker() {
+		
+	}
 	@Override
 	public String toString() {
 		
