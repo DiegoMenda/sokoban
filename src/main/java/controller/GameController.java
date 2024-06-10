@@ -28,16 +28,16 @@ public class GameController {
 
     private void initController() {
         keyListener.setupKeyBindings(gameFrame.getRootPane());
-
         SwingUtilities.invokeLater(() -> {
-            gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            gameFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
             gameFrame.setVisible(true);
             gameFrame.requestFocusInWindow();
         });
-
-        Timer gameTimer = new Timer(50, e -> updateGame()); /// ¿Le ponemos menos?
+        Timer gameTimer = new Timer(50, e -> updateGame());
         gameTimer.start();
     }
+
 
     private void updateGame() {
         entitiesRenderer.repaint();

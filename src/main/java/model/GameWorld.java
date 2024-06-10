@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 @XmlRootElement
 public class GameWorld {
@@ -52,12 +53,12 @@ public class GameWorld {
 	}
 
 	@XmlElement
-	public ArrayList<Integer> getLocalPuntuation() {
-		return localPuntuation;
+	public List<Integer> getLocalPuntuation() {
+	    return localPuntuation;
 	}
 
-	public void setLocalPuntuation(ArrayList<Integer> localPuntuation) {
-		this.localPuntuation = localPuntuation;
+	public void setLocalPuntuation(List<Integer> localPuntuation) {
+	    this.localPuntuation = (ArrayList<Integer>) localPuntuation;
 	}
 
 	public void addPuntuation() {

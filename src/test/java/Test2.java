@@ -216,10 +216,7 @@ public class Test2 {
       Image im=TexturePaths.generateImage("hello");
         assertEquals(null, im);
     }
-    @Test void save(){
-    	
-    	
-    }
+
     @Test
    
     void undo() {

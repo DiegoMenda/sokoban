@@ -1,10 +1,9 @@
 package model;
 
-import java.util.LinkedList;
-import java.util.Queue;
+
 import java.util.Stack;
 
-import javax.xml.bind.annotation.XmlRootElement;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -164,9 +163,7 @@ public class SokobanLogic {
 	}
 	
 		
-//	public GameWorld getWorld() {
-//		return world;
-//	}
+
 	
 public int getPuntuation() {
 	return world.getPuntuation();

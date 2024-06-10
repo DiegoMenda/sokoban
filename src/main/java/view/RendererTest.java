@@ -3,8 +3,6 @@ package view;
 import javax.swing.SwingUtilities;
 import javax.swing.JFrame;
 import javax.swing.Timer;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import model.*;
@@ -16,7 +14,7 @@ public class RendererTest {
     private static boolean moveCooldown = false;
 
     public static void main(String[] args) {
-        String mapas[] = new String[9];
+        String[] mapas = new String[9];
         mapas[0] = "/src/main/java/model/maps/test_level.txt";
         mapas[1] = "/src/main/java/model/maps/test_level_no_boxes.txt";
         mapas[2] = "/src/main/java/model/maps/test_level_no_goals.txt";
@@ -94,23 +92,21 @@ public class RendererTest {
             gameFrame.requestFocusInWindow();
         });
 
-        Timer gameTimer = new Timer(200, new ActionListener() { // Reducing the interval to 100ms
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                gameFrame.renderFrame();
-                if (!unDo) {
-                    if (xDirection != 0 || yDirection != 0) {
-                        logica.moveCharacter(xDirection, yDirection);
-                    }
-                } else {
-                    logica.undoMove();
-                    unDo = false;
+        Timer gameTimer = new Timer(100, e -> {
+            gameFrame.renderFrame();
+            if (!unDo) {
+                if (xDirection != 0 || yDirection != 0) {
+                    logica.moveCharacter(xDirection, yDirection);
                 }
-                gameFrame.setPuntuation(mundo.getPuntuation());
-                moveCooldown = false; // Reset cooldown after each timer tick
+            } else {
+                logica.undoMove();
+                unDo = false;
             }
+            gameFrame.setPuntuation(mundo.getPuntuation());
+            moveCooldown = false; // Reset cooldown after each timer tick
         });
 
         gameTimer.start();
+
     }
 }

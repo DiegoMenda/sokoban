@@ -4,10 +4,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Move {
-    private final int oldX, oldY;
-    private final int newX, newY;
+    private final int oldX;
+    private final int oldY;
+    private final int newX;
+    private final int newY;
     private final boolean boxMove;
-    private final int oldBoxX, oldBoxY, newBoxX, newBoxY;
+    private final int oldBoxX;
+    private final int oldBoxY;
+    private final int newBoxX;
+    private final int newBoxY;
 
     public Move(int oldX, int oldY, int newX, int newY) {
         this.oldX = oldX;
