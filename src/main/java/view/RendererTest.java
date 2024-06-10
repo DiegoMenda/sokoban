@@ -23,12 +23,12 @@ public class RendererTest {
         mapas[5] = "/src/main/java/model/maps/test_level_nboxes_!=_ngoals.txt";
 
         GameWorld mundo = new GameWorld("./src/main/java/model/maps/test_level.txt");
-        LevelLoader levelLoader = new LevelLoader();
+
         SokobanLogic logica = new SokobanLogic(mundo);
         String xd = mundo.getLevel().toString();
-        boolean UnDo = false;
+       
 
-        System.out.println(xd);
+        
 
         EntitiesRenderer rend = new EntitiesRenderer(mundo.getLevel().getMobileEntities(), mundo.getLevel().getImmovableEntities());
         GameFrame gameFrame = new GameFrame(rend);

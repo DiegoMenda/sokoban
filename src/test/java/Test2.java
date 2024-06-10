@@ -4,11 +4,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.awt.Image;
 import java.io.File;
+import java.util.stream.Stream;
 
 import javax.xml.bind.JAXBException;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import model.GameWorld;
 import model.GameWorldWithHistory;
@@ -162,54 +165,23 @@ public class Test2 {
 //        assertEquals(1, nivel.getWarehouseMan().getY());
 //        assertEquals(1, nivel.getWarehouseMan().getX());
 //    }
-    @Test
-    void invalidCharLevel() {
-        levelFile = new File("./src/main/java/model/maps/test_level_wrong_char.txt");
-        nivel = LevelLoader.loadLevel(levelFile);
+    @ParameterizedTest
+    @MethodSource("provideInvalidLevelFiles")
+    void testInvalidLevels(File levelFile) {
+        Level nivel = LevelLoader.loadLevel(levelFile);
         assertEquals(null, nivel);
     }
-    @Test
-    void moreThanOneWhareHouseManInALevel() {
-        
-        levelFile = new File("./src/main/java/model/maps/test_level_2_warehouseMan.txt");
-        nivel = LevelLoader.loadLevel(levelFile);
-        assertEquals(null, nivel);
-     
-    }
-    @Test
-    void noBoxesInALevel() {
-        
-        levelFile = new File("./src/main/java/model/maps/test_level_no_boxes.txt");
-        nivel = LevelLoader.loadLevel(levelFile);
-        assertEquals(null, nivel);
-    }
-    @Test
-    void noGoalsInALevel() {
-        
-        levelFile = new File("./src/main/java/model/maps/test_level_no_goals.txt");
-        nivel = LevelLoader.loadLevel(levelFile);
-        assertEquals(null, nivel);
-    }
-    @Test
-    void differentNUmberOfGoalsAndBoxes() {
-        
-        levelFile = new File("./src/main/java/model/maps/test_level_nboxes_!=_ngoals.txt");
-        nivel = LevelLoader.loadLevel(levelFile);
-        assertEquals(null, nivel);
-    }
-    @Test
-    void noLevel() {
-        
-        levelFile = new File("./src/main/java/model/maps/test_level_no_level.txt");
-        nivel = LevelLoader.loadLevel(levelFile);
-        assertEquals(null, nivel);
-    }
-    @Test
-    void noWareHouseMan() {
-        
-        levelFile = new File("./src/main/java/model/maps/test_level_no_whman.txt");
-        nivel = LevelLoader.loadLevel(levelFile);
-        assertEquals(null, nivel);
+
+    private static Stream<File> provideInvalidLevelFiles() {
+        return Stream.of(
+            new File("./src/main/java/model/maps/test_level_wrong_char.txt"),
+            new File("./src/main/java/model/maps/test_level_2_warehouseMan.txt"),
+            new File("./src/main/java/model/maps/test_level_no_boxes.txt"),
+            new File("./src/main/java/model/maps/test_level_no_goals.txt"),
+            new File("./src/main/java/model/maps/test_level_nboxes_!=_ngoals.txt"),
+            new File("./src/main/java/model/maps/test_level_no_level.txt"),
+            new File("./src/main/java/model/maps/test_level_no_whman.txt")
+        );
     }
     @Test
     void createWithInvalidTexture() {
