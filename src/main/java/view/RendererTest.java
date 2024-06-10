@@ -25,7 +25,7 @@ public class RendererTest {
         GameWorld mundo = new GameWorld("./src/main/java/model/maps/test_level.txt");
 
         SokobanLogic logica = new SokobanLogic(mundo);
-        String xd = mundo.getLevel().toString();
+       
        
 
         

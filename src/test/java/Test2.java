@@ -24,7 +24,7 @@ import model.SokobanLogic;
 import model.TexturePaths;
 import model.Wall;
 
-public class Test2 {
+class Test2 {
 
     private Level nivel;
     private static LevelLoader cargador;
