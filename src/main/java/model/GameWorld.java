@@ -10,21 +10,33 @@ import java.util.List;
 public class GameWorld {
 	
 	private File levelFile;
-	private int puntuation;
+	private int globalPuntuation;
 	private ArrayList<Integer> localPuntuation;
 	private Level level;
 	
 	public GameWorld(String levelRoute) {
 		levelFile = new File(levelRoute); 
+		localPuntuation = new ArrayList<Integer>();
 		loadLevel(levelFile);
-		puntuation=0;
+		globalPuntuation=0;
+		//levelNumber = 0;
 	}
 	
 	public GameWorld() {
+		
 	}
 
 	private void loadLevel(File file) {
-		this.level = LevelLoader.loadLevel(file);
+		Level nivel = LevelLoader.loadLevel(file);
+		if(nivel != null) {
+			//88
+			this.level = nivel;
+			LevelNumber.levelNumber++;
+			localPuntuation.add(LevelNumber.levelNumber-1, 0);
+		} else {
+			
+			System.out.println("\n\n\nGAME OVER BRO\n\n\n");
+		}
 	}
 	@XmlElement
 	public Level getLevel() {
@@ -45,11 +57,11 @@ public class GameWorld {
 
 	@XmlElement
 	public int getPuntuation() {
-		return puntuation;
+		return globalPuntuation;
 	}
 
 	public void setPuntuation(int puntuation) {
-		this.puntuation = puntuation;
+		this.globalPuntuation = puntuation;
 	}
 
 	@XmlElement
@@ -62,10 +74,40 @@ public class GameWorld {
 	}
 
 	public void addPuntuation() {
-		puntuation++;
+		localPuntuation.add(LevelNumber.levelNumber-1, localPuntuation.get(LevelNumber.levelNumber-1)+1);
 	}
 	
 	public void subPuntuation() {
-		puntuation--;
+		localPuntuation.add(LevelNumber.levelNumber-1, localPuntuation.get(LevelNumber.levelNumber-1)-1);
 	}
+	
+	public Level getNextLevel() {
+	    String currentLevelName = level.getLevelName();
+	    int currentLevelNumber = LevelNumber.levelNumber;
+	    String nextLevelName = "./src/main/java/model/maps/level_" + (currentLevelNumber + 1) + ".txt";
+	    File file = new File(nextLevelName);
+	    loadLevel(file);
+	    return level;
+	}
+	
+//	public boolean isGameOver() {
+//	    String currentLevelName = level.getLevelName();
+//	    int currentLevelNumber = Integer.parseInt(currentLevelName.substring(6));
+//	    return getNextLevel() == null;
+//	}
+
+	
+	
+	// devuelve false si hemos terminado
+	public boolean loadNextLevel() {
+	    Level nextLevel = getNextLevel();
+	    if (nextLevel != null) {
+	        level = nextLevel;
+	        globalPuntuation = 0;
+	        return false;
+	    }
+	    return true;
+	}
+	
+	
 }

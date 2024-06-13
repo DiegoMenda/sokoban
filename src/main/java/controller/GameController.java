@@ -33,7 +33,9 @@ public class GameController {
 
             gameFrame.setVisible(true);
             gameFrame.requestFocusInWindow();
+            
         });
+        
         Timer gameTimer = new Timer(50, e -> updateGame());
         gameTimer.start();
     }
@@ -43,9 +45,31 @@ public class GameController {
         entitiesRenderer.repaint();
         gameFrame.setPuntuation(gameWorld.getPuntuation());
         gameFrame.setLevelName(gameWorld.getLevel().getLevelName());
+        
+        checkLevelCompletion();
+    }
+    
+    private void checkLevelCompletion() {
+        if (sokobanLogic.isLevelCompleted()) {
+            entitiesRenderer.repaint();
+            // Introduces a delay of 1 second (1000 ms) before loading the next level.
+            Timer delayTimer = new Timer(1000, evt -> {
+                // Cargar el siguiente nivel
+                System.err.println(gameWorld.getLevel());
+                gameWorld.loadNextLevel();
+                // Update view
+                entitiesRenderer.setMobileEntity(gameWorld.getLevel().getMobileEntities());
+                entitiesRenderer.setImmovableEntity(gameWorld.getLevel().getImmovableEntities());
+                ((Timer) evt.getSource()).stop(); // Detener el timer después de la ejecución
+            });
+            delayTimer.setRepeats(false);
+            delayTimer.start();
+        }
     }
 
     public static void main(String[] args) {
-        new GameController("./src/main/java/model/maps/test_level.txt");
+        new GameController("./src/main/java/model/maps/level_1.txt");
     }
+    
+    
 }

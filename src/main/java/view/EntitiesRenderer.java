@@ -18,6 +18,17 @@ public class EntitiesRenderer extends JPanel {
         this.mobileEntity = mobileEntity;
         this.immovableEntity = immovableEntity;
     }
+    
+    public void setMobileEntity(MobileEntity[][] mobileEntity) {
+        this.mobileEntity = mobileEntity;
+
+
+    }
+
+    public void setImmovableEntity(ImmovableEntity[][] immovableEntity) {
+        this.immovableEntity = immovableEntity;
+    }
+    
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

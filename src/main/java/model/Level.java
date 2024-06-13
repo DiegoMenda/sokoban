@@ -50,6 +50,16 @@ public class Level {
             }
             print.append('\n');
         }
+        print.append('\n');
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+            	if(mobileEntities[i][j] != null)
+                print.append(mobileEntities[i][j]);
+            	else print.append('.');
+            }
+            print.append('\n');
+        }
+        
         return print.toString();
     }
 
