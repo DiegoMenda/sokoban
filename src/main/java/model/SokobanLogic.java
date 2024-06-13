@@ -14,16 +14,15 @@ import org.slf4j.LoggerFactory;
 public class SokobanLogic {
 
 	private GameWorld world;
-	private Worker warehouseMan;
-	private Level level;
+	//private Worker warehouseMan;
+	//private Level level;  --> world.getLevel()
 	private Deque<Move> history;
 	private static final Logger logger = LoggerFactory.getLogger(SokobanLogic.class);
 	public SokobanLogic(GameWorld world) {
 		this.world=world;
-		this.level = world.getLevel();		
-		this.warehouseMan = level.getWarehouseMan();
+		//this.level = world.getLevel();		
+		//this.warehouseMan = world.getLevel().getWarehouseMan();
 		history = new LinkedList<>();
-
 	}
 	
 
@@ -40,24 +39,24 @@ public class SokobanLogic {
 		logger.info("Undoing move: {}", lastMove);
 		
 
-		warehouseMan.move(lastMove.getOldX(),lastMove.getOldY());
-		level.setMobileEntities(lastMove.getOldX(), lastMove.getOldY(), warehouseMan);
-		level.setMobileEntities(lastMove.getNewX(), lastMove.getNewY(), null);
+		world.getLevel().getWarehouseMan().move(lastMove.getOldX(),lastMove.getOldY());
+		world.getLevel().setMobileEntities(lastMove.getOldX(), lastMove.getOldY(), world.getLevel().getWarehouseMan());
+		world.getLevel().setMobileEntities(lastMove.getNewX(), lastMove.getNewY(), null);
 		
 		if (lastMove.isBoxMove()) {
-            MobileEntity box = level.getMobileEntities(lastMove.getNewBoxX(), lastMove.getNewBoxY());
+            MobileEntity box = world.getLevel().getMobileEntities(lastMove.getNewBoxX(), lastMove.getNewBoxY());
             box.move(lastMove.getOldBoxX(), lastMove.getOldBoxY());
-            level.setMobileEntities(lastMove.getOldBoxX(), lastMove.getOldBoxY(), box);
-            level.setMobileEntities(lastMove.getNewBoxX(), lastMove.getNewBoxY(), null);
+            world.getLevel().setMobileEntities(lastMove.getOldBoxX(), lastMove.getOldBoxY(), box);
+            world.getLevel().setMobileEntities(lastMove.getNewBoxX(), lastMove.getNewBoxY(), null);
 
-            if(level.getImmovableEntities(lastMove.getOldBoxX(), lastMove.getOldBoxY()) instanceof Goal)  {
+            if(world.getLevel().getImmovableEntities(lastMove.getOldBoxX(), lastMove.getOldBoxY()) instanceof Goal)  {
             	((Box) box).setBoxOnGoalTexture();
-				Goal gol = (Goal) level.getImmovableEntities(lastMove.getOldBoxX(), lastMove.getOldBoxY());
+				Goal gol = (Goal) world.getLevel().getImmovableEntities(lastMove.getOldBoxX(), lastMove.getOldBoxY());
 				gol.setGoalArchieved(true);
 			}
-            else if(level.getImmovableEntities(lastMove.getNewBoxX(), lastMove.getNewBoxY()) instanceof Goal)  {
+            else if(world.getLevel().getImmovableEntities(lastMove.getNewBoxX(), lastMove.getNewBoxY()) instanceof Goal)  {
             	((Box) box).setNormalBoxTexture();
-				Goal gol = (Goal) level.getImmovableEntities(lastMove.getNewBoxX(), lastMove.getNewBoxY());
+				Goal gol = (Goal) world.getLevel().getImmovableEntities(lastMove.getNewBoxX(), lastMove.getNewBoxY());
 				gol.setGoalArchieved(false);
 			}
             else {
@@ -73,7 +72,7 @@ public class SokobanLogic {
 
 		return (x >= 0 && y >= 0 && 
 				x < world.getLevel().getCol()-1 && y < world.getLevel().getRow()-1 && 
-				level.getImmovableEntities(x, y).getPenetrable() );
+				world.getLevel().getImmovableEntities(x, y).getPenetrable() );
 	}
 
 
@@ -81,44 +80,44 @@ public class SokobanLogic {
 	public void moveCharacter(int dx, int dy) {
 
 
-
-		int charX = warehouseMan.getX();
-		int charY = warehouseMan.getY();
-		int newX = warehouseMan.getX() + dx;
-		int newY = warehouseMan.getY() + dy;
+		
+		int charX = world.getLevel().getWarehouseMan().getX();
+		int charY = world.getLevel().getWarehouseMan().getY();
+		int newX = world.getLevel().getWarehouseMan().getX() + dx;
+		int newY = world.getLevel().getWarehouseMan().getY() + dy;
 
 		if (isValidPosition(newX, newY) && (dx != 0 || dy != 0)) {
 
-			if(level.getMobileEntities(newX,newY) instanceof Box) { // hay una caja en medio
+			if(world.getLevel().getMobileEntities(newX,newY) instanceof Box) { // hay una caja en medio
 
-				if(isValidPosition( newX+dx, newY+dy)  && level.getMobileEntities(newX+dx, newY+dy) == null   ) { //en la posicion hay una caja que empujar
+				if(isValidPosition( newX+dx, newY+dy)  && world.getLevel().getMobileEntities(newX+dx, newY+dy) == null   ) { //en la posicion hay una caja que empujar
 					// mover la caja
 					logger.info("the warehouse man moves the box from ({}, {}) to ({}, {})", newX, newY, newX+dx, newY+dy);
-					MobileEntity box = level.getMobileEntities(newX, newY);
+					MobileEntity box = world.getLevel().getMobileEntities(newX, newY);
 					Position oldPosition = new Position(charX, charY);
 					Position newPosition = new Position(newX, newY);
 					Position oldBoxPosition = new Position(box.getX(), box.getY());
 					Position newBoxPosition = new Position(newX + dx, newY + dy);
 
 					history.push(new Move(oldPosition, newPosition, oldBoxPosition, newBoxPosition));
-					if(level.getImmovableEntities(newX+dx, newY+dy) instanceof Goal) {
-						  ((Goal) level.getImmovableEntities(newX + dx, newY + dy)).setGoalArchieved(true);
+					if(world.getLevel().getImmovableEntities(newX+dx, newY+dy) instanceof Goal) {
+						  ((Goal) world.getLevel().getImmovableEntities(newX + dx, newY + dy)).setGoalArchieved(true);
 						    logger.info("We reached the goal.");
 						    ((Box)box).setBoxOnGoalTexture();
 					}
-					if(level.getImmovableEntities(newX, newY) instanceof Goal)  {
+					if(world.getLevel().getImmovableEntities(newX, newY) instanceof Goal)  {
 						((Box)box).setNormalBoxTexture();
-						Goal gol = (Goal) level.getImmovableEntities(newX, newY);
+						Goal gol = (Goal) world.getLevel().getImmovableEntities(newX, newY);
 						gol.setGoalArchieved(false);
 					}
 					box.move(newX+dx, newY+dy);
-					level.setMobileEntities(newX+dx, newY+dy, box);
+					world.getLevel().setMobileEntities(newX+dx, newY+dy, box);
 
 					logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
 					// mover el personaje
-					warehouseMan.move(newX, newY);
-					level.setMobileEntities(newX, newY, warehouseMan);
-					level.setMobileEntities(charX, charY, null);
+					world.getLevel().getWarehouseMan().move(newX, newY);
+					world.getLevel().setMobileEntities(newX, newY, world.getLevel().getWarehouseMan());
+					world.getLevel().setMobileEntities(charX, charY, null);
 					world.addPuntuation();
 					logger.info("la puntuacion nueva es {}", world.getPuntuation());
 				}
@@ -131,9 +130,9 @@ public class SokobanLogic {
 				history.push(new Move(oldPosition, newPosition));
 
 				logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
-				warehouseMan.move(newX, newY);
-				level.setMobileEntities(newX, newY, warehouseMan);
-				level.setMobileEntities(charX, charY, null);
+				world.getLevel().getWarehouseMan().move(newX, newY);
+				world.getLevel().setMobileEntities(newX, newY, world.getLevel().getWarehouseMan());
+				world.getLevel().setMobileEntities(charX, charY, null);
 				world.addPuntuation();
 				logger.info("la puntuacion nueva es {}", world.getPuntuation());
 			}
@@ -146,33 +145,35 @@ public class SokobanLogic {
 		
 
 	}
-
-	//	private void moveBox(int x, int y, int dx, int dy) {
-	//        int newBoxX = x + dx;
-	//        int newBoxY = y + dy;
-	//
-	//        if (isValidPosition(newBoxX, newBoxY)) {
-	//        	if(level.getImmovableEntities(newBoxX, newBoxY) instanceof Goal) {
-	//        		logger.info("GOOOOOL");
-	//        		level.getImmovableEntities(newBoxX, newBoxY).setImage(TexturePaths.generateImage(TexturePaths.TEXTURE_BOX2));
-	//        	}
-	//        	logger.info("GOOOOOL");
-	//        	MobileEntity origin = level.getMobileEntities(x, y);
-	//        	MobileEntity destiny = level.getMobileEntities(newBoxX, newBoxY);
-	//            level.setMobileEntities(newBoxX, newBoxY, destiny);
-	//            level.setMobileEntities(x, y, destiny);
-	//        }
-	//    }
-
+	
+	
+	
 	private void nextLevel() {
-
-
+		world.loadNextLevel();
 	}
+	
+	
 	//GETTER DE LA PILA (BORRAR SI A ISAM NO LE PARECE BIEN
 	public Deque<Move>  getHistory() {
 	    return history;
 	}
 	
+	
+	
+	
+	public boolean isLevelCompleted() {
+	    for (int y = 0; y < world.getLevel().getRow(); y++) {
+	        for (int x = 0; x < world.getLevel().getCol(); x++) {
+	            if (world.getLevel().getImmovableEntities(x, y) instanceof Goal) {
+	                Goal goal = (Goal) world.getLevel().getImmovableEntities(x, y);
+	                if (!goal.isGoalArchieved()) {
+	                    return false;
+	                }
+	            }
+	        }
+	    }
+	    return true;
+	}
 		
 
 	
