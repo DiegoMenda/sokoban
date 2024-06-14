@@ -1,23 +1,28 @@
 package model;
 
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
 
 import java.util.Deque;
+import java.util.List;
 
 
 @XmlRootElement
+//@XmlAccessorType(XmlAccessType.FIELD)
+@XmlSeeAlso({Wall.class, Air.class, Goal.class, Worker.class, Box.class})
 public class GameWorldWithHistory {
 
     private GameWorld gameWorld;
-    private Deque<Move> history;
+    private List<Move> history;
 
     // Constructor vacío
     public GameWorldWithHistory() {
         
     }
 
-    public GameWorldWithHistory(GameWorld gameWorld, Deque<Move> history) {
+    public GameWorldWithHistory(GameWorld gameWorld, List<Move> history) {
         this.history=history;
         this.gameWorld = gameWorld;
     }
@@ -32,11 +37,11 @@ public class GameWorldWithHistory {
     }
 
     @XmlElement
-    public Deque<Move>getHistory() {
+    public List<Move>getHistory() {
         return history;
     }
 
-    public void setHistory(Deque<Move> history) {
+    public void setHistory(List<Move> history) {
         this.history = history;
     }
 }

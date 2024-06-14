@@ -3,9 +3,9 @@ package model;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
 
-
-
+import javax.xml.bind.JAXBException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,13 +16,13 @@ public class SokobanLogic {
 	private GameWorld world;
 	//private Worker warehouseMan;
 	//private Level level;  --> world.getLevel()
-	private Deque<Move> history;
+	private List<Move> history;
 	private static final Logger logger = LoggerFactory.getLogger(SokobanLogic.class);
 	public SokobanLogic(GameWorld world) {
 		this.world=world;
 		//this.level = world.getLevel();		
 		//this.warehouseMan = world.getLevel().getWarehouseMan();
-		history = new LinkedList<>();
+		setHistory(new LinkedList<>());
 	}
 	
 
@@ -30,15 +30,15 @@ public class SokobanLogic {
 	 * Si la posicion dentro del mapa es valida.
 	 */
 	public void undoMove() {
-		if(history.isEmpty()) {
+		if(getHistory().isEmpty()) {
 			logger.info("No move to undo");
 			return;
 		}
 		
-		Move lastMove = history.pop();
+		Move lastMove = getHistory().remove(getHistory().size()-1);
+		
 		logger.info("Undoing move: {}", lastMove);
 		
-
 		world.getLevel().getWarehouseMan().move(lastMove.getOldX(),lastMove.getOldY());
 		world.getLevel().setMobileEntities(lastMove.getOldX(), lastMove.getOldY(), world.getLevel().getWarehouseMan());
 		world.getLevel().setMobileEntities(lastMove.getNewX(), lastMove.getNewY(), null);
@@ -99,7 +99,7 @@ public class SokobanLogic {
 					Position oldBoxPosition = new Position(box.getX(), box.getY());
 					Position newBoxPosition = new Position(newX + dx, newY + dy);
 
-					history.push(new Move(oldPosition, newPosition, oldBoxPosition, newBoxPosition));
+					getHistory().add(new Move(oldPosition, newPosition, oldBoxPosition, newBoxPosition));
 					if(world.getLevel().getImmovableEntities(newX+dx, newY+dy) instanceof Goal) {
 						  ((Goal) world.getLevel().getImmovableEntities(newX + dx, newY + dy)).setGoalArchieved(true);
 						    logger.info("We reached the goal.");
@@ -127,7 +127,7 @@ public class SokobanLogic {
 				Position oldPosition = new Position(charX, charY);
 				Position newPosition = new Position(newX, newY);
 
-				history.push(new Move(oldPosition, newPosition));
+				getHistory().add(new Move(oldPosition, newPosition));
 
 				logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
 				world.getLevel().getWarehouseMan().move(newX, newY);
@@ -154,7 +154,7 @@ public class SokobanLogic {
 	
 	
 	//GETTER DE LA PILA (BORRAR SI A ISAM NO LE PARECE BIEN
-	public Deque<Move>  getHistory() {
+	public List<Move>  getHistory() {
 	    return history;
 	}
 	
@@ -180,6 +180,18 @@ public class SokobanLogic {
 public int getPuntuation() {
 	return world.getPuntuation();
 }
+
+
+public void setHistory(List<Move> history) {
+	this.history = history;
+}
+
+public void clearHistory() {
+	history = new LinkedList<>();
+}
+
+
+
 
 
 }

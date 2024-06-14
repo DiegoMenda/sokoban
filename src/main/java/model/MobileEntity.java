@@ -2,7 +2,9 @@ package model;
 
 import java.awt.Image;
 
+import javax.xml.bind.annotation.XmlSeeAlso;
 
+@XmlSeeAlso({Worker.class, Box.class})
 public class MobileEntity extends Entity{
 
 	public MobileEntity(int x, int y, Image textureImage) {
@@ -15,5 +17,6 @@ public class MobileEntity extends Entity{
 		this.x = posx;
 		this.y = posy;
 	}
+	
 
 }

@@ -2,9 +2,12 @@ package model;
 
 import java.awt.Image;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
 
 
-
+@XmlRootElement
+@XmlSeeAlso({Wall.class, Air.class, Goal.class})
 public class ImmovableEntity extends Entity{
 
 	boolean penetrable;
@@ -20,6 +23,9 @@ public class ImmovableEntity extends Entity{
 	public boolean getPenetrable() {
 		return this.penetrable;
 	}
+	
+
+	
 	
 	
 

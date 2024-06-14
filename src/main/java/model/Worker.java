@@ -2,6 +2,10 @@ package model;
 
 import java.awt.Image;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+@XmlRootElement
 public class Worker extends MobileEntity{
 
 	public Worker(int x, int y, Image textureImage) {

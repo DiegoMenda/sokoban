@@ -12,28 +12,18 @@ import model.*;
 public class EntitiesRenderer extends JPanel {
 
 	private int TILE_SIZE = 36;
-    private MobileEntity[][] mobileEntity;
-    private ImmovableEntity[][] immovableEntity;
-    public EntitiesRenderer(MobileEntity[][] mobileEntity, ImmovableEntity[][] immovableEntity) {
-        this.mobileEntity = mobileEntity;
-        this.immovableEntity = immovableEntity;
+	GameWorld world;
+    public EntitiesRenderer(GameWorld world) {
+
+    	this.world = world;
     }
     
-    public void setMobileEntity(MobileEntity[][] mobileEntity) {
-        this.mobileEntity = mobileEntity;
 
-
-    }
-
-    public void setImmovableEntity(ImmovableEntity[][] immovableEntity) {
-        this.immovableEntity = immovableEntity;
-    }
-    
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        drawEntities(g, immovableEntity);
-        drawEntities(g, mobileEntity);
+        drawEntities(g, world.getLevel().getImmovableEntities());
+        drawEntities(g, world.getLevel().getMobileEntities());
     }
 
     private void drawEntities(Graphics g, Entity[][] entities) {
@@ -50,10 +40,10 @@ public class EntitiesRenderer extends JPanel {
     @Override
     public Dimension getPreferredSize() {
         int width = 
-            mobileEntity[0].length * TILE_SIZE;
+        		world.getLevel().getMobileEntities()[0].length * TILE_SIZE;
 
         int height = 
-            mobileEntity.length * TILE_SIZE;
+        		world.getLevel().getMobileEntities().length * TILE_SIZE;
         
         return new Dimension(width, height);
     }

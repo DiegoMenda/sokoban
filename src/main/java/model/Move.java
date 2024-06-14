@@ -66,6 +66,8 @@ public class Move {
     }
     @Override
     public String toString() {
-        return "Move [oldPosition=" + oldPosition + ", newPosition=" + newPosition + "]";
+        //return "Move [oldPosition=" + oldPosition + ", newPosition=" + newPosition + "]";
+        return "Move [" + oldPosition + "->" + newPosition + "]";
+
     }
 }
