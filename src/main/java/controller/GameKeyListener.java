@@ -22,6 +22,11 @@ public class GameKeyListener {
         inputMap.put(KeyStroke.getKeyStroke("A"), "moveLeft");
         inputMap.put(KeyStroke.getKeyStroke("D"), "moveRight");
         inputMap.put(KeyStroke.getKeyStroke("Z"), "undoMove");
+
+        //88
+        inputMap.put(KeyStroke.getKeyStroke("J"), "guarda");
+        inputMap.put(KeyStroke.getKeyStroke("K"), "carga");
+        
         // move up
         actionMap.put("moveUp", new AbstractAction() {
             @Override
@@ -58,5 +63,31 @@ public class GameKeyListener {
             }
         });
         //
+        
+        
+        
+        
+        
+        
+        //TOQUITAR
+        
+        actionMap.put("carga", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	sokobanLogic.laodLevel();
+            }
+        });
+        
+        actionMap.put("guarda", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sokobanLogic.saveLevel();
+            }
+        });
+        
+        
+        
+        
+        
     }
 }

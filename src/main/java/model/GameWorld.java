@@ -33,6 +33,10 @@ public class GameWorld {
 			this.level = nivel;
 			LevelNumber.levelNumber++;
 			localPuntuation.add(LevelNumber.levelNumber-1, 0);
+			if(LevelNumber.levelNumber > 1) {
+				globalPuntuation += localPuntuation.get(LevelNumber.levelNumber-2);
+			}
+			
 		} else {
 			
 			System.out.println("\n\n\nGAME OVER BRO\n\n\n");
@@ -74,11 +78,11 @@ public class GameWorld {
 	}
 
 	public void addPuntuation() {
-		localPuntuation.add(LevelNumber.levelNumber-1, localPuntuation.get(LevelNumber.levelNumber-1)+1);
+		localPuntuation.set(LevelNumber.levelNumber-1, localPuntuation.get(LevelNumber.levelNumber-1)+1);
 	}
 	
 	public void subPuntuation() {
-		localPuntuation.add(LevelNumber.levelNumber-1, localPuntuation.get(LevelNumber.levelNumber-1)-1);
+		localPuntuation.set(LevelNumber.levelNumber-1, localPuntuation.get(LevelNumber.levelNumber-1)-1);
 	}
 	
 	public Level getNextLevel() {
@@ -103,11 +107,17 @@ public class GameWorld {
 	    Level nextLevel = getNextLevel();
 	    if (nextLevel != null) {
 	        level = nextLevel;
-	        globalPuntuation = 0;
 	        return false;
 	    }
 	    return true;
 	}
-	
-	
+
+    public void updateFrom(GameWorld other) {
+        this.levelFile = (File)other.levelFile;
+        this.globalPuntuation = other.globalPuntuation;
+        this.localPuntuation = new ArrayList<Integer>(other.localPuntuation); // Deep copy
+        
+        level.updateFrom(other.level);
+        
+    }
 }

@@ -20,34 +20,37 @@ public class LevelSaver {
 
 	private static final Logger logger = LoggerFactory.getLogger(LevelSaver.class);
 	private static JAXBContext context;
-	
-	 private LevelSaver() {
-	        // Este constructor está vacío, ya que no necesitamos inicializar nada en esta clase
-	    }
+
+	private LevelSaver() {
+		// Este constructor está vacío, ya que no necesitamos inicializar nada en esta clase
+	}
 
 
-	 public static void saveToXML(GameWorldWithHistory gameWorldWithHistory, String filePath) throws JAXBException {
-	        if (context == null) {
-	            context = JAXBContext.newInstance(GameWorldWithHistory.class);
-	        }
-	        logger.info("saving game in xml format on the following route {} ", filePath);
-	        Marshaller marshaller = context.createMarshaller();
-	        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-	        marshaller.marshal(gameWorldWithHistory, new File(filePath));
-	    }
-
-	    // Método para leer desde XML
-	 public static GameWorldWithHistory readFromXML(String filePath) throws JAXBException {
-		 logger.info("reading game in xml format from the following route {} ", filePath);
-		    JAXBContext context = getJAXBContext();
-		    Unmarshaller unmarshaller = context.createUnmarshaller();
-		    return (GameWorldWithHistory) unmarshaller.unmarshal(new File(filePath));
+	public static void saveToXML(GameWorldWithHistory gameWorldWithHistory, String filePath) throws JAXBException 
+	{
+		if (context == null) {
+			context = JAXBContext.newInstance(GameWorldWithHistory.class);
 		}
 
-		private static JAXBContext getJAXBContext() throws JAXBException {
-		    if (context == null) {
-		        context = JAXBContext.newInstance(GameWorldWithHistory.class);
-		    }
-		    return context;
+		logger.info("saving game in xml format on the following route {} ", filePath);
+		Marshaller marshaller = context.createMarshaller();
+		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		marshaller.marshal(gameWorldWithHistory, new File(filePath));
+	}
+
+	// Método para leer desde XML
+	public static GameWorldWithHistory readFromXML(String filePath) throws JAXBException {
+		logger.info("reading game in xml format from the following route {} ", filePath);
+		JAXBContext context = getJAXBContext();
+		Unmarshaller unmarshaller = context.createUnmarshaller();
+		GameWorldWithHistory x = (GameWorldWithHistory) unmarshaller.unmarshal(new File(filePath));
+		return x;
+	}
+
+	private static JAXBContext getJAXBContext() throws JAXBException {
+		if (context == null) {
+			context = JAXBContext.newInstance(GameWorldWithHistory.class);
 		}
+		return context;
+	}
 }

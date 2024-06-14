@@ -41,7 +41,7 @@ public class GameFrame extends JFrame {
         centerRenderer();
     }
 
-    private void centerRenderer() {
+    public void centerRenderer() {
         int frameWidth = getWidth();
         int frameHeight = getHeight();
         int rendererWidth = renderer.getPreferredSize().width;

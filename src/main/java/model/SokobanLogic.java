@@ -4,8 +4,7 @@ package model;
 import java.util.Deque;
 import java.util.LinkedList;
 
-
-
+import javax.xml.bind.JAXBException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +37,6 @@ public class SokobanLogic {
 		Move lastMove = history.pop();
 		logger.info("Undoing move: {}", lastMove);
 		
-
 		world.getLevel().getWarehouseMan().move(lastMove.getOldX(),lastMove.getOldY());
 		world.getLevel().setMobileEntities(lastMove.getOldX(), lastMove.getOldY(), world.getLevel().getWarehouseMan());
 		world.getLevel().setMobileEntities(lastMove.getNewX(), lastMove.getNewY(), null);
@@ -181,5 +179,44 @@ public int getPuntuation() {
 	return world.getPuntuation();
 }
 
+
+
+//TOQUITAR
+
+	public void saveLevel() {
+		try {
+			LevelSaver.saveToXML(new GameWorldWithHistory(world, getHistory()), "./src/main/java/model/maps/guarda.xml");
+		} catch (JAXBException e) {
+
+			e.printStackTrace();
+			System.out.println("ERRRRRROOOOOOOOOR saveToXML");
+		}
+		
+	}
+
+	public void laodLevel() {
+	    try {
+	        GameWorldWithHistory newLevelLoaded = LevelSaver.readFromXML("./src/main/java/model/maps/guarda.xml");
+	        if (newLevelLoaded != null) {
+	        	System.err.println(newLevelLoaded.getGameWorld().getLevel());
+	        	System.err.println(newLevelLoaded.getGameWorld().getLevel().getImmovableEntities(0, 0).getX());
+	            this.world.updateFrom((GameWorld)newLevelLoaded.getGameWorld());
+	        	System.err.println(world.getLevel());
+
+	            this.history = newLevelLoaded.getHistory(); // Update history as well
+	            logger.info("Level loaded successfully.");
+	        } else {
+	            logger.error("Failed to load level.");
+	        }
+	    } catch (JAXBException e) {
+	        e.printStackTrace();
+	        logger.error("Error loading level from XML", e);
+	    }
+	}
+	
+	
+	public void clearHistory() {
+		history = new LinkedList<>();
+	}
 
 }

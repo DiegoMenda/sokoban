@@ -21,6 +21,9 @@ public class ImmovableEntity extends Entity{
 		return this.penetrable;
 	}
 	
+
+	
+	
 	
 
 }

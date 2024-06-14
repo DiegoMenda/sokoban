@@ -126,7 +126,8 @@ public class LevelLoader {
 	    return new Result(context.warehouseMan, context.nWareHouseMan, false);
 	}
 
-	private static boolean validateLevel(String levelName, int nWareHouseMan, int nboxes, int ngoals) {
+	private static boolean validateLevel(String levelName, int nWareHouseMan, int nboxes, int ngoals) 
+	{
 	    if (nWareHouseMan != 1) {
 	        logger.error("The level {} is wrong, there should be at least one warehouse man", levelName);
 	        return false;

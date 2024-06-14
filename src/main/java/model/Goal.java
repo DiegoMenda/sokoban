@@ -2,6 +2,7 @@ package model;
 
 import java.awt.Image;
 
+
 public class Goal extends ImmovableEntity{
 
 	private boolean archieved;

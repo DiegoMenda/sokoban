@@ -2,6 +2,7 @@ package model;
 
 import java.awt.Image;
 
+
 public class Wall extends ImmovableEntity {
 
 	public Wall(int x, int y, Image textureImage) {

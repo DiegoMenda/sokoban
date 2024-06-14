@@ -15,5 +15,6 @@ public class MobileEntity extends Entity{
 		this.x = posx;
 		this.y = posy;
 	}
+	
 
 }

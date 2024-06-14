@@ -53,17 +53,19 @@ public class GameController {
         if (sokobanLogic.isLevelCompleted()) {
             entitiesRenderer.repaint();
             // Introduces a delay of 1 second (1000 ms) before loading the next level.
-            Timer delayTimer = new Timer(1000, evt -> {
+            //Timer delayTimer = new Timer(1000, evt -> {
                 // Cargar el siguiente nivel
                 System.err.println(gameWorld.getLevel());
                 gameWorld.loadNextLevel();
+                sokobanLogic.clearHistory();
                 // Update view
                 entitiesRenderer.setMobileEntity(gameWorld.getLevel().getMobileEntities());
                 entitiesRenderer.setImmovableEntity(gameWorld.getLevel().getImmovableEntities());
-                ((Timer) evt.getSource()).stop(); // Detener el timer después de la ejecución
-            });
-            delayTimer.setRepeats(false);
-            delayTimer.start();
+                gameFrame.centerRenderer();
+                //((Timer) evt.getSource()).stop(); // Detener el timer después de la ejecución
+            //});
+            //delayTimer.setRepeats(false);
+            //delayTimer.start();
         }
     }
 
