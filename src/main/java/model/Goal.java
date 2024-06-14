@@ -2,7 +2,9 @@ package model;
 
 import java.awt.Image;
 
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Goal extends ImmovableEntity{
 
 	private boolean archieved;
@@ -12,6 +14,10 @@ public class Goal extends ImmovableEntity{
 		this.archieved = false;
 		
 	}
+	
+    public Goal() {
+        // Constructor sin argumentos necesario para JAXB
+    }
 	
 	public boolean isGoalArchieved() {
 		return archieved;

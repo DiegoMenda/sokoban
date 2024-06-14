@@ -2,6 +2,9 @@ package model;
 
 import java.awt.Image;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Box extends MobileEntity {
 
 	private Image normalBox;
@@ -12,6 +15,10 @@ public class Box extends MobileEntity {
 		normalBox = textureImage1;
 		boxOnGoal = textureImage2;
 	}
+	
+    public Box() {
+        // Constructor sin argumentos necesario para JAXB
+    }
 
 	@Override
 	public String toString() {

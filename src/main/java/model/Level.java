@@ -1,9 +1,9 @@
 package model;
 
 import javax.xml.bind.annotation.*;
-
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
+@XmlSeeAlso({Wall.class, Air.class, Goal.class, Worker.class, Box.class})
 public class Level {
 
 	@XmlElement
@@ -12,12 +12,12 @@ public class Level {
 	@XmlElement
 	private int row;
 
-	@XmlElementWrapper(name="immovableEntities")
-	@XmlElement(name="row")
+    @XmlElementWrapper(name="immovableEntities")
+    @XmlElement(name="immovableEntity")
 	private ImmovableEntity[][] immovableEntities;
 
-	@XmlElementWrapper(name="mobileEntities")
-	@XmlElement(name="row")
+    @XmlElementWrapper(name="mobileEntities")
+    @XmlElement(name="mobileEntity")
 	private MobileEntity[][] mobileEntities;
 
 	@XmlElement

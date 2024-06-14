@@ -3,6 +3,7 @@ package model;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
 
 import javax.xml.bind.JAXBException;
 
@@ -15,13 +16,13 @@ public class SokobanLogic {
 	private GameWorld world;
 	//private Worker warehouseMan;
 	//private Level level;  --> world.getLevel()
-	private Deque<Move> history;
+	private List<Move> history;
 	private static final Logger logger = LoggerFactory.getLogger(SokobanLogic.class);
 	public SokobanLogic(GameWorld world) {
 		this.world=world;
 		//this.level = world.getLevel();		
 		//this.warehouseMan = world.getLevel().getWarehouseMan();
-		history = new LinkedList<>();
+		setHistory(new LinkedList<>());
 	}
 	
 
@@ -29,12 +30,13 @@ public class SokobanLogic {
 	 * Si la posicion dentro del mapa es valida.
 	 */
 	public void undoMove() {
-		if(history.isEmpty()) {
+		if(getHistory().isEmpty()) {
 			logger.info("No move to undo");
 			return;
 		}
 		
-		Move lastMove = history.pop();
+		Move lastMove = getHistory().remove(getHistory().size()-1);
+		
 		logger.info("Undoing move: {}", lastMove);
 		
 		world.getLevel().getWarehouseMan().move(lastMove.getOldX(),lastMove.getOldY());
@@ -97,7 +99,7 @@ public class SokobanLogic {
 					Position oldBoxPosition = new Position(box.getX(), box.getY());
 					Position newBoxPosition = new Position(newX + dx, newY + dy);
 
-					history.push(new Move(oldPosition, newPosition, oldBoxPosition, newBoxPosition));
+					getHistory().add(new Move(oldPosition, newPosition, oldBoxPosition, newBoxPosition));
 					if(world.getLevel().getImmovableEntities(newX+dx, newY+dy) instanceof Goal) {
 						  ((Goal) world.getLevel().getImmovableEntities(newX + dx, newY + dy)).setGoalArchieved(true);
 						    logger.info("We reached the goal.");
@@ -125,7 +127,7 @@ public class SokobanLogic {
 				Position oldPosition = new Position(charX, charY);
 				Position newPosition = new Position(newX, newY);
 
-				history.push(new Move(oldPosition, newPosition));
+				getHistory().add(new Move(oldPosition, newPosition));
 
 				logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
 				world.getLevel().getWarehouseMan().move(newX, newY);
@@ -152,7 +154,7 @@ public class SokobanLogic {
 	
 	
 	//GETTER DE LA PILA (BORRAR SI A ISAM NO LE PARECE BIEN
-	public Deque<Move>  getHistory() {
+	public List<Move>  getHistory() {
 	    return history;
 	}
 	
@@ -180,43 +182,16 @@ public int getPuntuation() {
 }
 
 
+public void setHistory(List<Move> history) {
+	this.history = history;
+}
 
-//TOQUITAR
+public void clearHistory() {
+	history = new LinkedList<>();
+}
 
-	public void saveLevel() {
-		try {
-			LevelSaver.saveToXML(new GameWorldWithHistory(world, getHistory()), "./src/main/java/model/maps/guarda.xml");
-		} catch (JAXBException e) {
 
-			e.printStackTrace();
-			System.out.println("ERRRRRROOOOOOOOOR saveToXML");
-		}
-		
-	}
 
-	public void laodLevel() {
-	    try {
-	        GameWorldWithHistory newLevelLoaded = LevelSaver.readFromXML("./src/main/java/model/maps/guarda.xml");
-	        if (newLevelLoaded != null) {
-	        	System.err.println(newLevelLoaded.getGameWorld().getLevel());
-	        	System.err.println(newLevelLoaded.getGameWorld().getLevel().getImmovableEntities(0, 0).getX());
-	            this.world.updateFrom((GameWorld)newLevelLoaded.getGameWorld());
-	        	System.err.println(world.getLevel());
 
-	            this.history = newLevelLoaded.getHistory(); // Update history as well
-	            logger.info("Level loaded successfully.");
-	        } else {
-	            logger.error("Failed to load level.");
-	        }
-	    } catch (JAXBException e) {
-	        e.printStackTrace();
-	        logger.error("Error loading level from XML", e);
-	    }
-	}
-	
-	
-	public void clearHistory() {
-		history = new LinkedList<>();
-	}
 
 }

@@ -13,13 +13,13 @@ public class GameWorld {
 	private int globalPuntuation;
 	private ArrayList<Integer> localPuntuation;
 	private Level level;
-	
+	private int levelNumber;
 	public GameWorld(String levelRoute) {
 		levelFile = new File(levelRoute); 
 		localPuntuation = new ArrayList<Integer>();
+		setLevelNumber(0);
 		loadLevel(levelFile);
 		globalPuntuation=0;
-		//levelNumber = 0;
 	}
 	
 	public GameWorld() {
@@ -29,12 +29,12 @@ public class GameWorld {
 	private void loadLevel(File file) {
 		Level nivel = LevelLoader.loadLevel(file);
 		if(nivel != null) {
-			//88
+			//REMOVE
 			this.level = nivel;
-			LevelNumber.levelNumber++;
-			localPuntuation.add(LevelNumber.levelNumber-1, 0);
-			if(LevelNumber.levelNumber > 1) {
-				globalPuntuation += localPuntuation.get(LevelNumber.levelNumber-2);
+			setLevelNumberMas();
+			localPuntuation.add(getLevelNumber()-1, 0);
+			if(getLevelNumber() > 1) {
+				globalPuntuation += localPuntuation.get(getLevelNumber()-2);
 			}
 			
 		} else {
@@ -78,30 +78,23 @@ public class GameWorld {
 	}
 
 	public void addPuntuation() {
-		localPuntuation.set(LevelNumber.levelNumber-1, localPuntuation.get(LevelNumber.levelNumber-1)+1);
+		localPuntuation.set(getLevelNumber()-1, localPuntuation.get(getLevelNumber()-1)+1);
 	}
 	
 	public void subPuntuation() {
-		localPuntuation.set(LevelNumber.levelNumber-1, localPuntuation.get(LevelNumber.levelNumber-1)-1);
+		localPuntuation.set(getLevelNumber()-1, localPuntuation.get(getLevelNumber()-1)-1);
 	}
 	
 	public Level getNextLevel() {
 	    String currentLevelName = level.getLevelName();
-	    int currentLevelNumber = LevelNumber.levelNumber;
+	    int currentLevelNumber = getLevelNumber();
 	    String nextLevelName = "./src/main/java/model/maps/level_" + (currentLevelNumber + 1) + ".txt";
 	    File file = new File(nextLevelName);
 	    loadLevel(file);
 	    return level;
 	}
 	
-//	public boolean isGameOver() {
-//	    String currentLevelName = level.getLevelName();
-//	    int currentLevelNumber = Integer.parseInt(currentLevelName.substring(6));
-//	    return getNextLevel() == null;
-//	}
 
-	
-	
 	// devuelve false si hemos terminado
 	public boolean loadNextLevel() {
 	    Level nextLevel = getNextLevel();
@@ -113,11 +106,26 @@ public class GameWorld {
 	}
 
     public void updateFrom(GameWorld other) {
+    	setLevelNumber(other.getLevelNumber());
         this.levelFile = (File)other.levelFile;
         this.globalPuntuation = other.globalPuntuation;
         this.localPuntuation = new ArrayList<Integer>(other.localPuntuation); // Deep copy
         
         level.updateFrom(other.level);
         
+    }
+    
+    public int getLevelNumber() {
+    	
+    	return levelNumber;
+    }
+    
+   public void setLevelNumber(int numero) {
+    	levelNumber = numero;
+    }
+    
+    public void setLevelNumberMas() {
+    	
+    	 this.levelNumber++;
     }
 }
