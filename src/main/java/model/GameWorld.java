@@ -27,11 +27,14 @@ public class GameWorld {
 		globalPuntuation=0;
 	}
 	
+
+    
+	
 	public GameWorld() {
 		
 	}
 
-	private void loadLevel(File file) {
+	private Level loadLevel(File file) {
 		Level nivel = LevelLoader.loadLevel(file);
 		if(nivel != null) {
 			//REMOVE
@@ -43,9 +46,11 @@ public class GameWorld {
 			}
 			
 		} else {
-			logger.info("\n\n\nGAME OVER\\n\\n\\n");
+			
+			logger.info("All levels completed");
 			
 		}
+		return nivel;
 	}
 	@XmlElement
 	public Level getLevel() {
@@ -95,8 +100,7 @@ public class GameWorld {
 	    int currentLevelNumber = getLevelNumber();
 	    String nextLevelName = "./src/main/java/model/maps/level_" + (currentLevelNumber + 1) + ".txt";
 	    File file = new File(nextLevelName);
-	    loadLevel(file);
-	    return level;
+	    return loadLevel(file);
 	}
 	
 
@@ -105,9 +109,9 @@ public class GameWorld {
 	    Level nextLevel = getNextLevel();
 	    if (nextLevel != null) {
 	        level = nextLevel;
-	        return false;
+	        return true;
 	    }
-	    return true;
+	    return false;
 	}
 
     public void updateFrom(GameWorld other) {
@@ -133,4 +137,9 @@ public class GameWorld {
     	
     	 this.levelNumber++;
     }
+    
+	public int getActualLevelPuntuation() {
+		return localPuntuation.get(levelNumber-1);
+	}
+    
 }

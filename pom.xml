@@ -1,63 +1,55 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>es.upm.pproject.sokoban</groupId>
   <artifactId>sokoban</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Sokoban</name>
-<properties>
+  <properties>
     <jacoco.version>0.8.6</jacoco.version>
-	<sonar.language>java</sonar.language>
-		<sonar.host.url>https://costa.ls.fi.upm.es/sonar</sonar.host.url>
-		<sonar.qualitygate.wait>true</sonar.qualitygate.wait>
-		<sonar.projectName>${project.name}-${sonar.id}</sonar.projectName>
-		<sonar.projectKey>${project.groupId}:${project.artifactId}:${sonar.projectName}:${sonar.id}</sonar.projectKey>
-
-		<!-- Files to be excluded from coverage. Define for the view+controller 
-			in your final projects -->
-		<sonar.coverage.exclusions>**/view/**/*, **/controller/**/*</sonar.coverage.exclusions>
-		<jacoco.version>0.8.6</jacoco.version>
-		<sonar.scm.provider>git</sonar.scm.provider>
-		<sonar.language>java</sonar.language>
-
+    <sonar.language>java</sonar.language>
+    <sonar.host.url>https://costa.ls.fi.upm.es/sonar</sonar.host.url>
+    <sonar.qualitygate.wait>true</sonar.qualitygate.wait>
+    <sonar.projectName>${project.name}-${sonar.id}</sonar.projectName>
+    <sonar.projectKey>${project.groupId}:${project.artifactId}:${sonar.projectName}:${sonar.id}</sonar.projectKey>
+    <sonar.coverage.exclusions>**/view/**/*, **/controller/**/*</sonar.coverage.exclusions>
+    <sonar.scm.provider>git</sonar.scm.provider>
   </properties>
   <dependencies>
-
-	<dependency>
+    <dependency>
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
       <version>2.3.3</version>
     </dependency>
     <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>5.8.1</version>
-        <scope>test</scope>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.8.1</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.8.1</version>
-        <scope>test</scope>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.8.1</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-params</artifactId>
-        <version>5.8.1</version>
-        <scope>test</scope>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.8.1</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
-			<groupId>org.jacoco</groupId>
-			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.6</version>
-		</dependency>
-
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.8.6</version>
+    </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>1.7.5</version>
     </dependency>
   </dependencies>
-
   <build>
     <plugins>
       <!-- Plugin de Surefire para ejecutar pruebas -->
@@ -71,29 +63,27 @@
           </systemPropertyVariables>
         </configuration>
       </plugin>
-<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${jacoco.version}</version>
-				<executions>
-					<execution>
-						<id>prepare-agent</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-						<phase>test-compile</phase>
-					</execution>
-					<execution>
-						<id>report</id>
-						<goals>
-							<goal>report</goal>
-						</goals>
-						<phase>test</phase>
-					</execution>
-		
-				</executions>
-			</plugin>
-
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco.version}</version>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+            <phase>test-compile</phase>
+          </execution>
+          <execution>
+            <id>report</id>
+            <goals>
+              <goal>report</goal>
+            </goals>
+            <phase>test</phase>
+          </execution>
+        </executions>
+      </plugin>
       <!-- Plugin del compilador para configurar la versión de Java -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -102,6 +92,18 @@
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
+        </configuration>
+      </plugin>
+      <!-- Plugin para ejecutar la aplicación -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <mainClass>controller.GameController</mainClass>
+          <arguments>
+            <argument>./src/main/java/model/maps/level_1.txt</argument>
+          </arguments>
         </configuration>
       </plugin>
     </plugins>
