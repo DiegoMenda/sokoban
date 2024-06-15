@@ -35,15 +35,15 @@ import model.Box;
 class Test2 {
 
     private Level nivel;
-    private static LevelLoader cargador;
+    
     private File levelFile;
     private GameWorld mundo;
     private SokobanLogic logica;
     @BeforeEach
     void setUp() {
-        cargador = new LevelLoader();
+        
         levelFile = new File("./src/main/java/model/maps/test_level.txt");
-        nivel = cargador.loadLevel(levelFile);
+        nivel = LevelLoader.loadLevel(levelFile);
         mundo = new GameWorld("./src/main/java/model/maps/test_level.txt");
         logica =new SokobanLogic(mundo);
     }
@@ -93,6 +93,11 @@ class Test2 {
     
         assertEquals("#", nivel.getMobileEntities()[1][2].toString());
     }
+//    @Test
+//    void loadLevel() {
+//    	assertTrue(mundo.loadNextLevel());
+//    	assertFalse(mundo.loadNextLevel());
+//    }
     @Test
     void levelToString() {
         assertEquals("Level Name: Nivel 1\n"

@@ -74,74 +74,76 @@ public class SokobanLogic {
 
 
 	public void moveCharacter(int dx, int dy) {
+	    int charX = world.getLevel().getWarehouseMan().getX();
+	    int charY = world.getLevel().getWarehouseMan().getY();
+	    int newX = charX + dx;
+	    int newY = charY + dy;
 
+	    if (!isValidPosition(newX, newY) || (dx == 0 && dy == 0)) {
+	        logger.info("the warehouse man cannot move from ({}, {}) to ({}, {})", charX, charY, newX, newY);
+	        return;
+	    }
 
-		
-		int charX = world.getLevel().getWarehouseMan().getX();
-		int charY = world.getLevel().getWarehouseMan().getY();
-		int newX = world.getLevel().getWarehouseMan().getX() + dx;
-		int newY = world.getLevel().getWarehouseMan().getY() + dy;
-
-		if (isValidPosition(newX, newY) && (dx != 0 || dy != 0)) {
-
-			if(world.getLevel().getMobileEntities(newX,newY) instanceof Box) { // hay una caja en medio
-
-				if(isValidPosition( newX+dx, newY+dy)  && world.getLevel().getMobileEntities(newX+dx, newY+dy) == null   ) { //en la posicion hay una caja que empujar
-					// mover la caja
-					logger.info("the warehouse man moves the box from ({}, {}) to ({}, {})", newX, newY, newX+dx, newY+dy);
-					MobileEntity box = world.getLevel().getMobileEntities(newX, newY);
-					Position oldPosition = new Position(charX, charY);
-					Position newPosition = new Position(newX, newY);
-					Position oldBoxPosition = new Position(box.getX(), box.getY());
-					Position newBoxPosition = new Position(newX + dx, newY + dy);
-
-					getHistory().add(new Move(oldPosition, newPosition, oldBoxPosition, newBoxPosition));
-					if(world.getLevel().getImmovableEntities(newX+dx, newY+dy) instanceof Goal) {
-						  ((Goal) world.getLevel().getImmovableEntities(newX + dx, newY + dy)).setGoalArchieved(true);
-						    logger.info("We reached the goal.");
-						    ((Box)box).setBoxOnGoalTexture();
-					}
-					if(world.getLevel().getImmovableEntities(newX, newY) instanceof Goal)  {
-						((Box)box).setNormalBoxTexture();
-						Goal gol = (Goal) world.getLevel().getImmovableEntities(newX, newY);
-						gol.setGoalArchieved(false);
-					}
-					box.move(newX+dx, newY+dy);
-					world.getLevel().setMobileEntities(newX+dx, newY+dy, box);
-
-					logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
-					// mover el personaje
-					world.getLevel().getWarehouseMan().move(newX, newY);
-					world.getLevel().setMobileEntities(newX, newY, world.getLevel().getWarehouseMan());
-					world.getLevel().setMobileEntities(charX, charY, null);
-					world.addPuntuation();
-					logger.info("la puntuacion nueva es {}", world.getPuntuation());
-				}
-			}
-			else { // nueva posicion libre de cajas
-				// mover el personaje
-				Position oldPosition = new Position(charX, charY);
-				Position newPosition = new Position(newX, newY);
-
-				getHistory().add(new Move(oldPosition, newPosition));
-
-				logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
-				world.getLevel().getWarehouseMan().move(newX, newY);
-				world.getLevel().setMobileEntities(newX, newY, world.getLevel().getWarehouseMan());
-				world.getLevel().setMobileEntities(charX, charY, null);
-				world.addPuntuation();
-				logger.info("la puntuacion nueva es {}", world.getPuntuation());
-			}
-
-			
-		}
-		else {
-			logger.info("the warehouse man can not move from ({}, {}) to ({}, {})", charX, charY, newX, newY);
-		}
-		
-
+	    if (world.getLevel().getMobileEntities(newX, newY) instanceof Box) {
+	        moveBoxAndCharacter(charX, charY, newX, newY, dx, dy);
+	    } else {
+	        moveCharacterOnly(charX, charY, newX, newY);
+	    }
 	}
-	
+
+	private void moveBoxAndCharacter(int charX, int charY, int newX, int newY, int dx, int dy) {
+	    if (canMoveBox(newX, newY, dx, dy)) {
+	        MobileEntity box = world.getLevel().getMobileEntities(newX, newY);
+	        Position oldPosition = new Position(charX, charY);
+	        Position newPosition = new Position(newX, newY);
+	        Position oldBoxPosition = new Position(box.getX(), box.getY());
+	        Position newBoxPosition = new Position(newX + dx, newY + dy);
+
+	        getHistory().add(new Move(oldPosition, newPosition, oldBoxPosition, newBoxPosition));
+	        updateBoxState(box, newX + dx, newY + dy);
+	        moveEntity(box, newX + dx, newY + dy);
+	        moveCharacterToNewPosition(charX, charY, newX, newY);
+	    }
+	}
+
+	private boolean canMoveBox(int newX, int newY, int dx, int dy) {
+	    return isValidPosition(newX + dx, newY + dy) && world.getLevel().getMobileEntities(newX + dx, newY + dy) == null;
+	}
+
+	private void updateBoxState(MobileEntity box, int boxNewX, int boxNewY) {
+	    if (world.getLevel().getImmovableEntities(boxNewX, boxNewY) instanceof Goal) {
+	        ((Goal) world.getLevel().getImmovableEntities(boxNewX, boxNewY)).setGoalArchieved(true);
+	        logger.info("We reached the goal.");
+	        ((Box) box).setBoxOnGoalTexture();
+	    }
+	    if (world.getLevel().getImmovableEntities(box.getX(), box.getY()) instanceof Goal) {
+	        ((Box) box).setNormalBoxTexture();
+	        ((Goal) world.getLevel().getImmovableEntities(box.getX(), box.getY())).setGoalArchieved(false);
+	    }
+	}
+
+	private void moveCharacterOnly(int charX, int charY, int newX, int newY) {
+	    Position oldPosition = new Position(charX, charY);
+	    Position newPosition = new Position(newX, newY);
+	    getHistory().add(new Move(oldPosition, newPosition));
+
+	    moveCharacterToNewPosition(charX, charY, newX, newY);
+	}
+
+	private void moveCharacterToNewPosition(int charX, int charY, int newX, int newY) {
+	    logger.info("the warehouse man moves from ({}, {}) to ({}, {})", charX, charY, newX, newY);
+	    moveEntity(world.getLevel().getWarehouseMan(), newX, newY);
+	    world.getLevel().setMobileEntities(newX, newY, world.getLevel().getWarehouseMan());
+	    world.getLevel().setMobileEntities(charX, charY, null);
+	    world.addPuntuation();
+	    logger.info("la puntuacion nueva es {}", world.getPuntuation());
+	}
+
+	private void moveEntity(MobileEntity entity, int x, int y) {
+	    entity.move(x, y);
+	    world.getLevel().setMobileEntities(x, y, entity);
+	}
+
 	
 	
 	

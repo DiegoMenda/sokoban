@@ -13,7 +13,9 @@ public class LevelLoader {
 	private static final Logger logger = LoggerFactory.getLogger(LevelLoader.class);
 
 
-	
+	private LevelLoader() {
+		
+	}
 	
 	public static Level loadLevel(File file) {
 	    logger.info("reading file {} to generate level", file.getName());

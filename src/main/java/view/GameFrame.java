@@ -6,8 +6,6 @@ import java.awt.event.ActionListener;
 
 public class GameFrame extends JFrame {
     private EntitiesRenderer renderer;
-    private int puntuation = 0;
-    private String levelName = "";
 
     private JButton startButton;
     private JButton restartLevelButton;
@@ -15,7 +13,6 @@ public class GameFrame extends JFrame {
     private JButton openSaveGameButton;
     private JLabel puntuationLabel;
     private JLabel levelNameLabel;
-    private JLabel undoLabel;
 
     public GameFrame(EntitiesRenderer renderer) {
         this.renderer = renderer;
@@ -26,7 +23,7 @@ public class GameFrame extends JFrame {
     private void initializeFrame() {
         setTitle("Sokoban Game");
         setSize(800, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
     }
@@ -47,7 +44,7 @@ public class GameFrame extends JFrame {
         openSaveGameButton = new JButton("Open a saved game");
         puntuationLabel = new JLabel("Total Puntuation: 0");
         levelNameLabel = new JLabel("Level Name: ");
-        undoLabel = new JLabel("Undo the last movement: Z");
+        JLabel undoLabel = new JLabel("Undo the last movement: Z");
 
         sidePanel.add(startButton);
         sidePanel.add(restartLevelButton);
@@ -61,12 +58,10 @@ public class GameFrame extends JFrame {
     }
 
     public void setPuntuation(int puntuation) {
-        this.puntuation = puntuation;
         puntuationLabel.setText("Total Puntuation: " + puntuation);
     }
 
     public void setLevelName(String levelName) {
-        this.levelName = levelName;
         levelNameLabel.setText("Level Name: " + levelName);
     }
 

@@ -8,7 +8,7 @@ import model.*;
 public class EntitiesRenderer extends JPanel {
 
 	private int titleSize = 36;
-	private GameWorld world;
+	private transient GameWorld world;
     public EntitiesRenderer(GameWorld world) {
 
     	this.world = world;
