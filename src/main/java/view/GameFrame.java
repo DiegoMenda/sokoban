@@ -42,7 +42,7 @@ public class GameFrame extends JFrame {
         restartLevelButton = new JButton("Restart the current level");
         saveGameButton = new JButton("Save the game");
         openSaveGameButton = new JButton("Open a saved game");
-        puntuationLabel = new JLabel("Puntuation: 0");
+        puntuationLabel = new JLabel("Total Puntuation: 0");
         levelNameLabel = new JLabel("Level Name: ");
         undoLabel = new JLabel("Undo the last movement: Z");
 
@@ -60,12 +60,12 @@ public class GameFrame extends JFrame {
 
     public void setPuntuation(int puntuation) {
         this.puntuation = puntuation;
-        puntuationLabel.setText("Puntuacion: " + puntuation);
+        puntuationLabel.setText("Total Puntuation " + puntuation);
     }
 
     public void setLevelName(String levelName) {
         this.levelName = levelName;
-        levelNameLabel.setText("Nombre de nivel: " + levelName);
+        levelNameLabel.setText("Level Name: " + levelName);
     }
 
     public void setStartButtonAction(ActionListener action) {
@@ -100,8 +100,8 @@ public class GameFrame extends JFrame {
             super.paintComponent(g);
             g.setFont(new Font("Arial", Font.PLAIN, 20));
             g.setColor(Color.BLACK); 
-            g.drawString("Puntuacion: " + puntuation, 5, 30);
-            g.drawString("Nombre de nivel: " + levelName , 5, 55);
+            g.drawString("Total Puntuation: " + puntuation, 5, 30);
+            g.drawString("Level Name: " + levelName , 5, 55);
         }
     }
     public void centerRenderer() {

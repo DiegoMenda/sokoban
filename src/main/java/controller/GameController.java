@@ -17,6 +17,7 @@ import view.EntitiesRenderer;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -84,7 +85,9 @@ public class GameController {
     	gameWorld.setLevel(LevelLoader.loadLevel(new File("./src/main/java/model/maps/level_1.txt")));
     	gameWorld.setLevelNumber(1);
     	gameWorld.setPuntuation(0);
-    	gameWorld.setLocalPuntuation(new ArrayList<>());
+    	List<Integer> lista = new ArrayList<>();
+    	lista.add(0);
+    	gameWorld.setLocalPuntuation(lista);
     	this.gameWorld.updateFrom(gameWorld);
     	 
     	 sokobanLogic.clearHistory();
