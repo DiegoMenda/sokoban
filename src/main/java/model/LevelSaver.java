@@ -74,21 +74,5 @@ public class LevelSaver {
         return (GameWorldWithHistory) unmarshaller.unmarshal(new File(filePath));
     }
 
-	private static JAXBContext getJAXBContext() throws JAXBException {
-	    if (context == null) {
-	        context = JAXBContext.newInstance(
-	            GameWorldWithHistory.class,
-	            GameWorld.class,
-	            Level.class,
-	            ImmovableEntity.class,
-	            MobileEntity.class,
-	            Wall.class,
-	            Air.class,
-	            Goal.class,
-	            Worker.class,
-	            Box.class
-	        );
-	    }
-	    return context;
-	}
+
 }

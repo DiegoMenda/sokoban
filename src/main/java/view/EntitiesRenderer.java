@@ -1,25 +1,21 @@
 package view;
 
 import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
-
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.util.List;
-import java.util.ArrayList;
 import model.*;
 
 public class EntitiesRenderer extends JPanel {
 
-	private int TILE_SIZE = 36;
-	GameWorld world;
+	private int titleSize = 36;
+	private GameWorld world;
     public EntitiesRenderer(GameWorld world) {
 
     	this.world = world;
     }
     
 
-
+    @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         drawEntities(g, world.getLevel().getImmovableEntities());
@@ -36,14 +32,14 @@ public class EntitiesRenderer extends JPanel {
         }
     }
     
-    // TODO: mirar si se puede hacer el sistema de forma más sofisticada.
+    
     @Override
     public Dimension getPreferredSize() {
         int width = 
-        		world.getLevel().getMobileEntities()[0].length * TILE_SIZE;
+        		world.getLevel().getMobileEntities()[0].length * titleSize;
 
         int height = 
-        		world.getLevel().getMobileEntities().length * TILE_SIZE;
+        		world.getLevel().getMobileEntities().length * titleSize;
         
         return new Dimension(width, height);
     }

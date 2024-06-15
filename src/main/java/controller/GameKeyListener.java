@@ -1,13 +1,12 @@
 package controller;
 
-import model.SokobanLogic;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class GameKeyListener {
 
-    private SokobanLogic sokobanLogic;
+    
     GameController gameController;
     public GameKeyListener(GameController gc) {
     	gameController = gc;

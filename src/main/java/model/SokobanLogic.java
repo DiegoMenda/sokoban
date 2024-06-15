@@ -1,12 +1,9 @@
 package model;
 
 
-import java.util.Deque;
+
 import java.util.LinkedList;
 import java.util.List;
-
-import javax.xml.bind.JAXBException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,15 +11,14 @@ import org.slf4j.LoggerFactory;
 public class SokobanLogic {
 
 	private GameWorld world;
-	//private Worker warehouseMan;
-	//private Level level;  --> world.getLevel()
+	
+	
 	private List<Move> history;
 	private static final Logger logger = LoggerFactory.getLogger(SokobanLogic.class);
 	public SokobanLogic(GameWorld world) {
 		this.world=world;
-		//this.level = world.getLevel();		
-		//this.warehouseMan = world.getLevel().getWarehouseMan();
-		setHistory(new LinkedList<>());
+		
+		history= new LinkedList<>();
 	}
 	
 
@@ -148,9 +144,7 @@ public class SokobanLogic {
 	
 	
 	
-	private void nextLevel() {
-		world.loadNextLevel();
-	}
+	
 	
 	
 	//GETTER DE LA PILA (BORRAR SI A ISAM NO LE PARECE BIEN

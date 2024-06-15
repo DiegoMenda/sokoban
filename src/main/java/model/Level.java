@@ -42,26 +42,7 @@ public class Level {
 		// Lógica para deshacer un movimiento
 	}
 
-	//    public String toString() {
-	//        StringBuilder print = new StringBuilder();
-	//        for (int i = 0; i < row; i++) {
-	//            for (int j = 0; j < col; j++) {
-	//                print.append(immovableEntities[i][j]);
-	//            }
-	//            print.append('\n');
-	//        }
-	//        print.append('\n');
-	//        for (int i = 0; i < row; i++) {
-	//            for (int j = 0; j < col; j++) {
-	//            	if(mobileEntities[i][j] != null)
-	//                print.append(mobileEntities[i][j]);
-	//            	else print.append('.');
-	//            }
-	//            print.append('\n');
-	//        }
-	//        
-	//        return print.toString();
-	//    }
+
 
 	public void setWarehouseMan(Worker warehouseMan) {
 		this.warehouseMan = warehouseMan;
@@ -108,21 +89,12 @@ public class Level {
 		this.col = other.col;
 		this.row = other.row;
 		this.levelName = other.levelName;
-		//this.immovableEntities = new ImmovableEntity[other.row][other.col];
-		//this.mobileEntities = new MobileEntity[other.row][other.col];
+
 
 		
-		this.immovableEntities = (ImmovableEntity[][])other.getImmovableEntities();
-		this.mobileEntities = (MobileEntity[][])other.getMobileEntities();
-		// Clonar las entidades inmóviles
-//		for (int i = 0; i < other.row; i++) {
-//			System.arraycopy(other.immovableEntities[i], 0, this.immovableEntities[i], 0, other.col);
-//		}
-//
-//		// Clonar las entidades móviles
-//		for (int i = 0; i < other.row; i++) {
-//			System.arraycopy(other.mobileEntities[i], 0, this.mobileEntities[i], 0, other.col);
-//		}
+		this.immovableEntities = other.getImmovableEntities();
+		this.mobileEntities = other.getMobileEntities();
+
 
 		this.warehouseMan = other.warehouseMan; // Assuming warehouseMan is immutable or correctly handled
 	}

@@ -16,7 +16,6 @@ import view.EntitiesRenderer;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import javax.swing.*;
@@ -32,7 +31,7 @@ public class GameController {
     private GameFrame gameFrame;
     private EntitiesRenderer entitiesRenderer;
     private GameKeyListener keyListener;
-	private static final Logger logger = LoggerFactory.getLogger(SokobanLogic.class);
+	private static final Logger logger = LoggerFactory.getLogger(GameController.class);
 
 
     public GameController(String levelFilePath) {
@@ -40,14 +39,14 @@ public class GameController {
         gameWorld = new GameWorld(levelFilePath);
         sokobanLogic = new SokobanLogic(gameWorld);
         entitiesRenderer = new EntitiesRenderer(gameWorld);
-        setGameFrame(new GameFrame(entitiesRenderer));
+        gameFrame = new GameFrame(entitiesRenderer);
         keyListener = new GameKeyListener(this);
 
         
         initController();
     }
 
-    private void initController() {
+    private final void initController() {
         keyListener.setupKeyBindings(getGameFrame().getRootPane());
         SwingUtilities.invokeLater(() -> {
             getGameFrame().setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -57,7 +56,7 @@ public class GameController {
 
             // Asigna las acciones a los botones aquí
             getGameFrame().setStartButtonAction(e -> startNewGame());
-            //getGameFrame().setLoadButtonAction(e -> loadLevel());
+          
             getGameFrame().setRestartLevelButtonAction(e -> restartCurrentLevel());
             getGameFrame().setSaveGameButtonAction(e -> saveLevel());
             getGameFrame().setOpenSaveGameButtonAction(e -> loadLevel());
@@ -105,20 +104,13 @@ public class GameController {
     private void checkLevelCompletion() {
         if (sokobanLogic.isLevelCompleted()) {
             entitiesRenderer.repaint();
-            // Introduces a delay of 1 second (1000 ms) before loading the next level.
-            //Timer delayTimer = new Timer(1000, evt -> {
-                // Cargar el siguiente nivel
-                System.err.println(gameWorld.getLevel());
+          
+               
                 gameWorld.loadNextLevel();
                 sokobanLogic.clearHistory();
-                // Update view
-                //entitiesRenderer.setMobileEntity(gameWorld.getLevel().getMobileEntities());
-                //entitiesRenderer.setImmovableEntity(gameWorld.getLevel().getImmovableEntities());
+                
                 getGameFrame().centerRenderer();
-                //((Timer) evt.getSource()).stop(); // Detener el timer después de la ejecución
-            //});
-            //delayTimer.setRepeats(false);
-            //delayTimer.start();
+               
         }
     }
     
@@ -148,7 +140,7 @@ public class GameController {
                 LevelSaver.saveToXML(new GameWorldWithHistory(gameWorld, sokobanLogic.getHistory()), fileToSave.getAbsolutePath());
                 logger.info("Level saved successfully.");
             } catch (JAXBException e) {
-                e.printStackTrace();
+                
                 logger.error("Error saving level to XML", e);
             }
         }
@@ -174,21 +166,22 @@ public class GameController {
 	            // Lee el archivo seleccionado
 	            GameWorldWithHistory newLevelLoaded = LevelSaver.readFromXML(fileToLoad.getAbsolutePath());
 	            if (newLevelLoaded != null) {
-	                System.err.println(newLevelLoaded.getGameWorld().getLevel());
-	                System.err.println(newLevelLoaded.getGameWorld().getLevel().getImmovableEntities(0, 0).getX());
-	                this.gameWorld.updateFrom((GameWorld) newLevelLoaded.getGameWorld());
+	                
+	                
+	                this.gameWorld.updateFrom( newLevelLoaded.getGameWorld());
 
 	                cleanUpArray(newLevelLoaded.getGameWorld().getLevel().getMobileEntities());
-
-	                System.err.println(gameWorld.getLevel());
-	                System.out.println(newLevelLoaded.getHistory().toString());
+	                
+	                logger.info("Nivel que se va a cargar : {}", gameWorld.getLevel());
+	                logger.info("Historico de movimientos del nivel a cargar: {} ", newLevelLoaded.getHistory());
+	               
 	                sokobanLogic.setHistory(newLevelLoaded.getHistory()); // Actualiza el historial también
 	                logger.info("Level loaded successfully.");
 	            } else {
 	                logger.error("Failed to load level.");
 	            }
 	        } catch (JAXBException e) {
-	            e.printStackTrace();
+	            
 	            logger.error("Error loading level from XML", e);
 	        }
 	    }

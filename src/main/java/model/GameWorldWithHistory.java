@@ -1,11 +1,9 @@
 package model;
 
-import javax.xml.bind.annotation.XmlAccessorType;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
-
-import java.util.Deque;
 import java.util.List;
 
 

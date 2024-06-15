@@ -2,6 +2,10 @@ package model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +18,11 @@ public class GameWorld {
 	private ArrayList<Integer> localPuntuation;
 	private Level level;
 	private int levelNumber;
+	private static final Logger logger = LoggerFactory.getLogger(GameWorld.class);
 	public GameWorld(String levelRoute) {
 		levelFile = new File(levelRoute); 
-		localPuntuation = new ArrayList<Integer>();
-		setLevelNumber(0);
+		localPuntuation = new ArrayList<>();
+		levelNumber=0;
 		loadLevel(levelFile);
 		globalPuntuation=0;
 	}
@@ -38,8 +43,8 @@ public class GameWorld {
 			}
 			
 		} else {
+			logger.info("\n\n\nGAME OVER\\n\\n\\n");
 			
-			System.out.println("\n\n\nGAME OVER BRO\n\n\n");
 		}
 	}
 	@XmlElement
@@ -86,7 +91,7 @@ public class GameWorld {
 	}
 	
 	public Level getNextLevel() {
-	    String currentLevelName = level.getLevelName();
+	    
 	    int currentLevelNumber = getLevelNumber();
 	    String nextLevelName = "./src/main/java/model/maps/level_" + (currentLevelNumber + 1) + ".txt";
 	    File file = new File(nextLevelName);
@@ -107,9 +112,9 @@ public class GameWorld {
 
     public void updateFrom(GameWorld other) {
     	setLevelNumber(other.getLevelNumber());
-        this.levelFile = (File)other.levelFile;
+        this.levelFile = other.levelFile;
         this.globalPuntuation = other.globalPuntuation;
-        this.localPuntuation = new ArrayList<Integer>(other.localPuntuation); // Deep copy
+        this.localPuntuation = new ArrayList<>(other.localPuntuation); // Deep copy
         
         level.updateFrom(other.level);
         

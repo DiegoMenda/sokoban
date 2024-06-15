@@ -10,7 +10,6 @@ public class GameFrame extends JFrame {
     private String levelName = "";
 
     private JButton startButton;
-    //private JButton loadButton;
     private JButton restartLevelButton;
     private JButton saveGameButton;
     private JButton openSaveGameButton;
@@ -19,15 +18,20 @@ public class GameFrame extends JFrame {
     private JLabel undoLabel;
 
     public GameFrame(EntitiesRenderer renderer) {
+        this.renderer = renderer;
+        initializeFrame();
+        initializeComponents();
+    }
+
+    private void initializeFrame() {
         setTitle("Sokoban Game");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
+    }
 
-        this.renderer = renderer;
-        renderer.setPreferredSize(new Dimension(400, 300));
-
+    private void initializeComponents() {
         JPanel centerPanel = new JPanel(new GridBagLayout());
         centerPanel.add(renderer);
         add(centerPanel, BorderLayout.CENTER);
@@ -38,7 +42,6 @@ public class GameFrame extends JFrame {
         add(sidePanel, BorderLayout.EAST);
 
         startButton = new JButton("Start a new game");
-        //loadButton = new JButton("Load a level");
         restartLevelButton = new JButton("Restart the current level");
         saveGameButton = new JButton("Save the game");
         openSaveGameButton = new JButton("Open a saved game");
@@ -47,7 +50,6 @@ public class GameFrame extends JFrame {
         undoLabel = new JLabel("Undo the last movement: Z");
 
         sidePanel.add(startButton);
-        //sidePanel.add(loadButton);
         sidePanel.add(restartLevelButton);
         sidePanel.add(saveGameButton);
         sidePanel.add(openSaveGameButton);
@@ -60,7 +62,7 @@ public class GameFrame extends JFrame {
 
     public void setPuntuation(int puntuation) {
         this.puntuation = puntuation;
-        puntuationLabel.setText("Total Puntuation " + puntuation);
+        puntuationLabel.setText("Total Puntuation: " + puntuation);
     }
 
     public void setLevelName(String levelName) {
@@ -71,10 +73,6 @@ public class GameFrame extends JFrame {
     public void setStartButtonAction(ActionListener action) {
         startButton.addActionListener(action);
     }
-
-//    public void setLoadButtonAction(ActionListener action) {
-//        loadButton.addActionListener(action);
-//    }
 
     public void setRestartLevelButtonAction(ActionListener action) {
         restartLevelButton.addActionListener(action);
@@ -93,24 +91,11 @@ public class GameFrame extends JFrame {
         repaint();
     }
 
-
-    private class OverlayPanel extends JPanel {
-        @Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            g.setFont(new Font("Arial", Font.PLAIN, 20));
-            g.setColor(Color.BLACK); 
-            g.drawString("Total Puntuation: " + puntuation, 5, 30);
-            g.drawString("Level Name: " + levelName , 5, 55);
-        }
-    }
     public void centerRenderer() {
         int frameWidth = getWidth();
         int frameHeight = getHeight();
         int rendererWidth = renderer.getPreferredSize().width;
-        System.out.println("W: "+rendererWidth);
         int rendererHeight = renderer.getPreferredSize().height;
-        System.out.println("H: "+rendererHeight);
         int x = (frameWidth - rendererWidth) / 2;
         int y = (frameHeight - rendererHeight) / 2;
 
