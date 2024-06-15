@@ -95,11 +95,21 @@ class Test2 {
     }
     @Test
     void levelToString() {
-        assertEquals("+++++++\n"
-        		+ "+...*.+\n"
-        		+ "+.....+\n"
-        		+ "+.....+\n"
-        		+ "+++++++\n", nivel.toString());
+        assertEquals("Level Name: Nivel 1\n"
+        		+"Dimensions: 5x7\n"
+        		+"WarehouseMan: W\n"
+        		+"Immovable Entities:\n"
+        		+"+ + + + + + + \n"
+        		+ "+ . . . * . + \n"
+        		+ "+ . . . . . + \n"
+        		+ "+ . . . . . + \n"
+        		+ "+ + + + + + + \n"
+        		+"Mobile Entities:\n"
+        		+"null null null null null null null \n"
+        		+"null W # null null null null \n"
+        		+"null null null null null null null \n"
+        		+"null null null null null null null \n"
+        		+"null null null null null null null \n", nivel.toString());
     }
     @Test
     void readWareHouseMan() {
@@ -230,7 +240,7 @@ class Test2 {
     @Test
     void saveLevel() throws JAXBException {
     	logica.moveCharacter(0, 1);
-    	assertEquals(1, logica.getPuntuation());
+    	assertEquals(1, mundo.getLocalPuntuation().get(0));
     	GameWorldWithHistory mundohistoria = new GameWorldWithHistory(mundo, logica.getHistory());
     	
     	LevelSaver.saveToXML(mundohistoria,"./src/main/java/model/maps/test_level_save");

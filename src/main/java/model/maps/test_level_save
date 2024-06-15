@@ -5,264 +5,265 @@
             <col>7</col>
             <row>5</row>
             <immovableEntities>
-                <row>
-                    <item>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>0</x>
                         <y>0</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>1</x>
                         <y>0</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>2</x>
                         <y>0</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>3</x>
                         <y>0</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>4</x>
                         <y>0</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>5</x>
                         <y>0</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>6</x>
                         <y>0</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                </row>
-                <row>
-                    <item>
+                </immovableEntity>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>0</x>
                         <y>1</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>1</x>
                         <y>1</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>2</x>
                         <y>1</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>3</x>
                         <y>1</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="goal">
                         <exp>36</exp>
                         <x>4</x>
                         <y>1</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkBAMAAAATLoWrAAAAMFBMVEUqKiqsPRd4LRJdIw7paDvthGDoXSz749vrc0rYTRyHMhMAAAAAAAAAAAAAAAAAAADstYCkAAAAWElEQVR4XmNgGAUQwAhjCArxXoCwWGBSJn8eQZnMUFrEmiXkxQswkwkqxMj/sQHKhAnx3/OAGQsTYjVtEEAT+jFhIkwVjGaWYxQ8C2HCHPFXiOEvlDlCAQCMUA5Hyky75wAAAABJRU5ErkJggg==</textureImage>
                         <penetrable>true</penetrable>
+                        <archieved>false</archieved>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>5</x>
                         <y>1</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>6</x>
                         <y>1</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                </row>
-                <row>
-                    <item>
+                </immovableEntity>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>0</x>
                         <y>2</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>1</x>
                         <y>2</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>2</x>
                         <y>2</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>3</x>
                         <y>2</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>4</x>
                         <y>2</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>5</x>
                         <y>2</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>6</x>
                         <y>2</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                </row>
-                <row>
-                    <item>
+                </immovableEntity>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>0</x>
                         <y>3</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>1</x>
                         <y>3</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>2</x>
                         <y>3</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>3</x>
                         <y>3</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>4</x>
                         <y>3</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
                         <exp>36</exp>
                         <x>5</x>
                         <y>3</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
                         <penetrable>true</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>6</x>
                         <y>3</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                </row>
-                <row>
-                    <item>
+                </immovableEntity>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>0</x>
                         <y>4</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>1</x>
                         <y>4</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>2</x>
                         <y>4</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>3</x>
                         <y>4</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>4</x>
                         <y>4</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>5</x>
                         <y>4</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
                         <exp>36</exp>
                         <x>6</x>
                         <y>4</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
                         <penetrable>false</penetrable>
                     </item>
-                </row>
+                </immovableEntity>
             </immovableEntities>
             <mobileEntities>
-                <row>
+                <mobileEntity>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
@@ -270,22 +271,24 @@
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                </row>
-                <row>
+                </mobileEntity>
+                <mobileEntity>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                    <item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="box">
                         <exp>36</exp>
                         <x>2</x>
                         <y>1</y>
                         <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkBAMAAAATLoWrAAAAMFBMVEXXunWqhkldPCDfz46KZTg8JBQsLCzHqmW6mlWadUFNMBgAAAAAAAAAAAAAAAAAAABAwkH/AAABDUlEQVR4Xo2STYrCQBCFX7e61QRntuLPBYZ4ATfucwWvNmNWs3IniHgFDyCCMPvJBBcSglp/HRJXU4RO8+XlVb2mgddyzkWvyGP60QR+Bo97W3Yh9NYibkFmUS9toG/2otfmNDrLM5znZMefSuvQGfMqCJmiQlZGKcqc970xKkNL4ItRAuwN/aTiRk4VqxmVKiPRIXhhzbIgsiFIlhUmsiFYBlQ6nqLbEslO2tWImv7FJ3GqEbt96jagzjUehKSGisdqH5IqonTXkNQQDb4NSRXJ4JbUkKSzpIosnSQ15DWdJA0/WjpNakjTUVIuQXpOcrzgexLhV4FUDNfFtH9sID85//uatBDB7rt0adYTWGhVjYNccv4AAAAASUVORK5CYII=</textureImage>
+                        <normalBox>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkBAMAAAATLoWrAAAAMFBMVEXXunWqhkldPCDfz46KZTg8JBQsLCzHqmW6mlWadUFNMBgAAAAAAAAAAAAAAAAAAABAwkH/AAABDUlEQVR4Xo2STYrCQBCFX7e61QRntuLPBYZ4ATfucwWvNmNWs3IniHgFDyCCMPvJBBcSglp/HRJXU4RO8+XlVb2mgddyzkWvyGP60QR+Bo97W3Yh9NYibkFmUS9toG/2otfmNDrLM5znZMefSuvQGfMqCJmiQlZGKcqc970xKkNL4ItRAuwN/aTiRk4VqxmVKiPRIXhhzbIgsiFIlhUmsiFYBlQ6nqLbEslO2tWImv7FJ3GqEbt96jagzjUehKSGisdqH5IqonTXkNQQDb4NSRXJ4JbUkKSzpIosnSQ15DWdJA0/WjpNakjTUVIuQXpOcrzgexLhV4FUDNfFtH9sID85//uatBDB7rt0adYTWGhVjYNccv4AAAAASUVORK5CYII=</normalBox>
+                        <boxOnGoal>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABrElEQVR4Xs3XMVLDMBAF0ByFkjIlF8gRcoQcgIKCK+QIKSkpKShpUqSkcElBScEhwnzPLMjfX+u1bBkXO1EUS/8lox1NNre743UttX98vW5ssIZ6On/+gW629209nC69B2sVZ/ZAeD1/fPcW1irO7ICgxAdLgjizA0qraZrqxZmDoPT93f7Ufhss2B2e23FakXnscTi+/ZbKDYMMFQlW84yZBWQoL1jNK0wRyEOpYAXKYXCIVa4Lenn/CqMUyMPgeZXrghAQRTHIw9jzKncQhMURVAoawkwGRVBeNzFmFlAEFcXMBoqgFEbtMxsICxiF+fTWTjF82KuAuPsMggICv1TaTbl9VG4xCGNDMQjrVffxPiq3GGTnBSiD2K9ie6Tdp/ZRuUUgPrx8ptLCs7l9VO5oEGOiKN5nFlAOY900BjUZ5GEsgLuPK0VNAg1hUhDGEVQxKIJhUARVDGKIwihQBKVyR4O8u0nNeyiVOwo0dDfl5nMolRsGcTepYG9eoVRuFmQLahbn9UD8x3+J4sweCK92Yy9RnNkBQWm3Ni+sVZzpnqH/qBaEATpgLfUDSMl16+WpbsMAAAAASUVORK5CYII=</boxOnGoal>
                     </item>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                </row>
-                <row>
+                </mobileEntity>
+                <mobileEntity>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="worker">
                         <exp>36</exp>
@@ -298,8 +301,8 @@
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                </row>
-                <row>
+                </mobileEntity>
+                <mobileEntity>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
@@ -307,8 +310,8 @@
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                </row>
-                <row>
+                </mobileEntity>
+                <mobileEntity>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
@@ -316,7 +319,7 @@
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
                     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
-                </row>
+                </mobileEntity>
             </mobileEntities>
             <levelName>Nivel 1</levelName>
             <warehouseMan>
@@ -327,7 +330,9 @@
             </warehouseMan>
         </level>
         <levelFile>./src/main/java/model/maps/test_level.txt</levelFile>
-        <puntuation>1</puntuation>
+        <levelNumber>1</levelNumber>
+        <localPuntuation>1</localPuntuation>
+        <puntuation>0</puntuation>
     </gameWorld>
     <history>
         <boxMove>false</boxMove>
