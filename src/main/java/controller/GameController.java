@@ -107,7 +107,7 @@ public class GameController {
 	            cleanUpArray(newLevelLoaded.getGameWorld().getLevel().getMobileEntities());
 	            
 	        	System.err.println(gameWorld.getLevel());
-
+	        	System.out.println(newLevelLoaded.getHistory().toString());
 	            sokobanLogic.setHistory(newLevelLoaded.getHistory()); // Update history as well
 	            logger.info("Level loaded successfully.");
 	        } else {
