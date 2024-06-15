@@ -32,7 +32,7 @@ public class GameController {
     private EntitiesRenderer entitiesRenderer;
     private GameKeyListener keyListener;
 	private static final Logger logger = LoggerFactory.getLogger(GameController.class);
-
+	private boolean gameFinished = false;
 
     public GameController(String levelFilePath) {
     	
@@ -54,7 +54,7 @@ public class GameController {
             getGameFrame().setVisible(true);
             getGameFrame().requestFocusInWindow();
 
-            // Asigna las acciones a los botones aquí
+            // buttons
             getGameFrame().setStartButtonAction(e -> startNewGame());
           
             getGameFrame().setRestartLevelButtonAction(e -> restartCurrentLevel());
@@ -75,6 +75,7 @@ public class GameController {
     	this.gameWorld.updateFrom(gameWorld);
    	 
     	sokobanLogic.clearHistory();
+    	gameFinished = false;
     	updateGame();
     	
 		
@@ -90,40 +91,58 @@ public class GameController {
     	this.gameWorld.updateFrom(gameWorld);
     	 
     	 sokobanLogic.clearHistory();
+    	 gameFinished = false;
     	 updateGame();
     }
 
 
 	public void updateGame() {
         entitiesRenderer.repaint();
-        getGameFrame().setPuntuation(gameWorld.getPuntuation());
+        getGameFrame().setGlobalPuntuation(gameWorld.getPuntuation() + gameWorld.getActualLevelPuntuation());
         getGameFrame().setLevelName(gameWorld.getLevel().getLevelName());
-        checkLevelCompletion();
+        getGameFrame().setLocalPuntuation(gameWorld.getActualLevelPuntuation());
+        if(!gameFinished) checkLevelCompletion();
     }
-    
-    private void checkLevelCompletion() {
-        if (sokobanLogic.isLevelCompleted()) {
-            entitiesRenderer.repaint();
-          
-               
-                gameWorld.loadNextLevel();
-                sokobanLogic.clearHistory();
-                
-                getGameFrame().centerRenderer();
-               
-        }
-    }
+	
+	
+	private void checkLevelCompletion() {
+	    if (sokobanLogic.isLevelCompleted()) {
+	        // force update
+	        SwingUtilities.invokeLater(() -> {
+	            entitiesRenderer.repaint(); // repaint to see the box
+
+	            // set delay
+	            try {
+	                Thread.sleep(500); // 0.5 sec delay
+	            } catch (InterruptedException ex) {
+	                Thread.currentThread().interrupt();
+	            }
+
+	            // move to next level
+	            if (gameWorld.loadNextLevel()) {
+	                sokobanLogic.clearHistory();
+	                getGameFrame().centerRenderer();
+	                gameFinished = false;
+	            } else {
+	                gameFinished = true;
+	                // show congratulations message.
+	                int puntuation = gameWorld.getLocalPuntuation().get(gameWorld.getLevelNumber() - 1);
+	                JOptionPane.showMessageDialog(null, "Congratulations! You have reached the end of the game.\nYour score: " + puntuation, "Congratulations!", JOptionPane.INFORMATION_MESSAGE);
+	            }
+	        });
+	    }
+	}
     
     
     public void saveLevel() {
-        // Crea un JFileChooser para guardar el archivo XML
+        // create a JFileChooser 
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Guardar archivo XML de nivel");
+        fileChooser.setDialogTitle("Save level XML file");
         fileChooser.setAcceptAllFileFilterUsed(false);
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos XML", "xml");
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("XML files", "xml");
         fileChooser.addChoosableFileFilter(filter);
 
-        // Establece el directorio por defecto
+        // def dir.
         File defaultDirectory = new File("./src/main/java/model/maps/");
         fileChooser.setCurrentDirectory(defaultDirectory);
 
@@ -131,12 +150,12 @@ public class GameController {
 
         if (userSelection == JFileChooser.APPROVE_OPTION) {
             File fileToSave = fileChooser.getSelectedFile();
-            // Asegúrate de que el archivo tenga la extensión .xml
+            // make sure it is an xml file
             if (!fileToSave.getAbsolutePath().endsWith(".xml")) {
                 fileToSave = new File(fileToSave + ".xml");
             }
             try {
-                // Guarda el archivo seleccionado
+                // Save to xml
                 LevelSaver.saveToXML(new GameWorldWithHistory(gameWorld, sokobanLogic.getHistory()), fileToSave.getAbsolutePath());
                 logger.info("Level saved successfully.");
             } catch (JAXBException e) {
@@ -147,14 +166,14 @@ public class GameController {
     }
 	
 	public void loadLevel() {
-	    // Crea un JFileChooser para seleccionar el archivo XML
+	    // create a JFileChooser to select the XML file.
 	    JFileChooser fileChooser = new JFileChooser();
-	    fileChooser.setDialogTitle("Seleccionar archivo XML de nivel guardado");
+	    fileChooser.setDialogTitle("Select saved level XML file");
 	    fileChooser.setAcceptAllFileFilterUsed(false);
-	    FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos XML", "xml");
+	    FileNameExtensionFilter filter = new FileNameExtensionFilter("XML file", "xml");
 	    fileChooser.addChoosableFileFilter(filter);
 
-	    // Establece el directorio por defecto
+	    // def directory
 	    File defaultDirectory = new File("./src/main/java/model/maps/");
 	    fileChooser.setCurrentDirectory(defaultDirectory);
 
@@ -163,7 +182,7 @@ public class GameController {
 	    if (userSelection == JFileChooser.APPROVE_OPTION) {
 	        File fileToLoad = fileChooser.getSelectedFile();
 	        try {
-	            // Lee el archivo seleccionado
+	            // read the file
 	            GameWorldWithHistory newLevelLoaded = LevelSaver.readFromXML(fileToLoad.getAbsolutePath());
 	            if (newLevelLoaded != null) {
 	                
@@ -172,11 +191,12 @@ public class GameController {
 
 	                cleanUpArray(newLevelLoaded.getGameWorld().getLevel().getMobileEntities());
 	                
-	                logger.info("Nivel que se va a cargar : {}", gameWorld.getLevel());
-	                logger.info("Historico de movimientos del nivel a cargar: {} ", newLevelLoaded.getHistory());
+	                logger.info("Level to be loaded : {}", gameWorld.getLevel());
+	                logger.info("Historical movement history of the level to be uploaded: {} ", newLevelLoaded.getHistory());
 	               
-	                sokobanLogic.setHistory(newLevelLoaded.getHistory()); // Actualiza el historial también
+	                sokobanLogic.setHistory(newLevelLoaded.getHistory()); // update history
 	                logger.info("Level loaded successfully.");
+	                gameFinished = false;
 	            } else {
 	                logger.error("Failed to load level.");
 	            }
@@ -201,20 +221,23 @@ public class GameController {
         }
     }
 	
+
     
     
-
-    public static void main(String[] args) {
-        new GameController("./src/main/java/model/maps/level_1.txt");
-    }
-
 	public GameFrame getGameFrame() {
 		return gameFrame;
 	}
 
 	public void setGameFrame(GameFrame gameFrame) {
 		this.gameFrame = gameFrame;
-	}
+	}    
+    
+
+    public static void main(String[] args) {
+        new GameController("./src/main/java/model/maps/level_1.txt");
+    }
+
+
     
     
 }
