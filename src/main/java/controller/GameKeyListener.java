@@ -62,34 +62,7 @@ public class GameKeyListener {
             }
         });
         //
-        
-        
-        
-        
-        
-        
-        //REMOVE
-        
-        actionMap.put("carga", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	gameController.loadLevel();
-            	gameController.updateGame();
-            	gameController.getGameFrame().centerRenderer();
 
-            }
-        });
-        
-        actionMap.put("guarda", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	gameController.saveLevel();
-            	gameController.updateGame();
-            }
-        });
-        
-        
-        
         
         
     }
