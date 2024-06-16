@@ -40,7 +40,7 @@ public class GameFrame extends JFrame {
         add(sidePanel, BorderLayout.EAST);
 
         startButton = new JButton("Start a new game");
-        restartLevelButton = new JButton("Restart the current level");
+        restartLevelButton = new JButton("Restart level");
         saveGameButton = new JButton("Save the game");
         openSaveGameButton = new JButton("Open a saved game");
         puntuationLabel = new JLabel("Total Global Puntuation: 0");
