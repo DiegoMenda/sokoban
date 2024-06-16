@@ -97,11 +97,14 @@ public class GameController {
 
 
 	public void updateGame() {
+		
         entitiesRenderer.repaint();
+        
         getGameFrame().setGlobalPuntuation(gameWorld.getPuntuation() + gameWorld.getActualLevelPuntuation());
         getGameFrame().setLevelName(gameWorld.getLevel().getLevelName());
         getGameFrame().setLocalPuntuation(gameWorld.getActualLevelPuntuation());
         if(!gameFinished) checkLevelCompletion();
+        
     }
 	
 	
@@ -109,7 +112,7 @@ public class GameController {
 	    if (sokobanLogic.isLevelCompleted()) {
 	        // force update
 	        SwingUtilities.invokeLater(() -> {
-	            entitiesRenderer.repaint(); // repaint to see the box
+	        	
 
 	            // set delay
 	            try {
@@ -117,11 +120,13 @@ public class GameController {
 	            } catch (InterruptedException ex) {
 	                Thread.currentThread().interrupt();
 	            }
+	            
+	            entitiesRenderer.repaint(); // repaint to see the box
+	            getGameFrame().centerRenderer();
 
 	            // move to next level
 	            if (gameWorld.loadNextLevel()) {
 	                sokobanLogic.clearHistory();
-	                getGameFrame().centerRenderer();
 	                gameFinished = false;
 	            } else {
 	                gameFinished = true;
@@ -195,7 +200,9 @@ public class GameController {
 	                logger.info("Historical movement history of the level to be uploaded: {} ", newLevelLoaded.getHistory());
 	               
 	                sokobanLogic.setHistory(newLevelLoaded.getHistory()); // update history
+	                getGameFrame().centerRenderer();
 	                logger.info("Level loaded successfully.");
+	                
 	                gameFinished = false;
 	            } else {
 	                logger.error("Failed to load level.");
