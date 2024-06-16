@@ -8,11 +8,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.awt.Image;
 import java.io.File;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
 import javax.xml.bind.JAXBException;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -93,11 +96,7 @@ class Test2 {
     
         assertEquals("#", nivel.getMobileEntities()[1][2].toString());
     }
-//    @Test
-//    void loadLevel() {
-//    	assertTrue(mundo.loadNextLevel());
-//    	assertFalse(mundo.loadNextLevel());
-//    }
+    
     @Test
     void levelToString() {
         assertEquals("Level Name: Nivel 1\n"
@@ -181,6 +180,44 @@ class Test2 {
         assertEquals(1, nivel.getWarehouseMan().getY());
         assertEquals(1, nivel.getWarehouseMan().getX());
     }
+    
+    @Test
+    void testConstructorThrowsException() throws Exception {
+        Constructor<TexturePaths> constructor = TexturePaths.class.getDeclaredConstructor();
+        constructor.setAccessible(true);
+
+        assertThrows(InvocationTargetException.class, () -> {
+            constructor.newInstance();
+        });
+    }
+    @Test
+    void loadNextLevel() {
+    	mundo = new GameWorld("./src/main/java/model/maps/level_1.txt");
+    	Level level2 = LevelLoader.loadLevel(  new File("./src/main/java/model/maps/level_2.txt")  );
+    	mundo.loadNextLevel();
+    	assertEquals(level2.toString(),mundo.getLevel().toString());
+    }
+    @Test
+    void getLevelPuntuation() {
+    	
+    	assertEquals(0, mundo.getActualLevelPuntuation());
+    	logica.moveCharacter(0, 1);
+    	assertEquals(1, mundo.getActualLevelPuntuation());
+    }
+    @Test
+    void updateFrom() {
+    	GameWorld mundo2 = new GameWorld("./src/main/java/model/maps/level_2.txt");
+    	mundo.updateFrom(mundo2);
+    	assertEquals("Nivel 2", mundo.getLevel().getLevelName());
+    	
+    }
+
+    @Test 
+    void isLevelCompleted() {
+    	logica.moveCharacter(1, 0);
+    	logica.moveCharacter(1, 0);
+    	assertTrue(logica.isLevelCompleted());
+    }
 //    @Test
 //    void cantMoveFromTO3() {
 //        logica.moveCharacter(1, 1);
@@ -241,21 +278,65 @@ class Test2 {
         assertEquals(1, nivel.getWarehouseMan().getY());
         assertEquals(1, nivel.getWarehouseMan().getX());
     }
-    
+    @Test 
+    void undoBoxGoal(){
+    	logica.moveCharacter(1, 0);
+    	logica.moveCharacter(1, 0);
+    	logica.moveCharacter(1, 0);
+    	logica.undoMove();
+    	assertTrue(logica.isLevelCompleted());
+    	logica.undoMove();
+    	assertFalse(logica.isLevelCompleted());
+    }
+    @Test
+    void logicHistory() {
+    	logica.moveCharacter(0, 1);
+    	assertNotNull(logica.getHistory());
+    	logica.setHistory(null);
+    	assertNull(logica.getHistory());
+    }
+    @Test
+    void logicClearHistory() {
+    	logica.moveCharacter(0, 1);
+    	assertFalse(logica.getHistory().isEmpty());
+    	logica.clearHistory();
+    	assertTrue(logica.getHistory().isEmpty());
+    }
+
+    @BeforeEach
+    @AfterEach
+    void resetContext() {
+        try {
+            // Accedemos al campo `context` privado de `LevelSaver` para restablecerlo a null
+            Field contextField = LevelSaver.class.getDeclaredField("context");
+            contextField.setAccessible(true);
+            contextField.set(null, null);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            throw new RuntimeException("Error resetting context field", e);
+        }
+    }
+
     @Test
     void saveLevel() throws JAXBException {
-    	logica.moveCharacter(0, 1);
-    	assertEquals(1, mundo.getLocalPuntuation().get(0));
-    	GameWorldWithHistory mundohistoria = new GameWorldWithHistory(mundo, logica.getHistory());
-    	
-    	LevelSaver.saveToXML(mundohistoria,"./src/main/java/model/maps/test_level_save");
-    	LevelSaver.saveToXML(mundohistoria,"./src/main/java/model/maps/test_level_save");
-    	GameWorldWithHistory  leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
-    	assertEquals("Nivel 1",leido.getGameWorld().getLevel().getLevelName());
-    	
+        // Movemos al personaje y verificamos la puntuación
+        logica.moveCharacter(0, 1);
+        assertEquals(1, mundo.getLocalPuntuation().get(0));
+        
+        // Creamos el objeto `GameWorldWithHistory`
+        GameWorldWithHistory mundohistoria = new GameWorldWithHistory(mundo, logica.getHistory());
+        
+        // Guardamos en XML
+        LevelSaver.saveToXML(mundohistoria, "./src/main/java/model/maps/test_level_save.xml");
+        
+        // Leemos desde XML
+        GameWorldWithHistory leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save.xml");
+        
+        // Verificamos que los datos leídos son correctos
+        assertEquals("Nivel 1", leido.getGameWorld().getLevel().getLevelName());
     }
     @Test void onlyreadLevel() throws JAXBException{
     	GameWorldWithHistory  leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
+    	leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
     	assertEquals("Nivel 1",leido.getGameWorld().getLevel().getLevelName());
     	 leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
     	assertEquals("Nivel 1",leido.getGameWorld().getLevel().getLevelName());
