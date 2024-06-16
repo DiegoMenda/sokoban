@@ -1,5 +1,4 @@
-
-## Sokoban: A Classic Puzzle Game in Java
+## Sokoban
 
 This repository contains the source code for a Sokoban game implemented in Java. Sokoban is a puzzle game where the goal is to move boxes to their target positions using a character.
 
