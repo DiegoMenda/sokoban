@@ -53,7 +53,7 @@ public class LevelLoader {
 	        }
 	        level = new Level(cols, rows, levelName, inamovible, movible);
 	        level.setWarehouseMan(context.warehouseMan);
-	    } catch (IOException | NullPointerException e) {
+	    } catch (IOException | NullPointerException | StringIndexOutOfBoundsException e) {
 	        logger.error("error reading from file {}", file.getName());
 	        return null;
 	    }
