@@ -7,10 +7,15 @@ import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.apache.log4j.BasicConfigurator;
 
 public class LevelLoader {
 	
-	private static final Logger logger = LoggerFactory.getLogger(LevelLoader.class);
+	static {
+        BasicConfigurator.configure();
+    }
+
+    private static final Logger logger = LoggerFactory.getLogger(LevelLoader.class);
 
 
 	private LevelLoader() {
