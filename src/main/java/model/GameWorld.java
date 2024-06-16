@@ -21,37 +21,16 @@ public class GameWorld {
 	private static final Logger logger = LoggerFactory.getLogger(GameWorld.class);
 	public GameWorld(String levelRoute) {
 		levelFile = new File(levelRoute); 
-		localPuntuation = new ArrayList<>();
+		localPuntuation = new ArrayList<>(1);
 		levelNumber=0;
-		loadLevel(levelFile);
+		loadLevelFromFile(levelFile);
 		globalPuntuation=0;
 	}
 	
-
-    
 	
-	public GameWorld() {
-		
-	}
+	public GameWorld() {}
 
-	private Level loadLevel(File file) {
-		Level nivel = LevelLoader.loadLevel(file);
-		if(nivel != null) {
-			//REMOVE
-			this.level = nivel;
-			setLevelNumberMas();
-			localPuntuation.add(getLevelNumber()-1, 0);
-			if(getLevelNumber() > 1) {
-				globalPuntuation += localPuntuation.get(getLevelNumber()-2);
-			}
-			
-		} else {
-			
-			logger.info("All levels completed");
-			
-		}
-		return nivel;
-	}
+
 	@XmlElement
 	public Level getLevel() {
 		return this.level;
@@ -95,23 +74,46 @@ public class GameWorld {
 		localPuntuation.set(getLevelNumber()-1, localPuntuation.get(getLevelNumber()-1)-1);
 	}
 	
-	public Level getNextLevel() {
-	    
-	    int currentLevelNumber = getLevelNumber();
-	    String nextLevelName = "./src/main/java/model/maps/level_" + (currentLevelNumber + 1) + ".txt";
-	    File file = new File(nextLevelName);
-	    return loadLevel(file);
+	private Level loadLevelFromFile(File file) {
+		Level nivel = LevelLoader.loadLevel(file);
+		if(nivel != null) {
+			
+			this.level = nivel;
+			incLevelNumber();
+			localPuntuation.add(getLevelNumber()-1, 0);
+			if(getLevelNumber() > 1) {
+				globalPuntuation += localPuntuation.get(getLevelNumber()-2);
+			}
+			
+		} else {
+			localPuntuation.add(getLevelNumber(), 0);
+			logger.info("There is an error loading the level {}", file.getAbsolutePath());
+		}
+		return nivel;
 	}
 	
 
-	// devuelve false si hemos terminado
+	// returns false if the level is not correct.
 	public boolean loadNextLevel() {
-	    Level nextLevel = getNextLevel();
-	    if (nextLevel != null) {
+		int currentLevelNumber = getLevelNumber();
+		Level nextLevel = null;
+		String nextLevelName = "./src/main/java/model/maps/level_" + (currentLevelNumber + 1) + ".txt";
+		File file = new File(nextLevelName);
+		if(file.exists()) {
+			nextLevel = loadLevelFromFile(file);
+		}
+		else {
+			logger.error("Tried to load the next level from {}, but the file does not exist.", file.getAbsolutePath());
+			return false; // we reached the end.
+		}
+	
+	    if (nextLevel != null) { // correct level
 	        level = nextLevel;
 	        return true;
-	    }
-	    return false;
+	    } else { //incorrect
+	    	incLevelNumber();
+	    	return loadNextLevel();
+	    	}
 	}
 
     public void updateFrom(GameWorld other) {
@@ -125,7 +127,6 @@ public class GameWorld {
     }
     
     public int getLevelNumber() {
-    	
     	return levelNumber;
     }
     
@@ -133,7 +134,7 @@ public class GameWorld {
     	levelNumber = numero;
     }
     
-    public void setLevelNumberMas() {
+    public void incLevelNumber() {
     	
     	 this.levelNumber++;
     }
