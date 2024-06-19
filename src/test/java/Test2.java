@@ -45,9 +45,9 @@ class Test2 {
     @BeforeEach
     void setUp() {
         
-        levelFile = new File("./src/main/java/model/maps/test_level.txt");
+        levelFile = new File("./resources/maps/test_level.txt");
         nivel = LevelLoader.loadLevel(levelFile);
-        mundo = new GameWorld("./src/main/java/model/maps/test_level.txt");
+        mundo = new GameWorld("./resources/maps/test_level.txt");
         logica =new SokobanLogic(mundo);
     }
 
@@ -192,8 +192,8 @@ class Test2 {
     }
     @Test
     void loadNextLevel() {
-    	mundo = new GameWorld("./src/main/java/model/maps/level_1.txt");
-    	Level level2 = LevelLoader.loadLevel(  new File("./src/main/java/model/maps/level_2.txt")  );
+    	mundo = new GameWorld("./resources/maps/level_1.txt");
+    	Level level2 = LevelLoader.loadLevel(  new File("./resources/maps/level_2.txt")  );
     	mundo.loadNextLevel();
     	assertEquals(level2.toString(),mundo.getLevel().toString());
     }
@@ -206,7 +206,7 @@ class Test2 {
     }
     @Test
     void updateFrom() {
-    	GameWorld mundo2 = new GameWorld("./src/main/java/model/maps/level_2.txt");
+    	GameWorld mundo2 = new GameWorld("./resources/maps/level_2.txt");
     	mundo.updateFrom(mundo2);
     	assertEquals("Nivel 2", mundo.getLevel().getLevelName());
     	
@@ -234,13 +234,13 @@ class Test2 {
 
     private static Stream<File> provideInvalidLevelFiles() {
         return Stream.of(
-            new File("./src/main/java/model/maps/test_level_wrong_char.txt"),
-            new File("./src/main/java/model/maps/test_level_2_warehouseMan.txt"),
-            new File("./src/main/java/model/maps/test_level_no_boxes.txt"),
-            new File("./src/main/java/model/maps/test_level_no_goals.txt"),
-            new File("./src/main/java/model/maps/test_level_nboxes_!=_ngoals.txt"),
-            new File("./src/main/java/model/maps/test_level_no_level.txt"),
-            new File("./src/main/java/model/maps/test_level_no_whman.txt")
+            new File("./resources/maps/test_level_wrong_char.txt"),
+            new File("./resources/maps/test_level_2_warehouseMan.txt"),
+            new File("./resources/maps/test_level_no_boxes.txt"),
+            new File("./resources/maps/test_level_no_goals.txt"),
+            new File("./resources/maps/test_level_nboxes_!=_ngoals.txt"),
+            new File("./resources/maps/test_level_no_level.txt"),
+            new File("./resources/maps/test_level_no_whman.txt")
         );
     }
     @Test
@@ -326,19 +326,19 @@ class Test2 {
         GameWorldWithHistory mundohistoria = new GameWorldWithHistory(mundo, logica.getHistory());
         
         // Guardamos en XML
-        LevelSaver.saveToXML(mundohistoria, "./src/main/java/model/maps/test_level_save.xml");
+        LevelSaver.saveToXML(mundohistoria, "./resources/maps/test_level_save.xml");
         
         // Leemos desde XML
-        GameWorldWithHistory leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save.xml");
+        GameWorldWithHistory leido = LevelSaver.readFromXML("./resources/maps/test_level_save.xml");
         
         // Verificamos que los datos leídos son correctos
         assertEquals("Nivel 1", leido.getGameWorld().getLevel().getLevelName());
     }
     @Test void onlyreadLevel() throws JAXBException{
-    	GameWorldWithHistory  leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
-    	leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
+    	GameWorldWithHistory  leido = LevelSaver.readFromXML("./resources/maps/test_level_save");
+    	leido = LevelSaver.readFromXML("./resources/maps/test_level_save");
     	assertEquals("Nivel 1",leido.getGameWorld().getLevel().getLevelName());
-    	 leido = LevelSaver.readFromXML("./src/main/java/model/maps/test_level_save");
+    	 leido = LevelSaver.readFromXML("./resources/maps/test_level_save");
     	assertEquals("Nivel 1",leido.getGameWorld().getLevel().getLevelName());
     }
 

@@ -102,7 +102,7 @@
         <configuration>
           <mainClass>controller.GameController</mainClass>
           <arguments>
-            <argument>./src/main/java/model/maps/level_1.txt</argument>
+            <argument>./resources/maps/level_1.txt</argument>
           </arguments>
         </configuration>
       </plugin>

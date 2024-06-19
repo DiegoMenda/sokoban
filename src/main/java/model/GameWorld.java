@@ -97,7 +97,7 @@ public class GameWorld {
 	public boolean loadNextLevel() {
 		int currentLevelNumber = getLevelNumber();
 		Level nextLevel = null;
-		String nextLevelName = "./src/main/java/model/maps/level_" + (currentLevelNumber + 1) + ".txt";
+		String nextLevelName = "./resources/maps/level_" + (currentLevelNumber + 1) + ".txt";
 		File file = new File(nextLevelName);
 		if(file.exists()) {
 			nextLevel = loadLevelFromFile(file);

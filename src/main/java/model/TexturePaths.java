@@ -11,12 +11,12 @@ import org.slf4j.LoggerFactory;
 
 public class TexturePaths {
 	private static final Logger logger = LoggerFactory.getLogger(TexturePaths.class);
-    public static final String TEXTURE_WALL = "./src/main/java/model/textures/wall.png";
-    public static final String TEXTURE_AIR = "./src/main/java/model/textures/air.png";
-    public static final String TEXTURE_WORKER = "./src/main/java/model/textures/worker.png";
-    public static final String TEXTURE_GOAL = "./src/main/java/model/textures/goal.png";
-    public static final String TEXTURE_BOX = "./src/main/java/model/textures/box.png";
-    public static final String TEXTURE_BOX2 = "./src/main/java/model/textures/box-modified.png";
+    public static final String TEXTURE_WALL = "./resources/textures/wall.png";
+    public static final String TEXTURE_AIR = "./resources/textures/air.png";
+    public static final String TEXTURE_WORKER = "./resources/textures/worker.png";
+    public static final String TEXTURE_GOAL = "./resources/textures/goal.png";
+    public static final String TEXTURE_BOX = "./resources/textures/box.png";
+    public static final String TEXTURE_BOX2 = "./resources/textures/box-modified.png";
 
     
     

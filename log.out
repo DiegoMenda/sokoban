@@ -6863,3 +6863,1263 @@
 2024-06-15 12:58:03 INFO  LevelLoader:93 - a wall has been loaded (5, 4)
 2024-06-15 12:58:03 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
 2024-06-15 12:58:03 INFO  LevelLoader:93 - a wall has been loaded (6, 4)
+2024-06-20 00:51:33 INFO  LevelLoader:26 - reading file level_1.txt to generate level
+2024-06-20 00:51:33 INFO  LevelLoader:36 - loading a level that has 5 rows
+2024-06-20 00:51:33 INFO  LevelLoader:37 - loading a level that has 7 columns
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (0, 0)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (1, 0)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (2, 0)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (3, 0)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (4, 0)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (5, 0)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (6, 0)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (0, 1)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/worker.png
+2024-06-20 00:51:33 INFO  LevelLoader:127 - the warehouse man has been loaded(1, 1)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box.png
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box-modified.png
+2024-06-20 00:51:33 INFO  LevelLoader:115 - a box has been loaded(2, 1)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/goal.png
+2024-06-20 00:51:33 INFO  LevelLoader:110 - a goal has been loaded(4, 1)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (6, 1)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (0, 2)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (6, 2)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (0, 3)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:33 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (6, 3)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (0, 4)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (1, 4)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (2, 4)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (3, 4)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (4, 4)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (5, 4)
+2024-06-20 00:51:33 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:33 INFO  LevelLoader:100 - a wall has been loaded (6, 4)
+2024-06-20 00:51:35 INFO  SokobanLogic:142 - the warehouse man moves from (1, 1) to (2, 1)
+2024-06-20 00:51:35 INFO  SokobanLogic:147 - la puntuacion nueva es 0
+2024-06-20 00:51:35 INFO  SokobanLogic:142 - the warehouse man moves from (2, 1) to (3, 1)
+2024-06-20 00:51:35 INFO  SokobanLogic:147 - la puntuacion nueva es 0
+2024-06-20 00:51:35 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:36 INFO  LevelLoader:26 - reading file level_2.txt to generate level
+2024-06-20 00:51:36 INFO  LevelLoader:36 - loading a level that has 5 rows
+2024-06-20 00:51:36 INFO  LevelLoader:37 - loading a level that has 9 columns
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (0, 0)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (1, 0)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (2, 0)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (3, 0)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (4, 0)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (5, 0)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (6, 0)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (7, 0)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (8, 0)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (0, 1)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box.png
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box-modified.png
+2024-06-20 00:51:36 INFO  LevelLoader:115 - a box has been loaded(2, 1)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/goal.png
+2024-06-20 00:51:36 INFO  LevelLoader:110 - a goal has been loaded(4, 1)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (8, 1)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (0, 2)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/worker.png
+2024-06-20 00:51:36 INFO  LevelLoader:127 - the warehouse man has been loaded(1, 2)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (8, 2)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (0, 3)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box.png
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box-modified.png
+2024-06-20 00:51:36 INFO  LevelLoader:115 - a box has been loaded(3, 3)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/goal.png
+2024-06-20 00:51:36 INFO  LevelLoader:110 - a goal has been loaded(6, 3)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:36 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (8, 3)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (0, 4)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (1, 4)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (2, 4)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (3, 4)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (4, 4)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (5, 4)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (6, 4)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (7, 4)
+2024-06-20 00:51:36 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:36 INFO  LevelLoader:100 - a wall has been loaded (8, 4)
+2024-06-20 00:51:36 INFO  SokobanLogic:142 - the warehouse man moves from (1, 2) to (1, 3)
+2024-06-20 00:51:36 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:36 INFO  SokobanLogic:81 - the warehouse man cannot move from (1, 3) to (1, 4)
+2024-06-20 00:51:37 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 00:51:37 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:37 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 00:51:37 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:37 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (4, 3)
+2024-06-20 00:51:37 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:37 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (5, 3)
+2024-06-20 00:51:37 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:37 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:37 INFO  SokobanLogic:142 - the warehouse man moves from (5, 3) to (4, 3)
+2024-06-20 00:51:37 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:38 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (3, 3)
+2024-06-20 00:51:38 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:38 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (2, 3)
+2024-06-20 00:51:38 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:38 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (1, 3)
+2024-06-20 00:51:38 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:38 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 2)
+2024-06-20 00:51:38 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:38 INFO  SokobanLogic:142 - the warehouse man moves from (1, 2) to (1, 1)
+2024-06-20 00:51:38 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:39 INFO  SokobanLogic:142 - the warehouse man moves from (1, 1) to (2, 1)
+2024-06-20 00:51:39 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:39 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:39 INFO  SokobanLogic:142 - the warehouse man moves from (2, 1) to (3, 1)
+2024-06-20 00:51:39 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 00:51:39 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:39 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:39 INFO  LevelLoader:26 - reading file level_3.txt to generate level
+2024-06-20 00:51:39 INFO  LevelLoader:36 - loading a level that has 7 rows
+2024-06-20 00:51:39 INFO  LevelLoader:37 - loading a level that has 7 columns
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (0, 0)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (1, 0)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (2, 0)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (3, 0)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (4, 0)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (5, 0)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (6, 0)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (0, 1)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (1, 1)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (6, 1)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (0, 2)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (1, 2)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box.png
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box-modified.png
+2024-06-20 00:51:39 INFO  LevelLoader:115 - a box has been loaded(2, 2)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/goal.png
+2024-06-20 00:51:39 INFO  LevelLoader:110 - a goal has been loaded(4, 2)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (6, 2)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (0, 3)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/worker.png
+2024-06-20 00:51:39 INFO  LevelLoader:127 - the warehouse man has been loaded(3, 3)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (6, 3)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (0, 4)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box.png
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box-modified.png
+2024-06-20 00:51:39 INFO  LevelLoader:115 - a box has been loaded(2, 4)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (3, 4)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/goal.png
+2024-06-20 00:51:39 INFO  LevelLoader:110 - a goal has been loaded(4, 4)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (6, 4)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (0, 5)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:51:39 INFO  LevelLoader:105 - an air
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (3, 5)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (4, 5)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (5, 5)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (6, 5)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (0, 6)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (1, 6)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (2, 6)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (3, 6)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (4, 6)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (5, 6)
+2024-06-20 00:51:39 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:51:39 INFO  LevelLoader:100 - a wall has been loaded (6, 6)
+2024-06-20 00:51:40 INFO  SokobanLogic:81 - the warehouse man cannot move from (3, 3) to (3, 4)
+2024-06-20 00:51:40 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (2, 3)
+2024-06-20 00:51:40 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:40 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (1, 3)
+2024-06-20 00:51:40 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:40 INFO  SokobanLogic:81 - the warehouse man cannot move from (1, 3) to (0, 3)
+2024-06-20 00:51:41 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 4)
+2024-06-20 00:51:41 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:41 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 5)
+2024-06-20 00:51:41 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:41 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (2, 5)
+2024-06-20 00:51:41 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:41 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (2, 4)
+2024-06-20 00:51:41 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:42 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (1, 4)
+2024-06-20 00:51:42 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:42 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 00:51:42 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:42 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 00:51:42 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:42 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 00:51:42 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:42 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (3, 2)
+2024-06-20 00:51:42 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:43 INFO  SokobanLogic:142 - the warehouse man moves from (3, 2) to (4, 2)
+2024-06-20 00:51:43 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:43 INFO  SokobanLogic:142 - the warehouse man moves from (4, 2) to (4, 3)
+2024-06-20 00:51:43 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:43 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:43 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (3, 3)
+2024-06-20 00:51:43 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:44 INFO  SokobanLogic:36 - Undoing move: Move [(4, 3)->(3, 3)]
+2024-06-20 00:51:44 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:44 INFO  SokobanLogic:36 - Undoing move: Move [(4, 2)->(4, 3)]
+2024-06-20 00:51:44 INFO  SokobanLogic:36 - Undoing move: Move [(3, 2)->(4, 2)]
+2024-06-20 00:51:44 INFO  SokobanLogic:36 - Undoing move: Move [(3, 3)->(3, 2)]
+2024-06-20 00:51:45 INFO  SokobanLogic:36 - Undoing move: Move [(2, 3)->(3, 3)]
+2024-06-20 00:51:45 INFO  SokobanLogic:36 - Undoing move: Move [(1, 3)->(2, 3)]
+2024-06-20 00:51:45 INFO  SokobanLogic:36 - Undoing move: Move [(1, 4)->(1, 3)]
+2024-06-20 00:51:46 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 00:51:46 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:47 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 00:51:47 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:47 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 00:51:47 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:47 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (3, 2)
+2024-06-20 00:51:47 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:48 INFO  SokobanLogic:142 - the warehouse man moves from (3, 2) to (3, 1)
+2024-06-20 00:51:48 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:48 INFO  SokobanLogic:142 - the warehouse man moves from (3, 1) to (2, 1)
+2024-06-20 00:51:48 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:48 INFO  SokobanLogic:142 - the warehouse man moves from (2, 1) to (2, 2)
+2024-06-20 00:51:48 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:48 INFO  SokobanLogic:142 - the warehouse man moves from (2, 2) to (2, 3)
+2024-06-20 00:51:48 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:48 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (1, 3)
+2024-06-20 00:51:48 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:49 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 4)
+2024-06-20 00:51:49 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:49 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 5)
+2024-06-20 00:51:49 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:49 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (2, 5)
+2024-06-20 00:51:49 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:49 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (2, 4)
+2024-06-20 00:51:49 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:50 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (1, 4)
+2024-06-20 00:51:50 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:50 INFO  SokobanLogic:36 - Undoing move: Move [(2, 4)->(1, 4)]
+2024-06-20 00:51:50 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (2, 3)
+2024-06-20 00:51:50 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:51 INFO  SokobanLogic:36 - Undoing move: Move [(2, 4)->(2, 3)]
+2024-06-20 00:51:51 INFO  SokobanLogic:36 - Undoing move: Move [(2, 5)->(2, 4)]
+2024-06-20 00:51:51 INFO  SokobanLogic:36 - Undoing move: Move [(1, 5)->(2, 5)]
+2024-06-20 00:51:52 INFO  SokobanLogic:81 - the warehouse man cannot move from (1, 5) to (0, 5)
+2024-06-20 00:51:52 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (1, 4)
+2024-06-20 00:51:52 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:52 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 00:51:52 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:52 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 00:51:52 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:52 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 00:51:52 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:53 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (3, 2)
+2024-06-20 00:51:53 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:53 INFO  SokobanLogic:142 - the warehouse man moves from (3, 2) to (4, 2)
+2024-06-20 00:51:53 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:53 INFO  SokobanLogic:142 - the warehouse man moves from (4, 2) to (5, 2)
+2024-06-20 00:51:53 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:53 INFO  SokobanLogic:142 - the warehouse man moves from (5, 2) to (5, 3)
+2024-06-20 00:51:53 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:54 INFO  SokobanLogic:142 - the warehouse man moves from (5, 3) to (5, 4)
+2024-06-20 00:51:54 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:54 INFO  SokobanLogic:142 - the warehouse man moves from (5, 4) to (4, 4)
+2024-06-20 00:51:54 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:54 INFO  SokobanLogic:142 - the warehouse man moves from (4, 4) to (4, 3)
+2024-06-20 00:51:54 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:54 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:55 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (3, 3)
+2024-06-20 00:51:55 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:55 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (2, 3)
+2024-06-20 00:51:55 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:55 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (1, 3)
+2024-06-20 00:51:55 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:55 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 4)
+2024-06-20 00:51:55 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:55 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 5)
+2024-06-20 00:51:55 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:56 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (2, 5)
+2024-06-20 00:51:56 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:56 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (2, 4)
+2024-06-20 00:51:56 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:56 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:56 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (1, 4)
+2024-06-20 00:51:56 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:56 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 00:51:56 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:56 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 00:51:56 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:56 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:56 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 00:51:56 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:56 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:57 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (3, 2)
+2024-06-20 00:51:57 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:57 INFO  SokobanLogic:142 - the warehouse man moves from (3, 2) to (3, 1)
+2024-06-20 00:51:57 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:57 INFO  SokobanLogic:142 - the warehouse man moves from (3, 1) to (4, 1)
+2024-06-20 00:51:57 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:58 INFO  SokobanLogic:142 - the warehouse man moves from (4, 1) to (5, 1)
+2024-06-20 00:51:58 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:58 INFO  SokobanLogic:142 - the warehouse man moves from (5, 1) to (5, 2)
+2024-06-20 00:51:58 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:58 INFO  SokobanLogic:142 - the warehouse man moves from (5, 2) to (4, 2)
+2024-06-20 00:51:58 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:58 INFO  SokobanLogic:142 - the warehouse man moves from (4, 2) to (4, 3)
+2024-06-20 00:51:58 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:58 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:51:59 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (3, 3)
+2024-06-20 00:51:59 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:51:59 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (2, 3)
+2024-06-20 00:51:59 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:52:00 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (2, 2)
+2024-06-20 00:52:00 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:52:00 INFO  SokobanLogic:142 - the warehouse man moves from (2, 2) to (3, 2)
+2024-06-20 00:52:00 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 00:52:00 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:00 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:01 INFO  LevelLoader:26 - reading file level_4.txt to generate level
+2024-06-20 00:52:01 INFO  LevelLoader:36 - loading a level that has 7 rows
+2024-06-20 00:52:01 INFO  LevelLoader:37 - loading a level that has 6 columns
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (0, 0)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (1, 0)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (2, 0)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (3, 0)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (4, 0)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (5, 0)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (0, 1)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/goal.png
+2024-06-20 00:52:01 INFO  LevelLoader:110 - a goal has been loaded(1, 1)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (3, 1)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (4, 1)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (5, 1)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (0, 2)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/goal.png
+2024-06-20 00:52:01 INFO  LevelLoader:110 - a goal has been loaded(1, 2)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (3, 2)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (4, 2)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (5, 2)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (0, 3)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/worker.png
+2024-06-20 00:52:01 INFO  LevelLoader:127 - the warehouse man has been loaded(1, 3)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box.png
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box-modified.png
+2024-06-20 00:52:01 INFO  LevelLoader:115 - a box has been loaded(2, 3)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (5, 3)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (0, 4)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box.png
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box-modified.png
+2024-06-20 00:52:01 INFO  LevelLoader:115 - a box has been loaded(2, 4)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (5, 4)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (0, 5)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:01 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (3, 5)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (4, 5)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (5, 5)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (0, 6)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (1, 6)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (2, 6)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (3, 6)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (4, 6)
+2024-06-20 00:52:01 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:01 INFO  LevelLoader:100 - a wall has been loaded (5, 6)
+2024-06-20 00:52:01 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 4)
+2024-06-20 00:52:01 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:02 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (2, 4)
+2024-06-20 00:52:02 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:02 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (3, 4)
+2024-06-20 00:52:02 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:03 INFO  SokobanLogic:36 - Undoing move: Move [(2, 4)->(3, 4)]
+2024-06-20 00:52:03 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (2, 3)
+2024-06-20 00:52:03 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:04 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 00:52:04 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:04 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (4, 3)
+2024-06-20 00:52:04 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:04 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (4, 4)
+2024-06-20 00:52:04 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:04 INFO  SokobanLogic:142 - the warehouse man moves from (4, 4) to (3, 4)
+2024-06-20 00:52:04 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:04 INFO  SokobanLogic:142 - the warehouse man moves from (3, 4) to (2, 4)
+2024-06-20 00:52:04 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:05 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (2, 5)
+2024-06-20 00:52:05 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:05 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (1, 5)
+2024-06-20 00:52:05 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:05 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (1, 4)
+2024-06-20 00:52:05 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:05 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 00:52:05 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:05 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:05 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 2)
+2024-06-20 00:52:05 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:05 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:06 INFO  SokobanLogic:36 - Undoing move: Move [(1, 3)->(1, 2)]
+2024-06-20 00:52:06 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:06 INFO  SokobanLogic:36 - Undoing move: Move [(1, 4)->(1, 3)]
+2024-06-20 00:52:06 INFO  SokobanLogic:36 - Undoing move: Move [(1, 5)->(1, 4)]
+2024-06-20 00:52:07 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (2, 5)
+2024-06-20 00:52:07 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:07 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (2, 4)
+2024-06-20 00:52:07 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:07 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (2, 3)
+2024-06-20 00:52:07 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:07 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (1, 3)
+2024-06-20 00:52:07 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:08 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 2)
+2024-06-20 00:52:08 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:08 INFO  SokobanLogic:142 - the warehouse man moves from (1, 2) to (1, 1)
+2024-06-20 00:52:08 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:08 INFO  SokobanLogic:142 - the warehouse man moves from (1, 1) to (2, 1)
+2024-06-20 00:52:08 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:08 INFO  SokobanLogic:142 - the warehouse man moves from (2, 1) to (2, 2)
+2024-06-20 00:52:08 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:08 INFO  SokobanLogic:142 - the warehouse man moves from (2, 2) to (1, 2)
+2024-06-20 00:52:08 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:09 INFO  SokobanLogic:142 - the warehouse man moves from (1, 2) to (1, 3)
+2024-06-20 00:52:09 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:09 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 00:52:09 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:09 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (2, 4)
+2024-06-20 00:52:09 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:10 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (2, 5)
+2024-06-20 00:52:10 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:10 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (1, 5)
+2024-06-20 00:52:10 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:10 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (1, 4)
+2024-06-20 00:52:10 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:10 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 00:52:10 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:10 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:10 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 2)
+2024-06-20 00:52:10 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:10 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:11 INFO  SokobanLogic:142 - the warehouse man moves from (1, 2) to (1, 3)
+2024-06-20 00:52:11 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:11 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 4)
+2024-06-20 00:52:11 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:11 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (2, 4)
+2024-06-20 00:52:11 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:11 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (3, 4)
+2024-06-20 00:52:11 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:12 INFO  SokobanLogic:142 - the warehouse man moves from (3, 4) to (4, 4)
+2024-06-20 00:52:12 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:12 INFO  SokobanLogic:142 - the warehouse man moves from (4, 4) to (4, 3)
+2024-06-20 00:52:12 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:12 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (3, 3)
+2024-06-20 00:52:12 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:12 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:12 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (3, 4)
+2024-06-20 00:52:12 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:12 INFO  SokobanLogic:81 - the warehouse man cannot move from (3, 4) to (3, 5)
+2024-06-20 00:52:13 INFO  SokobanLogic:142 - the warehouse man moves from (3, 4) to (3, 3)
+2024-06-20 00:52:13 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:13 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (2, 3)
+2024-06-20 00:52:13 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:13 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:13 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (2, 4)
+2024-06-20 00:52:13 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:13 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (2, 5)
+2024-06-20 00:52:13 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:13 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (1, 5)
+2024-06-20 00:52:13 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:14 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (1, 4)
+2024-06-20 00:52:14 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:14 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 00:52:14 INFO  SokobanLogic:147 - la puntuacion nueva es 66
+2024-06-20 00:52:14 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:14 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 00:52:14 INFO  LevelLoader:26 - reading file level_5.txt to generate level
+2024-06-20 00:52:14 INFO  LevelLoader:36 - loading a level that has 8 rows
+2024-06-20 00:52:14 INFO  LevelLoader:37 - loading a level that has 6 columns
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (0, 0)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (1, 0)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (2, 0)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (3, 0)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (4, 0)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (5, 0)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (0, 1)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (3, 1)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (4, 1)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (5, 1)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (0, 2)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/worker.png
+2024-06-20 00:52:14 INFO  LevelLoader:127 - the warehouse man has been loaded(2, 2)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (3, 2)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (4, 2)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (5, 2)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (0, 3)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/goal.png
+2024-06-20 00:52:14 INFO  LevelLoader:110 - a goal has been loaded(1, 3)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box.png
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box-modified.png
+2024-06-20 00:52:14 INFO  LevelLoader:115 - a box has been loaded(2, 3)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (3, 3)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (4, 3)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (5, 3)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (0, 4)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (5, 4)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (0, 5)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/goal.png
+2024-06-20 00:52:14 INFO  LevelLoader:110 - a goal has been loaded(1, 5)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box.png
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/box-modified.png
+2024-06-20 00:52:14 INFO  LevelLoader:115 - a box has been loaded(2, 5)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (3, 5)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (5, 5)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (0, 6)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (1, 6)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/air.png
+2024-06-20 00:52:14 INFO  LevelLoader:105 - an air
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (5, 6)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (0, 7)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (1, 7)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (2, 7)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (3, 7)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (4, 7)
+2024-06-20 00:52:14 INFO  TexturePaths:30 - image generated correctly from this path ./src/main/java/model/textures/wall.png
+2024-06-20 00:52:14 INFO  LevelLoader:100 - a wall has been loaded (5, 7)
+2024-06-20 01:03:12 INFO  LevelLoader:26 - reading file level_1.txt to generate level
+2024-06-20 01:03:12 INFO  LevelLoader:36 - loading a level that has 5 rows
+2024-06-20 01:03:12 INFO  LevelLoader:37 - loading a level that has 7 columns
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (0, 0)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (1, 0)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (2, 0)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (3, 0)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (4, 0)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (5, 0)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (6, 0)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (0, 1)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/worker.png
+2024-06-20 01:03:12 INFO  LevelLoader:127 - the warehouse man has been loaded(1, 1)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box.png
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box-modified.png
+2024-06-20 01:03:12 INFO  LevelLoader:115 - a box has been loaded(2, 1)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/goal.png
+2024-06-20 01:03:12 INFO  LevelLoader:110 - a goal has been loaded(4, 1)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (6, 1)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (0, 2)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (6, 2)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (0, 3)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:12 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (6, 3)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (0, 4)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (1, 4)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (2, 4)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (3, 4)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (4, 4)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (5, 4)
+2024-06-20 01:03:12 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:12 INFO  LevelLoader:100 - a wall has been loaded (6, 4)
+2024-06-20 01:03:14 INFO  SokobanLogic:142 - the warehouse man moves from (1, 1) to (2, 1)
+2024-06-20 01:03:14 INFO  SokobanLogic:147 - la puntuacion nueva es 0
+2024-06-20 01:03:14 INFO  SokobanLogic:142 - the warehouse man moves from (2, 1) to (3, 1)
+2024-06-20 01:03:14 INFO  SokobanLogic:147 - la puntuacion nueva es 0
+2024-06-20 01:03:14 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:15 INFO  LevelLoader:26 - reading file level_2.txt to generate level
+2024-06-20 01:03:15 INFO  LevelLoader:36 - loading a level that has 5 rows
+2024-06-20 01:03:15 INFO  LevelLoader:37 - loading a level that has 9 columns
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (0, 0)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (1, 0)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (2, 0)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (3, 0)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (4, 0)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (5, 0)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (6, 0)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (7, 0)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (8, 0)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (0, 1)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box.png
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box-modified.png
+2024-06-20 01:03:15 INFO  LevelLoader:115 - a box has been loaded(2, 1)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/goal.png
+2024-06-20 01:03:15 INFO  LevelLoader:110 - a goal has been loaded(4, 1)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (8, 1)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (0, 2)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/worker.png
+2024-06-20 01:03:15 INFO  LevelLoader:127 - the warehouse man has been loaded(1, 2)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (8, 2)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (0, 3)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box.png
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box-modified.png
+2024-06-20 01:03:15 INFO  LevelLoader:115 - a box has been loaded(3, 3)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/goal.png
+2024-06-20 01:03:15 INFO  LevelLoader:110 - a goal has been loaded(6, 3)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:15 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (8, 3)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (0, 4)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (1, 4)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (2, 4)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (3, 4)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (4, 4)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (5, 4)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (6, 4)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (7, 4)
+2024-06-20 01:03:15 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:15 INFO  LevelLoader:100 - a wall has been loaded (8, 4)
+2024-06-20 01:03:15 INFO  SokobanLogic:142 - the warehouse man moves from (1, 2) to (1, 3)
+2024-06-20 01:03:15 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:16 INFO  SokobanLogic:81 - the warehouse man cannot move from (1, 3) to (1, 4)
+2024-06-20 01:03:16 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 01:03:16 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:16 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 01:03:16 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:16 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (4, 3)
+2024-06-20 01:03:16 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:16 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (5, 3)
+2024-06-20 01:03:16 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:16 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:18 INFO  SokobanLogic:142 - the warehouse man moves from (5, 3) to (4, 3)
+2024-06-20 01:03:18 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:19 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (3, 3)
+2024-06-20 01:03:19 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:19 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (2, 3)
+2024-06-20 01:03:19 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:19 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (1, 3)
+2024-06-20 01:03:19 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:19 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 2)
+2024-06-20 01:03:19 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:19 INFO  SokobanLogic:142 - the warehouse man moves from (1, 2) to (1, 1)
+2024-06-20 01:03:19 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:20 INFO  SokobanLogic:142 - the warehouse man moves from (1, 1) to (2, 1)
+2024-06-20 01:03:20 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:20 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:20 INFO  SokobanLogic:142 - the warehouse man moves from (2, 1) to (3, 1)
+2024-06-20 01:03:20 INFO  SokobanLogic:147 - la puntuacion nueva es 2
+2024-06-20 01:03:20 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:20 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:20 INFO  LevelLoader:26 - reading file level_3.txt to generate level
+2024-06-20 01:03:20 INFO  LevelLoader:36 - loading a level that has 7 rows
+2024-06-20 01:03:20 INFO  LevelLoader:37 - loading a level that has 7 columns
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (0, 0)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (1, 0)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (2, 0)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (3, 0)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (4, 0)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (5, 0)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (6, 0)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (0, 1)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (1, 1)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (6, 1)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (0, 2)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (1, 2)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box.png
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box-modified.png
+2024-06-20 01:03:20 INFO  LevelLoader:115 - a box has been loaded(2, 2)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/goal.png
+2024-06-20 01:03:20 INFO  LevelLoader:110 - a goal has been loaded(4, 2)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (6, 2)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (0, 3)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/worker.png
+2024-06-20 01:03:20 INFO  LevelLoader:127 - the warehouse man has been loaded(3, 3)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (6, 3)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (0, 4)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box.png
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/box-modified.png
+2024-06-20 01:03:20 INFO  LevelLoader:115 - a box has been loaded(2, 4)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (3, 4)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/goal.png
+2024-06-20 01:03:20 INFO  LevelLoader:110 - a goal has been loaded(4, 4)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (6, 4)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (0, 5)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/air.png
+2024-06-20 01:03:20 INFO  LevelLoader:105 - an air
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (3, 5)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (4, 5)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (5, 5)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (6, 5)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (0, 6)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (1, 6)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (2, 6)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (3, 6)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (4, 6)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (5, 6)
+2024-06-20 01:03:20 INFO  TexturePaths:30 - image generated correctly from this path ./resources/textures/wall.png
+2024-06-20 01:03:20 INFO  LevelLoader:100 - a wall has been loaded (6, 6)
+2024-06-20 01:03:21 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (2, 3)
+2024-06-20 01:03:21 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:21 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (1, 3)
+2024-06-20 01:03:21 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:22 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 4)
+2024-06-20 01:03:22 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:22 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 5)
+2024-06-20 01:03:22 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:22 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (2, 5)
+2024-06-20 01:03:22 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:22 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (2, 4)
+2024-06-20 01:03:22 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:22 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (1, 4)
+2024-06-20 01:03:22 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:23 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 01:03:23 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:23 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 01:03:23 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:23 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 01:03:23 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:23 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (3, 2)
+2024-06-20 01:03:23 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:23 INFO  SokobanLogic:142 - the warehouse man moves from (3, 2) to (4, 2)
+2024-06-20 01:03:23 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:23 INFO  SokobanLogic:142 - the warehouse man moves from (4, 2) to (4, 3)
+2024-06-20 01:03:23 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:23 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:24 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (3, 3)
+2024-06-20 01:03:24 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:24 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (2, 3)
+2024-06-20 01:03:24 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:25 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 01:03:25 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:25 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (3, 2)
+2024-06-20 01:03:25 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:25 INFO  SokobanLogic:142 - the warehouse man moves from (3, 2) to (3, 1)
+2024-06-20 01:03:25 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:27 INFO  SokobanLogic:142 - the warehouse man moves from (3, 1) to (2, 1)
+2024-06-20 01:03:27 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:28 INFO  SokobanLogic:142 - the warehouse man moves from (2, 1) to (2, 2)
+2024-06-20 01:03:28 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:28 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:28 INFO  SokobanLogic:81 - the warehouse man cannot move from (2, 2) to (1, 2)
+2024-06-20 01:03:28 INFO  SokobanLogic:142 - the warehouse man moves from (2, 2) to (2, 3)
+2024-06-20 01:03:28 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:28 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:28 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (1, 3)
+2024-06-20 01:03:28 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:29 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (1, 4)
+2024-06-20 01:03:29 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:29 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 5)
+2024-06-20 01:03:29 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:29 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (2, 5)
+2024-06-20 01:03:29 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:29 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (2, 4)
+2024-06-20 01:03:29 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:29 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:30 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (1, 4)
+2024-06-20 01:03:30 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:30 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 01:03:30 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:30 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 01:03:30 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:30 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:30 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 01:03:30 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:30 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:31 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (3, 2)
+2024-06-20 01:03:31 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:31 INFO  SokobanLogic:142 - the warehouse man moves from (3, 2) to (4, 2)
+2024-06-20 01:03:31 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:31 INFO  SokobanLogic:142 - the warehouse man moves from (4, 2) to (5, 2)
+2024-06-20 01:03:31 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:32 INFO  SokobanLogic:142 - the warehouse man moves from (5, 2) to (5, 3)
+2024-06-20 01:03:32 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:32 INFO  SokobanLogic:142 - the warehouse man moves from (5, 3) to (4, 3)
+2024-06-20 01:03:32 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:32 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:33 INFO  SokobanLogic:142 - the warehouse man moves from (4, 3) to (3, 3)
+2024-06-20 01:03:33 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:33 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:35 INFO  SokobanLogic:36 - Undoing move: Move [(4, 3)->(3, 3)]
+2024-06-20 01:03:35 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:35 INFO  SokobanLogic:36 - Undoing move: Move [(5, 3)->(4, 3)]
+2024-06-20 01:03:35 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:36 INFO  SokobanLogic:36 - Undoing move: Move [(5, 2)->(5, 3)]
+2024-06-20 01:03:36 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:36 INFO  SokobanLogic:36 - Undoing move: Move [(4, 2)->(5, 2)]
+2024-06-20 01:03:36 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:37 INFO  SokobanLogic:36 - Undoing move: Move [(3, 2)->(4, 2)]
+2024-06-20 01:03:37 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:37 INFO  SokobanLogic:36 - Undoing move: Move [(3, 3)->(3, 2)]
+2024-06-20 01:03:37 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:37 INFO  SokobanLogic:36 - Undoing move: Move [(2, 3)->(3, 3)]
+2024-06-20 01:03:37 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:37 INFO  SokobanLogic:36 - Undoing move: Move [(1, 3)->(2, 3)]
+2024-06-20 01:03:37 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:37 INFO  SokobanLogic:36 - Undoing move: Move [(1, 4)->(1, 3)]
+2024-06-20 01:03:37 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:38 INFO  SokobanLogic:36 - Undoing move: Move [(2, 4)->(1, 4)]
+2024-06-20 01:03:38 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:38 INFO  SokobanLogic:36 - Undoing move: Move [(2, 5)->(2, 4)]
+2024-06-20 01:03:38 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:38 INFO  SokobanLogic:36 - Undoing move: Move [(1, 5)->(2, 5)]
+2024-06-20 01:03:38 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:39 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (2, 5)
+2024-06-20 01:03:39 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:40 INFO  SokobanLogic:142 - the warehouse man moves from (2, 5) to (2, 4)
+2024-06-20 01:03:40 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:40 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:41 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (1, 4)
+2024-06-20 01:03:41 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:42 INFO  SokobanLogic:36 - Undoing move: Move [(2, 4)->(1, 4)]
+2024-06-20 01:03:42 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:42 INFO  SokobanLogic:36 - Undoing move: Move [(2, 5)->(2, 4)]
+2024-06-20 01:03:42 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:42 INFO  SokobanLogic:36 - Undoing move: Move [(1, 5)->(2, 5)]
+2024-06-20 01:03:42 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:43 INFO  SokobanLogic:36 - Undoing move: Move [(1, 4)->(1, 5)]
+2024-06-20 01:03:43 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:43 INFO  SokobanLogic:36 - Undoing move: Move [(1, 3)->(1, 4)]
+2024-06-20 01:03:43 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:43 INFO  SokobanLogic:36 - Undoing move: Move [(2, 3)->(1, 3)]
+2024-06-20 01:03:43 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:43 INFO  SokobanLogic:36 - Undoing move: Move [(2, 2)->(2, 3)]
+2024-06-20 01:03:43 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:43 INFO  SokobanLogic:36 - Undoing move: Move [(2, 1)->(2, 2)]
+2024-06-20 01:03:43 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:44 INFO  SokobanLogic:36 - Undoing move: Move [(3, 1)->(2, 1)]
+2024-06-20 01:03:44 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:44 INFO  SokobanLogic:36 - Undoing move: Move [(3, 2)->(3, 1)]
+2024-06-20 01:03:44 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:44 INFO  SokobanLogic:36 - Undoing move: Move [(3, 3)->(3, 2)]
+2024-06-20 01:03:44 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:44 INFO  SokobanLogic:36 - Undoing move: Move [(2, 3)->(3, 3)]
+2024-06-20 01:03:44 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:44 INFO  SokobanLogic:36 - Undoing move: Move [(3, 3)->(2, 3)]
+2024-06-20 01:03:44 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:45 INFO  SokobanLogic:36 - Undoing move: Move [(4, 3)->(3, 3)]
+2024-06-20 01:03:45 INFO  SokobanLogic:119 - We reached the goal.
+2024-06-20 01:03:45 INFO  SokobanLogic:36 - Undoing move: Move [(4, 2)->(4, 3)]
+2024-06-20 01:03:46 INFO  SokobanLogic:142 - the warehouse man moves from (4, 2) to (3, 2)
+2024-06-20 01:03:46 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:47 INFO  SokobanLogic:36 - Undoing move: Move [(4, 2)->(3, 2)]
+2024-06-20 01:03:47 INFO  SokobanLogic:36 - Undoing move: Move [(3, 2)->(4, 2)]
+2024-06-20 01:03:47 INFO  SokobanLogic:36 - Undoing move: Move [(3, 3)->(3, 2)]
+2024-06-20 01:03:48 INFO  SokobanLogic:36 - Undoing move: Move [(2, 3)->(3, 3)]
+2024-06-20 01:03:48 INFO  SokobanLogic:36 - Undoing move: Move [(1, 3)->(2, 3)]
+2024-06-20 01:03:48 INFO  SokobanLogic:36 - Undoing move: Move [(1, 4)->(1, 3)]
+2024-06-20 01:03:49 INFO  SokobanLogic:36 - Undoing move: Move [(2, 4)->(1, 4)]
+2024-06-20 01:03:49 INFO  SokobanLogic:36 - Undoing move: Move [(2, 5)->(2, 4)]
+2024-06-20 01:03:49 INFO  SokobanLogic:36 - Undoing move: Move [(1, 5)->(2, 5)]
+2024-06-20 01:03:50 INFO  SokobanLogic:142 - the warehouse man moves from (1, 5) to (1, 4)
+2024-06-20 01:03:50 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:50 INFO  SokobanLogic:142 - the warehouse man moves from (1, 4) to (1, 3)
+2024-06-20 01:03:50 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:50 INFO  SokobanLogic:81 - the warehouse man cannot move from (1, 3) to (1, 2)
+2024-06-20 01:03:50 INFO  SokobanLogic:142 - the warehouse man moves from (1, 3) to (2, 3)
+2024-06-20 01:03:50 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:51 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (3, 3)
+2024-06-20 01:03:51 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:51 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (3, 2)
+2024-06-20 01:03:51 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:51 INFO  SokobanLogic:142 - the warehouse man moves from (3, 2) to (3, 1)
+2024-06-20 01:03:51 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:52 INFO  SokobanLogic:142 - the warehouse man moves from (3, 1) to (2, 1)
+2024-06-20 01:03:52 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:52 INFO  SokobanLogic:142 - the warehouse man moves from (2, 1) to (2, 2)
+2024-06-20 01:03:52 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:52 INFO  SokobanLogic:142 - the warehouse man moves from (2, 2) to (3, 2)
+2024-06-20 01:03:52 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:53 INFO  SokobanLogic:142 - the warehouse man moves from (3, 2) to (3, 3)
+2024-06-20 01:03:53 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:53 INFO  SokobanLogic:142 - the warehouse man moves from (3, 3) to (2, 3)
+2024-06-20 01:03:53 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:53 INFO  SokobanLogic:142 - the warehouse man moves from (2, 3) to (2, 4)
+2024-06-20 01:03:53 INFO  SokobanLogic:147 - la puntuacion nueva es 15
+2024-06-20 01:03:54 INFO  SokobanLogic:142 - the warehouse man moves from (2, 4) to (1, 4)
+2024-06-20 01:03:54 INFO  SokobanLogic:147 - la puntuacion nueva es 15

@@ -69,7 +69,7 @@ public class GameController {
 
     private void restartCurrentLevel() {
     	int numero = gameWorld.getLevelNumber();
-    	gameWorld.setLevel(LevelLoader.loadLevel(new File("./src/main/java/model/maps/level_"+numero+".txt")));
+    	gameWorld.setLevel(LevelLoader.loadLevel(new File("./resources/maps/level_"+numero+".txt")));
     	gameWorld.setLevelNumber(numero);
     	gameWorld.getLocalPuntuation().set(numero-1, 0);
     	this.gameWorld.updateFrom(gameWorld);
@@ -82,7 +82,7 @@ public class GameController {
 	}
 
 	private void startNewGame() {
-    	gameWorld.setLevel(LevelLoader.loadLevel(new File("./src/main/java/model/maps/level_1.txt")));
+    	gameWorld.setLevel(LevelLoader.loadLevel(new File("./resources/maps/level_1.txt")));
     	gameWorld.setLevelNumber(1);
     	gameWorld.setPuntuation(0);
     	List<Integer> lista = new ArrayList<>();
@@ -131,7 +131,7 @@ public class GameController {
 	            } else {
 	                gameFinished = true;
 	                // show congratulations message.
-	                int puntuation = gameWorld.getLocalPuntuation().get(gameWorld.getLevelNumber() - 1);
+	                int puntuation =  gameWorld.getPuntuation() + gameWorld.getLocalPuntuation().get(gameWorld.getLevelNumber() - 1);
 	                JOptionPane.showMessageDialog(null, "Congratulations! You have reached the end of the game.\nYour score: " + puntuation, "Congratulations!", JOptionPane.INFORMATION_MESSAGE);
 	            }
 	        });
@@ -148,7 +148,7 @@ public class GameController {
         fileChooser.addChoosableFileFilter(filter);
 
         // def dir.
-        File defaultDirectory = new File("./src/main/java/model/maps/");
+        File defaultDirectory = new File("./resources/maps/");
         fileChooser.setCurrentDirectory(defaultDirectory);
 
         int userSelection = fileChooser.showSaveDialog(null);
@@ -179,7 +179,7 @@ public class GameController {
 	    fileChooser.addChoosableFileFilter(filter);
 
 	    // def directory
-	    File defaultDirectory = new File("./src/main/java/model/maps/");
+	    File defaultDirectory = new File("./resources/maps/");
 	    fileChooser.setCurrentDirectory(defaultDirectory);
 
 	    int userSelection = fileChooser.showOpenDialog(null);
@@ -241,7 +241,7 @@ public class GameController {
     
 
     public static void main(String[] args) {
-        new GameController("./src/main/java/model/maps/level_1.txt");
+        new GameController("./resources/maps/level_1.txt");
     }
 
 
