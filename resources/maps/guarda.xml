@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gameWorldWithHistory>
+    <gameWorld>
+        <level>
+            <col>7</col>
+            <row>5</row>
+            <immovableEntities>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>0</x>
+                        <y>0</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>1</x>
+                        <y>0</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>2</x>
+                        <y>0</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>3</x>
+                        <y>0</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>4</x>
+                        <y>0</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>5</x>
+                        <y>0</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>6</x>
+                        <y>0</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                </immovableEntity>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>0</x>
+                        <y>1</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>1</x>
+                        <y>1</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>2</x>
+                        <y>1</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>3</x>
+                        <y>1</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="goal">
+                        <exp>36</exp>
+                        <x>4</x>
+                        <y>1</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkBAMAAAATLoWrAAAAMFBMVEUqKiqsPRd4LRJdIw7paDvthGDoXSz749vrc0rYTRyHMhMAAAAAAAAAAAAAAAAAAADstYCkAAAAWElEQVR4XmNgGAUQwAhjCArxXoCwWGBSJn8eQZnMUFrEmiXkxQswkwkqxMj/sQHKhAnx3/OAGQsTYjVtEEAT+jFhIkwVjGaWYxQ8C2HCHPFXiOEvlDlCAQCMUA5Hyky75wAAAABJRU5ErkJggg==</textureImage>
+                        <penetrable>true</penetrable>
+                        <archieved>false</archieved>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>5</x>
+                        <y>1</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>6</x>
+                        <y>1</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                </immovableEntity>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>0</x>
+                        <y>2</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>1</x>
+                        <y>2</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>2</x>
+                        <y>2</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>3</x>
+                        <y>2</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>4</x>
+                        <y>2</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>5</x>
+                        <y>2</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>6</x>
+                        <y>2</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                </immovableEntity>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>0</x>
+                        <y>3</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>1</x>
+                        <y>3</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>2</x>
+                        <y>3</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>3</x>
+                        <y>3</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>4</x>
+                        <y>3</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="air">
+                        <exp>36</exp>
+                        <x>5</x>
+                        <y>3</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAAF0lEQVR4XmNgGAWjYBSMglEwCkYBdgAAByYAAUoNFqwAAAAASUVORK5CYII=</textureImage>
+                        <penetrable>true</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>6</x>
+                        <y>3</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                </immovableEntity>
+                <immovableEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>0</x>
+                        <y>4</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>1</x>
+                        <y>4</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>2</x>
+                        <y>4</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>3</x>
+                        <y>4</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>4</x>
+                        <y>4</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>5</x>
+                        <y>4</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wall">
+                        <exp>36</exp>
+                        <x>6</x>
+                        <y>4</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAAAAADEa8dEAAAAoklEQVR4Xu2UwQ2EMAwEU1BKoAWelOESaMElXAEu4lq5Vkgw60gb6fy5+yD2x8iMsLWivC2NFvtkeUkb2pOsfUiTnEP8JidMtVYWBIRpEZNNyQAIUzXdxVh0wWFSEZtMDuObtvbIJsDYTtthSRTwD3f6lsd0A1PvPBsAYfLOUwBh8s6z6ILD1Ds/mRzC5J0nE+DYrv9hpjj87Z1kzSKlbZBFD94VqS6zCJc4AAAAAElFTkSuQmCC</textureImage>
+                        <penetrable>false</penetrable>
+                    </item>
+                </immovableEntity>
+            </immovableEntities>
+            <mobileEntities>
+                <mobileEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                </mobileEntity>
+                <mobileEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="box">
+                        <exp>36</exp>
+                        <x>3</x>
+                        <y>1</y>
+                        <textureImage>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkBAMAAAATLoWrAAAAMFBMVEXXunWqhkldPCDfz46KZTg8JBQsLCzHqmW6mlWadUFNMBgAAAAAAAAAAAAAAAAAAABAwkH/AAABDUlEQVR4Xo2STYrCQBCFX7e61QRntuLPBYZ4ATfucwWvNmNWs3IniHgFDyCCMPvJBBcSglp/HRJXU4RO8+XlVb2mgddyzkWvyGP60QR+Bo97W3Yh9NYibkFmUS9toG/2otfmNDrLM5znZMefSuvQGfMqCJmiQlZGKcqc970xKkNL4ItRAuwN/aTiRk4VqxmVKiPRIXhhzbIgsiFIlhUmsiFYBlQ6nqLbEslO2tWImv7FJ3GqEbt96jagzjUehKSGisdqH5IqonTXkNQQDb4NSRXJ4JbUkKSzpIosnSQ15DWdJA0/WjpNakjTUVIuQXpOcrzgexLhV4FUDNfFtH9sID85//uatBDB7rt0adYTWGhVjYNccv4AAAAASUVORK5CYII=</textureImage>
+                        <normalBox>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkBAMAAAATLoWrAAAAMFBMVEXXunWqhkldPCDfz46KZTg8JBQsLCzHqmW6mlWadUFNMBgAAAAAAAAAAAAAAAAAAABAwkH/AAABDUlEQVR4Xo2STYrCQBCFX7e61QRntuLPBYZ4ATfucwWvNmNWs3IniHgFDyCCMPvJBBcSglp/HRJXU4RO8+XlVb2mgddyzkWvyGP60QR+Bo97W3Yh9NYibkFmUS9toG/2otfmNDrLM5znZMefSuvQGfMqCJmiQlZGKcqc970xKkNL4ItRAuwN/aTiRk4VqxmVKiPRIXhhzbIgsiFIlhUmsiFYBlQ6nqLbEslO2tWImv7FJ3GqEbt96jagzjUehKSGisdqH5IqonTXkNQQDb4NSRXJ4JbUkKSzpIosnSQ15DWdJA0/WjpNakjTUVIuQXpOcrzgexLhV4FUDNfFtH9sID85//uatBDB7rt0adYTWGhVjYNccv4AAAAASUVORK5CYII=</normalBox>
+                        <boxOnGoal>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABrElEQVR4Xs3XMVLDMBAF0ByFkjIlF8gRcoQcgIKCK+QIKSkpKShpUqSkcElBScEhwnzPLMjfX+u1bBkXO1EUS/8lox1NNre743UttX98vW5ssIZ6On/+gW629209nC69B2sVZ/ZAeD1/fPcW1irO7ICgxAdLgjizA0qraZrqxZmDoPT93f7Ufhss2B2e23FakXnscTi+/ZbKDYMMFQlW84yZBWQoL1jNK0wRyEOpYAXKYXCIVa4Lenn/CqMUyMPgeZXrghAQRTHIw9jzKncQhMURVAoawkwGRVBeNzFmFlAEFcXMBoqgFEbtMxsICxiF+fTWTjF82KuAuPsMggICv1TaTbl9VG4xCGNDMQjrVffxPiq3GGTnBSiD2K9ie6Tdp/ZRuUUgPrx8ptLCs7l9VO5oEGOiKN5nFlAOY900BjUZ5GEsgLuPK0VNAg1hUhDGEVQxKIJhUARVDGKIwihQBKVyR4O8u0nNeyiVOwo0dDfl5nMolRsGcTepYG9eoVRuFmQLahbn9UD8x3+J4sweCK92Yy9RnNkBQWm3Ni+sVZzpnqH/qBaEATpgLfUDSMl16+WpbsMAAAAASUVORK5CYII=</boxOnGoal>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                </mobileEntity>
+                <mobileEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                </mobileEntity>
+                <mobileEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="worker">
+                        <exp>36</exp>
+                        <x>2</x>
+                        <y>3</y>
+                        <textureImage>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</textureImage>
+                    </item>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                </mobileEntity>
+                <mobileEntity>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+                </mobileEntity>
+            </mobileEntities>
+            <levelName>Nivel 1</levelName>
+            <warehouseMan>
+                <exp>36</exp>
+                <x>2</x>
+                <y>3</y>
+                <textureImage>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</textureImage>
+            </warehouseMan>
+        </level>
+        <levelFile>./src/main/java/model/maps/level_1.txt</levelFile>
+        <levelNumber>1</levelNumber>
+        <localPuntuation>3</localPuntuation>
+        <puntuation>0</puntuation>
+    </gameWorld>
+    <history>
+        <boxMove>true</boxMove>
+        <newBoxX>3</newBoxX>
+        <newBoxY>1</newBoxY>
+        <newX>2</newX>
+        <newY>1</newY>
+        <oldBoxX>2</oldBoxX>
+        <oldBoxY>1</oldBoxY>
+        <oldX>1</oldX>
+        <oldY>1</oldY>
+    </history>
+    <history>
+        <boxMove>false</boxMove>
+        <newBoxX>-1</newBoxX>
+        <newBoxY>-1</newBoxY>
+        <newX>2</newX>
+        <newY>2</newY>
+        <oldBoxX>-1</oldBoxX>
+        <oldBoxY>-1</oldBoxY>
+        <oldX>2</oldX>
+        <oldY>1</oldY>
+    </history>
+    <history>
+        <boxMove>false</boxMove>
+        <newBoxX>-1</newBoxX>
+        <newBoxY>-1</newBoxY>
+        <newX>2</newX>
+        <newY>3</newY>
+        <oldBoxX>-1</oldBoxX>
+        <oldBoxY>-1</oldBoxY>
+        <oldX>2</oldX>
+        <oldY>2</oldY>
+    </history>
+</gameWorldWithHistory>
