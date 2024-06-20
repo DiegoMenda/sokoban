@@ -43,8 +43,8 @@ public class GameFrame extends JFrame {
         restartLevelButton = new JButton("Restart level");
         saveGameButton = new JButton("Save the game");
         openSaveGameButton = new JButton("Open a saved game");
-        puntuationLabel = new JLabel("Total Global Puntuation: 0");
-        localPuntuationLabel = new JLabel("Total Level Puntuation: 0");
+        puntuationLabel = new JLabel("Global Puntuation: 0");
+        localPuntuationLabel = new JLabel("Level Puntuation: 0");
         levelNameLabel = new JLabel("Level Name: ");
         JLabel undoLabel = new JLabel("Undo the last movement: Z");
 
@@ -61,11 +61,11 @@ public class GameFrame extends JFrame {
     }
 
     public void setGlobalPuntuation(int puntuation) {
-        puntuationLabel.setText("Total Global Puntuation: " + puntuation);
+        puntuationLabel.setText("Global Puntuation: " + puntuation);
     }
     
     public void setLocalPuntuation(int puntuation) {
-    	localPuntuationLabel.setText("Total Level Puntuation: " + puntuation);
+    	localPuntuationLabel.setText("Level Puntuation: " + puntuation);
     }
     
 
